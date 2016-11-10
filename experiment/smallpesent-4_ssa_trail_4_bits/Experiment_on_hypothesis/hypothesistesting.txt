@@ -1,0 +1,620 @@
+Round:1
+00:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+01:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+02:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+03:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+04:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+05:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+06:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+07:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+08:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+09:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+0a:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+0b:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+0c:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+0d:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+0e:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+0f:	0.062500	Practical Variance:0.004882812500 Therorectical Variance: 0.005208333333
+And mean and variance of variances are:0.009765625000	0.000023841858
+Round:2
+00:	0.062500	Practical Variance:0.000366210938 Therorectical Variance: 0.000360107422
+01:	0.062500	Practical Variance:0.000308990479 Therorectical Variance: 0.000360107422
+02:	0.062500	Practical Variance:0.000308990479 Therorectical Variance: 0.000360107422
+03:	0.062500	Practical Variance:0.000366210938 Therorectical Variance: 0.000360107422
+04:	0.062500	Practical Variance:0.000308990479 Therorectical Variance: 0.000360107422
+05:	0.062500	Practical Variance:0.000366210938 Therorectical Variance: 0.000360107422
+06:	0.062500	Practical Variance:0.000366210938 Therorectical Variance: 0.000360107422
+07:	0.062500	Practical Variance:0.000308990479 Therorectical Variance: 0.000360107422
+08:	0.062500	Practical Variance:0.000308990479 Therorectical Variance: 0.000360107422
+09:	0.062500	Practical Variance:0.000366210938 Therorectical Variance: 0.000360107422
+0a:	0.062500	Practical Variance:0.000366210938 Therorectical Variance: 0.000360107422
+0b:	0.062500	Practical Variance:0.000308990479 Therorectical Variance: 0.000360107422
+0c:	0.062500	Practical Variance:0.000366210938 Therorectical Variance: 0.000360107422
+0d:	0.062500	Practical Variance:0.000308990479 Therorectical Variance: 0.000360107422
+0e:	0.062500	Practical Variance:0.000308990479 Therorectical Variance: 0.000360107422
+0f:	0.062500	Practical Variance:0.000366210938 Therorectical Variance: 0.000360107422
+And mean and variance of variances are:0.000703811646	0.000000134929
+Round:3
+00:	0.062500	Practical Variance:0.000044092536 Therorectical Variance: 0.000109667083
+01:	0.062500	Practical Variance:0.000056713820 Therorectical Variance: 0.000109667083
+02:	0.062500	Practical Variance:0.000065967441 Therorectical Variance: 0.000109667083
+03:	0.062500	Practical Variance:0.000117123127 Therorectical Variance: 0.000109667083
+04:	0.062500	Practical Variance:0.000077947974 Therorectical Variance: 0.000109667083
+05:	0.062500	Practical Variance:0.000103630126 Therorectical Variance: 0.000109667083
+06:	0.062500	Practical Variance:0.000130668283 Therorectical Variance: 0.000109667083
+07:	0.062500	Practical Variance:0.000099733472 Therorectical Variance: 0.000109667083
+08:	0.062500	Practical Variance:0.000118345022 Therorectical Variance: 0.000109667083
+09:	0.062500	Practical Variance:0.000148028135 Therorectical Variance: 0.000109667083
+0a:	0.062500	Practical Variance:0.000050120056 Therorectical Variance: 0.000109667083
+0b:	0.062500	Practical Variance:0.000067375600 Therorectical Variance: 0.000109667083
+0c:	0.062500	Practical Variance:0.000186622143 Therorectical Variance: 0.000109667083
+0d:	0.062500	Practical Variance:0.000135615468 Therorectical Variance: 0.000109667083
+0e:	0.062500	Practical Variance:0.000113099813 Therorectical Variance: 0.000109667083
+0f:	0.062500	Practical Variance:0.000129923224 Therorectical Variance: 0.000109667083
+And mean and variance of variances are:0.000232736114	0.000000018367
+Round:4
+00:	0.062500	Practical Variance:0.000029377639 Therorectical Variance: 0.000035305818
+01:	0.062500	Practical Variance:0.000017426908 Therorectical Variance: 0.000035305818
+02:	0.062500	Practical Variance:0.000010624528 Therorectical Variance: 0.000035305818
+03:	0.062500	Practical Variance:0.000013940036 Therorectical Variance: 0.000035305818
+04:	0.062500	Practical Variance:0.000037766993 Therorectical Variance: 0.000035305818
+05:	0.062500	Practical Variance:0.000047095120 Therorectical Variance: 0.000035305818
+06:	0.062500	Practical Variance:0.000046052039 Therorectical Variance: 0.000035305818
+07:	0.062500	Practical Variance:0.000046737492 Therorectical Variance: 0.000035305818
+08:	0.062500	Practical Variance:0.000014238060 Therorectical Variance: 0.000035305818
+09:	0.062500	Practical Variance:0.000014960766 Therorectical Variance: 0.000035305818
+0a:	0.062500	Practical Variance:0.000051118433 Therorectical Variance: 0.000035305818
+0b:	0.062500	Practical Variance:0.000041209161 Therorectical Variance: 0.000035305818
+0c:	0.062500	Practical Variance:0.000031903386 Therorectical Variance: 0.000035305818
+0d:	0.062500	Practical Variance:0.000056631863 Therorectical Variance: 0.000035305818
+0e:	0.062500	Practical Variance:0.000046119094 Therorectical Variance: 0.000035305818
+0f:	0.062500	Practical Variance:0.000024385750 Therorectical Variance: 0.000035305818
+And mean and variance of variances are:0.000057484955	0.000000000818
+Round:5
+00:	0.062500	Practical Variance:0.000023886561 Therorectical Variance: 0.000019419193
+01:	0.062500	Practical Variance:0.000020235777 Therorectical Variance: 0.000019419193
+02:	0.062500	Practical Variance:0.000015698373 Therorectical Variance: 0.000019419193
+03:	0.062500	Practical Variance:0.000016696751 Therorectical Variance: 0.000019419193
+04:	0.062500	Practical Variance:0.000009059906 Therorectical Variance: 0.000019419193
+05:	0.062500	Practical Variance:0.000012367964 Therorectical Variance: 0.000019419193
+06:	0.062500	Practical Variance:0.000015154481 Therorectical Variance: 0.000019419193
+07:	0.062500	Practical Variance:0.000011019409 Therorectical Variance: 0.000019419193
+08:	0.062500	Practical Variance:0.000015579164 Therorectical Variance: 0.000019419193
+09:	0.062500	Practical Variance:0.000026538968 Therorectical Variance: 0.000019419193
+0a:	0.062500	Practical Variance:0.000020846725 Therorectical Variance: 0.000019419193
+0b:	0.062500	Practical Variance:0.000017873943 Therorectical Variance: 0.000019419193
+0c:	0.062500	Practical Variance:0.000036142766 Therorectical Variance: 0.000019419193
+0d:	0.062500	Practical Variance:0.000012829900 Therorectical Variance: 0.000019419193
+0e:	0.062500	Practical Variance:0.000011973083 Therorectical Variance: 0.000019419193
+0f:	0.062500	Practical Variance:0.000025384128 Therorectical Variance: 0.000019419193
+And mean and variance of variances are:0.000043589622	0.000000000691
+Round:6
+00:	0.062500	Practical Variance:0.000013902783 Therorectical Variance: 0.000016603371
+01:	0.062500	Practical Variance:0.000014178455 Therorectical Variance: 0.000016603371
+02:	0.062500	Practical Variance:0.000017620623 Therorectical Variance: 0.000016603371
+03:	0.062500	Practical Variance:0.000014960766 Therorectical Variance: 0.000016603371
+04:	0.062500	Practical Variance:0.000019304454 Therorectical Variance: 0.000016603371
+05:	0.062500	Practical Variance:0.000017426908 Therorectical Variance: 0.000016603371
+06:	0.062500	Practical Variance:0.000018022954 Therorectical Variance: 0.000016603371
+07:	0.062500	Practical Variance:0.000016696751 Therorectical Variance: 0.000016603371
+08:	0.062500	Practical Variance:0.000008195639 Therorectical Variance: 0.000016603371
+09:	0.062500	Practical Variance:0.000014223158 Therorectical Variance: 0.000016603371
+0a:	0.062500	Practical Variance:0.000012911856 Therorectical Variance: 0.000016603371
+0b:	0.062500	Practical Variance:0.000012747943 Therorectical Variance: 0.000016603371
+0c:	0.062500	Practical Variance:0.000016272068 Therorectical Variance: 0.000016603371
+0d:	0.062500	Practical Variance:0.000013820827 Therorectical Variance: 0.000016603371
+0e:	0.062500	Practical Variance:0.000012367964 Therorectical Variance: 0.000016603371
+0f:	0.062500	Practical Variance:0.000026397407 Therorectical Variance: 0.000016603371
+And mean and variance of variances are:0.000041963067	0.000000000712
+Round:7
+00:	0.062500	Practical Variance:0.000016137958 Therorectical Variance: 0.000012371441
+01:	0.062500	Practical Variance:0.000022105873 Therorectical Variance: 0.000012371441
+02:	0.062500	Practical Variance:0.000013493001 Therorectical Variance: 0.000012371441
+03:	0.062500	Practical Variance:0.000010132790 Therorectical Variance: 0.000012371441
+04:	0.062500	Practical Variance:0.000006608665 Therorectical Variance: 0.000012371441
+05:	0.062500	Practical Variance:0.000014074147 Therorectical Variance: 0.000012371441
+06:	0.062500	Practical Variance:0.000013008714 Therorectical Variance: 0.000012371441
+07:	0.062500	Practical Variance:0.000013045967 Therorectical Variance: 0.000012371441
+08:	0.062500	Practical Variance:0.000009581447 Therorectical Variance: 0.000012371441
+09:	0.062500	Practical Variance:0.000008411705 Therorectical Variance: 0.000012371441
+0a:	0.062500	Practical Variance:0.000010244548 Therorectical Variance: 0.000012371441
+0b:	0.062500	Practical Variance:0.000011257827 Therorectical Variance: 0.000012371441
+0c:	0.062500	Practical Variance:0.000009477139 Therorectical Variance: 0.000012371441
+0d:	0.062500	Practical Variance:0.000011615455 Therorectical Variance: 0.000012371441
+0e:	0.062500	Practical Variance:0.000004701316 Therorectical Variance: 0.000012371441
+0f:	0.062500	Practical Variance:0.000011675060 Therorectical Variance: 0.000012371441
+And mean and variance of variances are:0.000023273285	0.000000000151
+Round:8
+00:	0.062500	Practical Variance:0.000011011958 Therorectical Variance: 0.000017374257
+01:	0.062500	Practical Variance:0.000019498169 Therorectical Variance: 0.000017374257
+02:	0.062500	Practical Variance:0.000014454126 Therorectical Variance: 0.000017374257
+03:	0.062500	Practical Variance:0.000017613173 Therorectical Variance: 0.000017374257
+04:	0.062500	Practical Variance:0.000017538667 Therorectical Variance: 0.000017374257
+05:	0.062500	Practical Variance:0.000017561018 Therorectical Variance: 0.000017374257
+06:	0.062500	Practical Variance:0.000023618340 Therorectical Variance: 0.000017374257
+07:	0.062500	Practical Variance:0.000025428832 Therorectical Variance: 0.000017374257
+08:	0.062500	Practical Variance:0.000011116266 Therorectical Variance: 0.000017374257
+09:	0.062500	Practical Variance:0.000014789402 Therorectical Variance: 0.000017374257
+0a:	0.062500	Practical Variance:0.000008657575 Therorectical Variance: 0.000017374257
+0b:	0.062500	Practical Variance:0.000015594065 Therorectical Variance: 0.000017374257
+0c:	0.062500	Practical Variance:0.000019893050 Therorectical Variance: 0.000017374257
+0d:	0.062500	Practical Variance:0.000016994774 Therorectical Variance: 0.000017374257
+0e:	0.062500	Practical Variance:0.000015959144 Therorectical Variance: 0.000017374257
+0f:	0.062500	Practical Variance:0.000010885298 Therorectical Variance: 0.000017374257
+And mean and variance of variances are:0.000027173664	0.000000000138
+Round:9
+00:	0.062500	Practical Variance:0.000022701919 Therorectical Variance: 0.000017139316
+01:	0.062500	Practical Variance:0.000013478100 Therorectical Variance: 0.000017139316
+02:	0.062500	Practical Variance:0.000019840896 Therorectical Variance: 0.000017139316
+03:	0.062500	Practical Variance:0.000015147030 Therorectical Variance: 0.000017139316
+04:	0.062500	Practical Variance:0.000018551946 Therorectical Variance: 0.000017139316
+05:	0.062500	Practical Variance:0.000017568469 Therorectical Variance: 0.000017139316
+06:	0.062500	Practical Variance:0.000017814338 Therorectical Variance: 0.000017139316
+07:	0.062500	Practical Variance:0.000013418496 Therorectical Variance: 0.000017139316
+08:	0.062500	Practical Variance:0.000016786158 Therorectical Variance: 0.000017139316
+09:	0.062500	Practical Variance:0.000010617077 Therorectical Variance: 0.000017139316
+0a:	0.062500	Practical Variance:0.000014461577 Therorectical Variance: 0.000017139316
+0b:	0.062500	Practical Variance:0.000007301569 Therorectical Variance: 0.000017139316
+0c:	0.062500	Practical Variance:0.000023126602 Therorectical Variance: 0.000017139316
+0d:	0.062500	Practical Variance:0.000013642013 Therorectical Variance: 0.000017139316
+0e:	0.062500	Practical Variance:0.000016823411 Therorectical Variance: 0.000017139316
+0f:	0.062500	Practical Variance:0.000015810132 Therorectical Variance: 0.000017139316
+And mean and variance of variances are:0.000031878240	0.000000000266
+Round:10
+00:	0.062500	Practical Variance:0.000005640090 Therorectical Variance: 0.000012276073
+01:	0.062500	Practical Variance:0.000011518598 Therorectical Variance: 0.000012276073
+02:	0.062500	Practical Variance:0.000013239682 Therorectical Variance: 0.000012276073
+03:	0.062500	Practical Variance:0.000017032027 Therorectical Variance: 0.000012276073
+04:	0.062500	Practical Variance:0.000007763505 Therorectical Variance: 0.000012276073
+05:	0.062500	Practical Variance:0.000012762845 Therorectical Variance: 0.000012276073
+06:	0.062500	Practical Variance:0.000007130206 Therorectical Variance: 0.000012276073
+07:	0.062500	Practical Variance:0.000016689301 Therorectical Variance: 0.000012276073
+08:	0.062500	Practical Variance:0.000005789101 Therorectical Variance: 0.000012276073
+09:	0.062500	Practical Variance:0.000009045005 Therorectical Variance: 0.000012276073
+0a:	0.062500	Practical Variance:0.000007502735 Therorectical Variance: 0.000012276073
+0b:	0.062500	Practical Variance:0.000005520880 Therorectical Variance: 0.000012276073
+0c:	0.062500	Practical Variance:0.000023484230 Therorectical Variance: 0.000012276073
+0d:	0.062500	Practical Variance:0.000011898577 Therorectical Variance: 0.000012276073
+0e:	0.062500	Practical Variance:0.000013537705 Therorectical Variance: 0.000012276073
+0f:	0.062500	Practical Variance:0.000015586615 Therorectical Variance: 0.000012276073
+And mean and variance of variances are:0.000027095433	0.000000000267
+Round:11
+00:	0.062500	Practical Variance:0.000009521842 Therorectical Variance: 0.000012883544
+01:	0.062500	Practical Variance:0.000010214746 Therorectical Variance: 0.000012883544
+02:	0.062500	Practical Variance:0.000015288591 Therorectical Variance: 0.000012883544
+03:	0.062500	Practical Variance:0.000009529293 Therorectical Variance: 0.000012883544
+04:	0.062500	Practical Variance:0.000011764467 Therorectical Variance: 0.000012883544
+05:	0.062500	Practical Variance:0.000020094216 Therorectical Variance: 0.000012883544
+06:	0.062500	Practical Variance:0.000010289252 Therorectical Variance: 0.000012883544
+07:	0.062500	Practical Variance:0.000012330711 Therorectical Variance: 0.000012883544
+08:	0.062500	Practical Variance:0.000016927719 Therorectical Variance: 0.000012883544
+09:	0.062500	Practical Variance:0.000010326505 Therorectical Variance: 0.000012883544
+0a:	0.062500	Practical Variance:0.000014185905 Therorectical Variance: 0.000012883544
+0b:	0.062500	Practical Variance:0.000006750226 Therorectical Variance: 0.000012883544
+0c:	0.062500	Practical Variance:0.000014267862 Therorectical Variance: 0.000012883544
+0d:	0.062500	Practical Variance:0.000010654330 Therorectical Variance: 0.000012883544
+0e:	0.062500	Practical Variance:0.000017076731 Therorectical Variance: 0.000012883544
+0f:	0.062500	Practical Variance:0.000004030764 Therorectical Variance: 0.000012883544
+And mean and variance of variances are:0.000016109087	0.000000000032
+Round:12
+00:	0.062500	Practical Variance:0.000007502735 Therorectical Variance: 0.000014537076
+01:	0.062500	Practical Variance:0.000006958842 Therorectical Variance: 0.000014537076
+02:	0.062500	Practical Variance:0.000021390617 Therorectical Variance: 0.000014537076
+03:	0.062500	Practical Variance:0.000011906028 Therorectical Variance: 0.000014537076
+04:	0.062500	Practical Variance:0.000010848045 Therorectical Variance: 0.000014537076
+05:	0.062500	Practical Variance:0.000016823411 Therorectical Variance: 0.000014537076
+06:	0.062500	Practical Variance:0.000015221536 Therorectical Variance: 0.000014537076
+07:	0.062500	Practical Variance:0.000011540949 Therorectical Variance: 0.000014537076
+08:	0.062500	Practical Variance:0.000017896295 Therorectical Variance: 0.000014537076
+09:	0.062500	Practical Variance:0.000012502074 Therorectical Variance: 0.000014537076
+0a:	0.062500	Practical Variance:0.000005297363 Therorectical Variance: 0.000014537076
+0b:	0.062500	Practical Variance:0.000011317432 Therorectical Variance: 0.000014537076
+0c:	0.062500	Practical Variance:0.000012174249 Therorectical Variance: 0.000014537076
+0d:	0.062500	Practical Variance:0.000027887523 Therorectical Variance: 0.000014537076
+0e:	0.062500	Practical Variance:0.000017903745 Therorectical Variance: 0.000014537076
+0f:	0.062500	Practical Variance:0.000010885298 Therorectical Variance: 0.000014537076
+And mean and variance of variances are:0.000024513807	0.000000000149
+Round:13
+00:	0.062500	Practical Variance:0.000018231571 Therorectical Variance: 0.000016062955
+01:	0.062500	Practical Variance:0.000011451542 Therorectical Variance: 0.000016062955
+02:	0.062500	Practical Variance:0.000018261373 Therorectical Variance: 0.000016062955
+03:	0.062500	Practical Variance:0.000011816621 Therorectical Variance: 0.000016062955
+04:	0.062500	Practical Variance:0.000019900501 Therorectical Variance: 0.000016062955
+05:	0.062500	Practical Variance:0.000012934208 Therorectical Variance: 0.000016062955
+06:	0.062500	Practical Variance:0.000012405217 Therorectical Variance: 0.000016062955
+07:	0.062500	Practical Variance:0.000020965934 Therorectical Variance: 0.000016062955
+08:	0.062500	Practical Variance:0.000015974045 Therorectical Variance: 0.000016062955
+09:	0.062500	Practical Variance:0.000018343329 Therorectical Variance: 0.000016062955
+0a:	0.062500	Practical Variance:0.000007204711 Therorectical Variance: 0.000016062955
+0b:	0.062500	Practical Variance:0.000018797815 Therorectical Variance: 0.000016062955
+0c:	0.062500	Practical Variance:0.000014729798 Therorectical Variance: 0.000016062955
+0d:	0.062500	Practical Variance:0.000006705523 Therorectical Variance: 0.000016062955
+0e:	0.062500	Practical Variance:0.000014901161 Therorectical Variance: 0.000016062955
+0f:	0.062500	Practical Variance:0.000018320978 Therorectical Variance: 0.000016062955
+And mean and variance of variances are:0.000033379998	0.000000000353
+Round:14
+00:	0.062500	Practical Variance:0.000009305775 Therorectical Variance: 0.000014759103
+01:	0.062500	Practical Variance:0.000009335577 Therorectical Variance: 0.000014759103
+02:	0.062500	Practical Variance:0.000008828938 Therorectical Variance: 0.000014759103
+03:	0.062500	Practical Variance:0.000008381903 Therorectical Variance: 0.000014759103
+04:	0.062500	Practical Variance:0.000014416873 Therorectical Variance: 0.000014759103
+05:	0.062500	Practical Variance:0.000013202429 Therorectical Variance: 0.000014759103
+06:	0.062500	Practical Variance:0.000016503036 Therorectical Variance: 0.000014759103
+07:	0.062500	Practical Variance:0.000010550022 Therorectical Variance: 0.000014759103
+08:	0.062500	Practical Variance:0.000021412969 Therorectical Variance: 0.000014759103
+09:	0.062500	Practical Variance:0.000023238361 Therorectical Variance: 0.000014759103
+0a:	0.062500	Practical Variance:0.000021941960 Therorectical Variance: 0.000014759103
+0b:	0.062500	Practical Variance:0.000015646219 Therorectical Variance: 0.000014759103
+0c:	0.062500	Practical Variance:0.000010758638 Therorectical Variance: 0.000014759103
+0d:	0.062500	Practical Variance:0.000015512109 Therorectical Variance: 0.000014759103
+0e:	0.062500	Practical Variance:0.000012420118 Therorectical Variance: 0.000014759103
+0f:	0.062500	Practical Variance:0.000009931624 Therorectical Variance: 0.000014759103
+And mean and variance of variances are:0.000023768283	0.000000000121
+Round:15
+00:	0.062500	Practical Variance:0.000009365380 Therorectical Variance: 0.000014010072
+01:	0.062500	Practical Variance:0.000007659197 Therorectical Variance: 0.000014010072
+02:	0.062500	Practical Variance:0.000015132129 Therorectical Variance: 0.000014010072
+03:	0.062500	Practical Variance:0.000013194978 Therorectical Variance: 0.000014010072
+04:	0.062500	Practical Variance:0.000017084181 Therorectical Variance: 0.000014010072
+05:	0.062500	Practical Variance:0.000018902123 Therorectical Variance: 0.000014010072
+06:	0.062500	Practical Variance:0.000013075769 Therorectical Variance: 0.000014010072
+07:	0.062500	Practical Variance:0.000013045967 Therorectical Variance: 0.000014010072
+08:	0.062500	Practical Variance:0.000012233853 Therorectical Variance: 0.000014010072
+09:	0.062500	Practical Variance:0.000013865530 Therorectical Variance: 0.000014010072
+0a:	0.062500	Practical Variance:0.000014714897 Therorectical Variance: 0.000014010072
+0b:	0.062500	Practical Variance:0.000014178455 Therorectical Variance: 0.000014010072
+0c:	0.062500	Practical Variance:0.000009715557 Therorectical Variance: 0.000014010072
+0d:	0.062500	Practical Variance:0.000007189810 Therorectical Variance: 0.000014010072
+0e:	0.062500	Practical Variance:0.000022076070 Therorectical Variance: 0.000014010072
+0f:	0.062500	Practical Variance:0.000008717179 Therorectical Variance: 0.000014010072
+And mean and variance of variances are:0.000021851622	0.000000000092
+Round:16
+00:	0.062500	Practical Variance:0.000015303493 Therorectical Variance: 0.000016684333
+01:	0.062500	Practical Variance:0.000016413629 Therorectical Variance: 0.000016684333
+02:	0.062500	Practical Variance:0.000015772879 Therorectical Variance: 0.000016684333
+03:	0.062500	Practical Variance:0.000011965632 Therorectical Variance: 0.000016684333
+04:	0.062500	Practical Variance:0.000018194318 Therorectical Variance: 0.000016684333
+05:	0.062500	Practical Variance:0.000009432435 Therorectical Variance: 0.000016684333
+06:	0.062500	Practical Variance:0.000018194318 Therorectical Variance: 0.000016684333
+07:	0.062500	Practical Variance:0.000020720065 Therorectical Variance: 0.000016684333
+08:	0.062500	Practical Variance:0.000019915402 Therorectical Variance: 0.000016684333
+09:	0.062500	Practical Variance:0.000010453165 Therorectical Variance: 0.000016684333
+0a:	0.062500	Practical Variance:0.000018619001 Therorectical Variance: 0.000016684333
+0b:	0.062500	Practical Variance:0.000012136996 Therorectical Variance: 0.000016684333
+0c:	0.062500	Practical Variance:0.000013664365 Therorectical Variance: 0.000016684333
+0d:	0.062500	Practical Variance:0.000016748905 Therorectical Variance: 0.000016684333
+0e:	0.062500	Practical Variance:0.000020898879 Therorectical Variance: 0.000016684333
+0f:	0.062500	Practical Variance:0.000011831522 Therorectical Variance: 0.000016684333
+And mean and variance of variances are:0.000027473085	0.000000000153
+Round:17
+00:	0.062500	Practical Variance:0.000010222197 Therorectical Variance: 0.000013984740
+01:	0.062500	Practical Variance:0.000021062791 Therorectical Variance: 0.000013984740
+02:	0.062500	Practical Variance:0.000015974045 Therorectical Variance: 0.000013984740
+03:	0.062500	Practical Variance:0.000010520220 Therorectical Variance: 0.000013984740
+04:	0.062500	Practical Variance:0.000009216368 Therorectical Variance: 0.000013984740
+05:	0.062500	Practical Variance:0.000013001263 Therorectical Variance: 0.000013984740
+06:	0.062500	Practical Variance:0.000015623868 Therorectical Variance: 0.000013984740
+07:	0.062500	Practical Variance:0.000014275312 Therorectical Variance: 0.000013984740
+08:	0.062500	Practical Variance:0.000011943281 Therorectical Variance: 0.000013984740
+09:	0.062500	Practical Variance:0.000013373792 Therorectical Variance: 0.000013984740
+0a:	0.062500	Practical Variance:0.000010035932 Therorectical Variance: 0.000013984740
+0b:	0.062500	Practical Variance:0.000010058284 Therorectical Variance: 0.000013984740
+0c:	0.062500	Practical Variance:0.000014476478 Therorectical Variance: 0.000013984740
+0d:	0.062500	Practical Variance:0.000010013580 Therorectical Variance: 0.000013984740
+0e:	0.062500	Practical Variance:0.000009022653 Therorectical Variance: 0.000013984740
+0f:	0.062500	Practical Variance:0.000020951033 Therorectical Variance: 0.000013984740
+And mean and variance of variances are:0.000034061726	0.000000000453
+Round:18
+00:	0.062500	Practical Variance:0.000017866492 Therorectical Variance: 0.000014151633
+01:	0.062500	Practical Variance:0.000011198223 Therorectical Variance: 0.000014151633
+02:	0.062500	Practical Variance:0.000013798475 Therorectical Variance: 0.000014151633
+03:	0.062500	Practical Variance:0.000006720424 Therorectical Variance: 0.000014151633
+04:	0.062500	Practical Variance:0.000012226403 Therorectical Variance: 0.000014151633
+05:	0.062500	Practical Variance:0.000017844141 Therorectical Variance: 0.000014151633
+06:	0.062500	Practical Variance:0.000017262995 Therorectical Variance: 0.000014151633
+07:	0.062500	Practical Variance:0.000015169382 Therorectical Variance: 0.000014151633
+08:	0.062500	Practical Variance:0.000010207295 Therorectical Variance: 0.000014151633
+09:	0.062500	Practical Variance:0.000018395483 Therorectical Variance: 0.000014151633
+0a:	0.062500	Practical Variance:0.000018902123 Therorectical Variance: 0.000014151633
+0b:	0.062500	Practical Variance:0.000009059906 Therorectical Variance: 0.000014151633
+0c:	0.062500	Practical Variance:0.000012315810 Therorectical Variance: 0.000014151633
+0d:	0.062500	Practical Variance:0.000014558434 Therorectical Variance: 0.000014151633
+0e:	0.062500	Practical Variance:0.000011309981 Therorectical Variance: 0.000014151633
+0f:	0.062500	Practical Variance:0.000005438924 Therorectical Variance: 0.000014151633
+And mean and variance of variances are:0.000018706080	0.000000000046
+Round:19
+00:	0.062500	Practical Variance:0.000017896295 Therorectical Variance: 0.000014698505
+01:	0.062500	Practical Variance:0.000010959804 Therorectical Variance: 0.000014698505
+02:	0.062500	Practical Variance:0.000018127263 Therorectical Variance: 0.000014698505
+03:	0.062500	Practical Variance:0.000012233853 Therorectical Variance: 0.000014698505
+04:	0.062500	Practical Variance:0.000010140240 Therorectical Variance: 0.000014698505
+05:	0.062500	Practical Variance:0.000016734004 Therorectical Variance: 0.000014698505
+06:	0.062500	Practical Variance:0.000010311604 Therorectical Variance: 0.000014698505
+07:	0.062500	Practical Variance:0.000012524426 Therorectical Variance: 0.000014698505
+08:	0.062500	Practical Variance:0.000018514693 Therorectical Variance: 0.000014698505
+09:	0.062500	Practical Variance:0.000012069941 Therorectical Variance: 0.000014698505
+0a:	0.062500	Practical Variance:0.000010214746 Therorectical Variance: 0.000014698505
+0b:	0.062500	Practical Variance:0.000015251338 Therorectical Variance: 0.000014698505
+0c:	0.062500	Practical Variance:0.000009849668 Therorectical Variance: 0.000014698505
+0d:	0.062500	Practical Variance:0.000014886260 Therorectical Variance: 0.000014698505
+0e:	0.062500	Practical Variance:0.000016719103 Therorectical Variance: 0.000014698505
+0f:	0.062500	Practical Variance:0.000014044344 Therorectical Variance: 0.000014698505
+And mean and variance of variances are:0.000027824193	0.000000000206
+Round:20
+00:	0.062500	Practical Variance:0.000023119152 Therorectical Variance: 0.000015145540
+01:	0.062500	Practical Variance:0.000022113323 Therorectical Variance: 0.000015145540
+02:	0.062500	Practical Variance:0.000005543232 Therorectical Variance: 0.000015145540
+03:	0.062500	Practical Variance:0.000020511448 Therorectical Variance: 0.000015145540
+04:	0.062500	Practical Variance:0.000015951693 Therorectical Variance: 0.000015145540
+05:	0.062500	Practical Variance:0.000009618700 Therorectical Variance: 0.000015145540
+06:	0.062500	Practical Variance:0.000009484589 Therorectical Variance: 0.000015145540
+07:	0.062500	Practical Variance:0.000012926757 Therorectical Variance: 0.000015145540
+08:	0.062500	Practical Variance:0.000014387071 Therorectical Variance: 0.000015145540
+09:	0.062500	Practical Variance:0.000013574958 Therorectical Variance: 0.000015145540
+0a:	0.062500	Practical Variance:0.000010207295 Therorectical Variance: 0.000015145540
+0b:	0.062500	Practical Variance:0.000011667609 Therorectical Variance: 0.000015145540
+0c:	0.062500	Practical Variance:0.000022105873 Therorectical Variance: 0.000015145540
+0d:	0.062500	Practical Variance:0.000013850629 Therorectical Variance: 0.000015145540
+0e:	0.062500	Practical Variance:0.000012837350 Therorectical Variance: 0.000015145540
+0f:	0.062500	Practical Variance:0.000009283423 Therorectical Variance: 0.000015145540
+And mean and variance of variances are:0.000023482367	0.000000000112
+Round:21
+00:	0.062500	Practical Variance:0.000009909272 Therorectical Variance: 0.000014242530
+01:	0.062500	Practical Variance:0.000006139278 Therorectical Variance: 0.000014242530
+02:	0.062500	Practical Variance:0.000017583370 Therorectical Variance: 0.000014242530
+03:	0.062500	Practical Variance:0.000009663403 Therorectical Variance: 0.000014242530
+04:	0.062500	Practical Variance:0.000014603138 Therorectical Variance: 0.000014242530
+05:	0.062500	Practical Variance:0.000017307699 Therorectical Variance: 0.000014242530
+06:	0.062500	Practical Variance:0.000018551946 Therorectical Variance: 0.000014242530
+07:	0.062500	Practical Variance:0.000021152198 Therorectical Variance: 0.000014242530
+08:	0.062500	Practical Variance:0.000013329089 Therorectical Variance: 0.000014242530
+09:	0.062500	Practical Variance:0.000013805926 Therorectical Variance: 0.000014242530
+0a:	0.062500	Practical Variance:0.000006437302 Therorectical Variance: 0.000014242530
+0b:	0.062500	Practical Variance:0.000012353063 Therorectical Variance: 0.000014242530
+0c:	0.062500	Practical Variance:0.000011421740 Therorectical Variance: 0.000014242530
+0d:	0.062500	Practical Variance:0.000010073185 Therorectical Variance: 0.000014242530
+0e:	0.062500	Practical Variance:0.000017218292 Therorectical Variance: 0.000014242530
+0f:	0.062500	Practical Variance:0.000014089048 Therorectical Variance: 0.000014242530
+And mean and variance of variances are:0.000027441420	0.000000000216
+Round:22
+00:	0.062500	Practical Variance:0.000011697412 Therorectical Variance: 0.000014655292
+01:	0.062500	Practical Variance:0.000012777746 Therorectical Variance: 0.000014655292
+02:	0.062500	Practical Variance:0.000016175210 Therorectical Variance: 0.000014655292
+03:	0.062500	Practical Variance:0.000009700656 Therorectical Variance: 0.000014655292
+04:	0.062500	Practical Variance:0.000035054982 Therorectical Variance: 0.000014655292
+05:	0.062500	Practical Variance:0.000013381243 Therorectical Variance: 0.000014655292
+06:	0.062500	Practical Variance:0.000008821487 Therorectical Variance: 0.000014655292
+07:	0.062500	Practical Variance:0.000019371510 Therorectical Variance: 0.000014655292
+08:	0.062500	Practical Variance:0.000014640391 Therorectical Variance: 0.000014655292
+09:	0.062500	Practical Variance:0.000013358891 Therorectical Variance: 0.000014655292
+0a:	0.062500	Practical Variance:0.000009842217 Therorectical Variance: 0.000014655292
+0b:	0.062500	Practical Variance:0.000010542572 Therorectical Variance: 0.000014655292
+0c:	0.062500	Practical Variance:0.000013999641 Therorectical Variance: 0.000014655292
+0d:	0.062500	Practical Variance:0.000007927418 Therorectical Variance: 0.000014655292
+0e:	0.062500	Practical Variance:0.000010482967 Therorectical Variance: 0.000014655292
+0f:	0.062500	Practical Variance:0.000012055039 Therorectical Variance: 0.000014655292
+And mean and variance of variances are:0.000025794376	0.000000000184
+Round:23
+00:	0.062500	Practical Variance:0.000014238060 Therorectical Variance: 0.000012361010
+01:	0.062500	Practical Variance:0.000013567507 Therorectical Variance: 0.000012361010
+02:	0.062500	Practical Variance:0.000013656914 Therorectical Variance: 0.000012361010
+03:	0.062500	Practical Variance:0.000008322299 Therorectical Variance: 0.000012361010
+04:	0.062500	Practical Variance:0.000015884638 Therorectical Variance: 0.000012361010
+05:	0.062500	Practical Variance:0.000017583370 Therorectical Variance: 0.000012361010
+06:	0.062500	Practical Variance:0.000013165176 Therorectical Variance: 0.000012361010
+07:	0.062500	Practical Variance:0.000005289912 Therorectical Variance: 0.000012361010
+08:	0.062500	Practical Variance:0.000007748604 Therorectical Variance: 0.000012361010
+09:	0.062500	Practical Variance:0.000009544194 Therorectical Variance: 0.000012361010
+0a:	0.062500	Practical Variance:0.000013537705 Therorectical Variance: 0.000012361010
+0b:	0.062500	Practical Variance:0.000009596348 Therorectical Variance: 0.000012361010
+0c:	0.062500	Practical Variance:0.000012792647 Therorectical Variance: 0.000012361010
+0d:	0.062500	Practical Variance:0.000010825694 Therorectical Variance: 0.000012361010
+0e:	0.062500	Practical Variance:0.000009685755 Therorectical Variance: 0.000012361010
+0f:	0.062500	Practical Variance:0.000009976327 Therorectical Variance: 0.000012361010
+And mean and variance of variances are:0.000021564774	0.000000000109
+Round:24
+00:	0.062500	Practical Variance:0.000012882054 Therorectical Variance: 0.000011172394
+01:	0.062500	Practical Variance:0.000007055700 Therorectical Variance: 0.000011172394
+02:	0.062500	Practical Variance:0.000012956560 Therorectical Variance: 0.000011172394
+03:	0.062500	Practical Variance:0.000015288591 Therorectical Variance: 0.000011172394
+04:	0.062500	Practical Variance:0.000006653368 Therorectical Variance: 0.000011172394
+05:	0.062500	Practical Variance:0.000010780990 Therorectical Variance: 0.000011172394
+06:	0.062500	Practical Variance:0.000004924834 Therorectical Variance: 0.000011172394
+07:	0.062500	Practical Variance:0.000004760921 Therorectical Variance: 0.000011172394
+08:	0.062500	Practical Variance:0.000006809831 Therorectical Variance: 0.000011172394
+09:	0.062500	Practical Variance:0.000010557473 Therorectical Variance: 0.000011172394
+0a:	0.062500	Practical Variance:0.000011064112 Therorectical Variance: 0.000011172394
+0b:	0.062500	Practical Variance:0.000017687678 Therorectical Variance: 0.000011172394
+0c:	0.062500	Practical Variance:0.000011026859 Therorectical Variance: 0.000011172394
+0d:	0.062500	Practical Variance:0.000009328127 Therorectical Variance: 0.000011172394
+0e:	0.062500	Practical Variance:0.000013537705 Therorectical Variance: 0.000011172394
+0f:	0.062500	Practical Variance:0.000012271106 Therorectical Variance: 0.000011172394
+And mean and variance of variances are:0.000022745226	0.000000000163
+Round:25
+00:	0.062500	Practical Variance:0.000004179776 Therorectical Variance: 0.000014877319
+01:	0.062500	Practical Variance:0.000012919307 Therorectical Variance: 0.000014877319
+02:	0.062500	Practical Variance:0.000018678606 Therorectical Variance: 0.000014877319
+03:	0.062500	Practical Variance:0.000019878149 Therorectical Variance: 0.000014877319
+04:	0.062500	Practical Variance:0.000012889504 Therorectical Variance: 0.000014877319
+05:	0.062500	Practical Variance:0.000014901161 Therorectical Variance: 0.000014877319
+06:	0.062500	Practical Variance:0.000010706484 Therorectical Variance: 0.000014877319
+07:	0.062500	Practical Variance:0.000019364059 Therorectical Variance: 0.000014877319
+08:	0.062500	Practical Variance:0.000021867454 Therorectical Variance: 0.000014877319
+09:	0.062500	Practical Variance:0.000011943281 Therorectical Variance: 0.000014877319
+0a:	0.062500	Practical Variance:0.000014409423 Therorectical Variance: 0.000014877319
+0b:	0.062500	Practical Variance:0.000004537404 Therorectical Variance: 0.000014877319
+0c:	0.062500	Practical Variance:0.000018104911 Therorectical Variance: 0.000014877319
+0d:	0.062500	Practical Variance:0.000009655952 Therorectical Variance: 0.000014877319
+0e:	0.062500	Practical Variance:0.000015489757 Therorectical Variance: 0.000014877319
+0f:	0.062500	Practical Variance:0.000013634562 Therorectical Variance: 0.000014877319
+And mean and variance of variances are:0.000027582049	0.000000000210
+Round:26
+00:	0.062500	Practical Variance:0.000024110079 Therorectical Variance: 0.000013782084
+01:	0.062500	Practical Variance:0.000009283423 Therorectical Variance: 0.000013782084
+02:	0.062500	Practical Variance:0.000014483929 Therorectical Variance: 0.000013782084
+03:	0.062500	Practical Variance:0.000015191734 Therorectical Variance: 0.000013782084
+04:	0.062500	Practical Variance:0.000019483268 Therorectical Variance: 0.000013782084
+05:	0.062500	Practical Variance:0.000011079013 Therorectical Variance: 0.000013782084
+06:	0.062500	Practical Variance:0.000005632639 Therorectical Variance: 0.000013782084
+07:	0.062500	Practical Variance:0.000008665025 Therorectical Variance: 0.000013782084
+08:	0.062500	Practical Variance:0.000012651086 Therorectical Variance: 0.000013782084
+09:	0.062500	Practical Variance:0.000011280179 Therorectical Variance: 0.000013782084
+0a:	0.062500	Practical Variance:0.000011913478 Therorectical Variance: 0.000013782084
+0b:	0.062500	Practical Variance:0.000013522804 Therorectical Variance: 0.000013782084
+0c:	0.062500	Practical Variance:0.000008456409 Therorectical Variance: 0.000013782084
+0d:	0.062500	Practical Variance:0.000011853874 Therorectical Variance: 0.000013782084
+0e:	0.062500	Practical Variance:0.000014342368 Therorectical Variance: 0.000013782084
+0f:	0.062500	Practical Variance:0.000014781952 Therorectical Variance: 0.000013782084
+And mean and variance of variances are:0.000027702656	0.000000000237
+Round:27
+00:	0.062500	Practical Variance:0.000011995435 Therorectical Variance: 0.000013578931
+01:	0.062500	Practical Variance:0.000011160970 Therorectical Variance: 0.000013578931
+02:	0.062500	Practical Variance:0.000011429191 Therorectical Variance: 0.000013578931
+03:	0.062500	Practical Variance:0.000010393560 Therorectical Variance: 0.000013578931
+04:	0.062500	Practical Variance:0.000016346574 Therorectical Variance: 0.000013578931
+05:	0.062500	Practical Variance:0.000013053417 Therorectical Variance: 0.000013578931
+06:	0.062500	Practical Variance:0.000004388392 Therorectical Variance: 0.000013578931
+07:	0.062500	Practical Variance:0.000021912158 Therorectical Variance: 0.000013578931
+08:	0.062500	Practical Variance:0.000009752810 Therorectical Variance: 0.000013578931
+09:	0.062500	Practical Variance:0.000013835728 Therorectical Variance: 0.000013578931
+0a:	0.062500	Practical Variance:0.000015847385 Therorectical Variance: 0.000013578931
+0b:	0.062500	Practical Variance:0.000008098781 Therorectical Variance: 0.000013578931
+0c:	0.062500	Practical Variance:0.000014074147 Therorectical Variance: 0.000013578931
+0d:	0.062500	Practical Variance:0.000014260411 Therorectical Variance: 0.000013578931
+0e:	0.062500	Practical Variance:0.000006116927 Therorectical Variance: 0.000013578931
+0f:	0.062500	Practical Variance:0.000021018088 Therorectical Variance: 0.000013578931
+And mean and variance of variances are:0.000033748336	0.000000000463
+Round:28
+00:	0.062500	Practical Variance:0.000011332333 Therorectical Variance: 0.000014636417
+01:	0.062500	Practical Variance:0.000014089048 Therorectical Variance: 0.000014636417
+02:	0.062500	Practical Variance:0.000021964312 Therorectical Variance: 0.000014636417
+03:	0.062500	Practical Variance:0.000024057925 Therorectical Variance: 0.000014636417
+04:	0.062500	Practical Variance:0.000009797513 Therorectical Variance: 0.000014636417
+05:	0.062500	Practical Variance:0.000007808208 Therorectical Variance: 0.000014636417
+06:	0.062500	Practical Variance:0.000007346272 Therorectical Variance: 0.000014636417
+07:	0.062500	Practical Variance:0.000008136034 Therorectical Variance: 0.000014636417
+08:	0.062500	Practical Variance:0.000017166138 Therorectical Variance: 0.000014636417
+09:	0.062500	Practical Variance:0.000019811094 Therorectical Variance: 0.000014636417
+0a:	0.062500	Practical Variance:0.000010721385 Therorectical Variance: 0.000014636417
+0b:	0.062500	Practical Variance:0.000014953315 Therorectical Variance: 0.000014636417
+0c:	0.062500	Practical Variance:0.000017881393 Therorectical Variance: 0.000014636417
+0d:	0.062500	Practical Variance:0.000009313226 Therorectical Variance: 0.000014636417
+0e:	0.062500	Practical Variance:0.000014536083 Therorectical Variance: 0.000014636417
+0f:	0.062500	Practical Variance:0.000010631979 Therorectical Variance: 0.000014636417
+And mean and variance of variances are:0.000024353620	0.000000000139
+Round:29
+00:	0.062500	Practical Variance:0.000011987984 Therorectical Variance: 0.000013594329
+01:	0.062500	Practical Variance:0.000009246171 Therorectical Variance: 0.000013594329
+02:	0.062500	Practical Variance:0.000012934208 Therorectical Variance: 0.000013594329
+03:	0.062500	Practical Variance:0.000017143786 Therorectical Variance: 0.000013594329
+04:	0.062500	Practical Variance:0.000014960766 Therorectical Variance: 0.000013594329
+05:	0.062500	Practical Variance:0.000006444752 Therorectical Variance: 0.000013594329
+06:	0.062500	Practical Variance:0.000011339784 Therorectical Variance: 0.000013594329
+07:	0.062500	Practical Variance:0.000008575618 Therorectical Variance: 0.000013594329
+08:	0.062500	Practical Variance:0.000011019409 Therorectical Variance: 0.000013594329
+09:	0.062500	Practical Variance:0.000016704202 Therorectical Variance: 0.000013594329
+0a:	0.062500	Practical Variance:0.000009953976 Therorectical Variance: 0.000013594329
+0b:	0.062500	Practical Variance:0.000016838312 Therorectical Variance: 0.000013594329
+0c:	0.062500	Practical Variance:0.000015892088 Therorectical Variance: 0.000013594329
+0d:	0.062500	Practical Variance:0.000007085502 Therorectical Variance: 0.000013594329
+0e:	0.062500	Practical Variance:0.000020816922 Therorectical Variance: 0.000013594329
+0f:	0.062500	Practical Variance:0.000012971461 Therorectical Variance: 0.000013594329
+And mean and variance of variances are:0.000025716145	0.000000000184
+Round:30
+00:	0.062500	Practical Variance:0.000007092953 Therorectical Variance: 0.000016019742
+01:	0.062500	Practical Variance:0.000012248755 Therorectical Variance: 0.000016019742
+02:	0.062500	Practical Variance:0.000018984079 Therorectical Variance: 0.000016019742
+03:	0.062500	Practical Variance:0.000013820827 Therorectical Variance: 0.000016019742
+04:	0.062500	Practical Variance:0.000013336539 Therorectical Variance: 0.000016019742
+05:	0.062500	Practical Variance:0.000013306737 Therorectical Variance: 0.000016019742
+06:	0.062500	Practical Variance:0.000021979213 Therorectical Variance: 0.000016019742
+07:	0.062500	Practical Variance:0.000007681549 Therorectical Variance: 0.000016019742
+08:	0.062500	Practical Variance:0.000020630658 Therorectical Variance: 0.000016019742
+09:	0.062500	Practical Variance:0.000015422702 Therorectical Variance: 0.000016019742
+0a:	0.062500	Practical Variance:0.000011377037 Therorectical Variance: 0.000016019742
+0b:	0.062500	Practical Variance:0.000006012619 Therorectical Variance: 0.000016019742
+0c:	0.062500	Practical Variance:0.000016734004 Therorectical Variance: 0.000016019742
+0d:	0.062500	Practical Variance:0.000029467046 Therorectical Variance: 0.000016019742
+0e:	0.062500	Practical Variance:0.000012613833 Therorectical Variance: 0.000016019742
+0f:	0.062500	Practical Variance:0.000019587576 Therorectical Variance: 0.000016019742
+And mean and variance of variances are:0.000034606084	0.000000000419
+Round:31
+00:	0.062500	Practical Variance:0.000008553267 Therorectical Variance: 0.000013525287
+01:	0.062500	Practical Variance:0.000029139221 Therorectical Variance: 0.000013525287
+02:	0.062500	Practical Variance:0.000006601214 Therorectical Variance: 0.000013525287
+03:	0.062500	Practical Variance:0.000009305775 Therorectical Variance: 0.000013525287
+04:	0.062500	Practical Variance:0.000010184944 Therorectical Variance: 0.000013525287
+05:	0.062500	Practical Variance:0.000013388693 Therorectical Variance: 0.000013525287
+06:	0.062500	Practical Variance:0.000006198883 Therorectical Variance: 0.000013525287
+07:	0.062500	Practical Variance:0.000014603138 Therorectical Variance: 0.000013525287
+08:	0.062500	Practical Variance:0.000009901822 Therorectical Variance: 0.000013525287
+09:	0.062500	Practical Variance:0.000006921589 Therorectical Variance: 0.000013525287
+0a:	0.062500	Practical Variance:0.000014230609 Therorectical Variance: 0.000013525287
+0b:	0.062500	Practical Variance:0.000013671815 Therorectical Variance: 0.000013525287
+0c:	0.062500	Practical Variance:0.000010803342 Therorectical Variance: 0.000013525287
+0d:	0.062500	Practical Variance:0.000022895634 Therorectical Variance: 0.000013525287
+0e:	0.062500	Practical Variance:0.000006042421 Therorectical Variance: 0.000013525287
+0f:	0.062500	Practical Variance:0.000020436943 Therorectical Variance: 0.000013525287
+And mean and variance of variances are:0.000033116899	0.000000000458
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Round:1 pract c_a: 0.000000000000 theo c_a: 0.208333328366 diff c_a: 0.208333328366 Variance of variances:0.000023841858
+Round:2 pract c_a: 0.000053644180 theo c_a: 0.000995922135 diff c_a: 0.000942277955 Variance of variances:0.000000134929
+Round:3 pract c_a: 0.000082312916 theo c_a: 0.000092366354 diff c_a: 0.000010053438 Variance of variances:0.000000018367
+Round:4 pract c_a: 0.000012357389 theo c_a: 0.000009573126 diff c_a: 0.000002784263 Variance of variances:0.000000000818
+Round:5 pract c_a: 0.000002714300 theo c_a: 0.000002896167 diff c_a: 0.000000181867 Variance of variances:0.000000000691
+Round:6 pract c_a: 0.000002259238 theo c_a: 0.000002117160 diff c_a: 0.000000142078 Variance of variances:0.000000000712
+Round:7 pract c_a: 0.000000661685 theo c_a: 0.000001175444 diff c_a: 0.000000513759 Variance of variances:0.000000000151
+Round:8 pract c_a: 0.000001235339 theo c_a: 0.000002318322 diff c_a: 0.000001082983 Variance of variances:0.000000000138
+Round:9 pract c_a: 0.000002544029 theo c_a: 0.000002256047 diff c_a: 0.000000287982 Variance of variances:0.000000000266
+Round:10 pract c_a: 0.000001245313 theo c_a: 0.000001157391 diff c_a: 0.000000087922 Variance of variances:0.000000000267
+Round:11 pract c_a: 0.000000583181 theo c_a: 0.000001274770 diff c_a: 0.000000691590 Variance of variances:0.000000000032
+Round:12 pract c_a: 0.000002455807 theo c_a: 0.000001622988 diff c_a: 0.000000832819 Variance of variances:0.000000000149
+Round:13 pract c_a: 0.000001477955 theo c_a: 0.000001981582 diff c_a: 0.000000503627 Variance of variances:0.000000000353
+Round:14 pract c_a: 0.000001178269 theo c_a: 0.000001672943 diff c_a: 0.000000494674 Variance of variances:0.000000000121
+Round:15 pract c_a: 0.000001049226 theo c_a: 0.000001507447 diff c_a: 0.000000458220 Variance of variances:0.000000000092
+Round:16 pract c_a: 0.000001861589 theo c_a: 0.000002137858 diff c_a: 0.000000276270 Variance of variances:0.000000000153
+Round:17 pract c_a: 0.000000747953 theo c_a: 0.000001502000 diff c_a: 0.000000754047 Variance of variances:0.000000000453
+Round:18 pract c_a: 0.000001104406 theo c_a: 0.000001538064 diff c_a: 0.000000433658 Variance of variances:0.000000000046
+Round:19 pract c_a: 0.000001275685 theo c_a: 0.000001659234 diff c_a: 0.000000383549 Variance of variances:0.000000000206
+Round:20 pract c_a: 0.000002631222 theo c_a: 0.000001761695 diff c_a: 0.000000869527 Variance of variances:0.000000000112
+Round:21 pract c_a: 0.000001446692 theo c_a: 0.000001557885 diff c_a: 0.000000111193 Variance of variances:0.000000000216
+Round:22 pract c_a: 0.000004566781 theo c_a: 0.000001649492 diff c_a: 0.000002917289 Variance of variances:0.000000000184
+Round:23 pract c_a: 0.000001265739 theo c_a: 0.000001173462 diff c_a: 0.000000092277 Variance of variances:0.000000000109
+Round:24 pract c_a: 0.000000865261 theo c_a: 0.000000958636 diff c_a: 0.000000093375 Variance of variances:0.000000000163
+Round:25 pract c_a: 0.000002094620 theo c_a: 0.000001699850 diff c_a: 0.000000394770 Variance of variances:0.000000000210
+Round:26 pract c_a: 0.000000503365 theo c_a: 0.000001458784 diff c_a: 0.000000955419 Variance of variances:0.000000000237
+Round:27 pract c_a: 0.000001036276 theo c_a: 0.000001416095 diff c_a: 0.000000379819 Variance of variances:0.000000000463
+Round:28 pract c_a: 0.000002022870 theo c_a: 0.000001645246 diff c_a: 0.000000377624 Variance of variances:0.000000000139
+Round:29 pract c_a: 0.000001063931 theo c_a: 0.000001419308 diff c_a: 0.000000355377 Variance of variances:0.000000000184
+Round:30 pract c_a: 0.000002793566 theo c_a: 0.000001970935 diff c_a: 0.000000822632 Variance of variances:0.000000000419
+Round:31 pract c_a: 0.000001083049 theo c_a: 0.000001404929 diff c_a: 0.000000321879 Variance of variances:0.000000000458

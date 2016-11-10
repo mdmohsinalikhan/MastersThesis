@@ -1,0 +1,49 @@
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\contentsline {chapter}{Abbreviations and Acronyms}{4}{chapter*.1}
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
+\contentsline {chapter}{\numberline {2}Theoretical Background}{10}{chapter.2}
+\contentsline {section}{\numberline {2.1}Cryptosystem}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}Block Cipher}{12}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Substitution-Permutation Networks (SPN)}{14}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Cryptanalysis}{17}{section.2.3}
+\contentsline {section}{\numberline {2.4}PRESENT}{18}{section.2.4}
+\contentsline {section}{\numberline {2.5}Statistical Saturation Attack}{19}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Partitioning the Plaintext and Ciphertext}{19}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.6}Exploiting the Weakness}{21}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Comparing with Model Distribution:}{21}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Distinguishing Attack:}{23}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Probability Distribution}{24}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Gamma Distribution}{24}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Properties of Gamma Distribution}{24}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}$\chi ^2$-Distribution}{26}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Link Between $\chi ^2$ and $\Gamma $ Distribution}{27}{subsection.2.7.4}
+\contentsline {subsection}{\numberline {2.7.5}Binomial Distribution}{28}{subsection.2.7.5}
+\contentsline {section}{\numberline {2.8}Capacity of a Distribution}{28}{section.2.8}
+\contentsline {section}{\numberline {2.9}Distribution of Capacity}{29}{section.2.9}
+\contentsline {section}{\numberline {2.10}Distinguishing Distribution}{31}{section.2.10}
+\contentsline {chapter}{\numberline {3}Statistical Distinguishers}{35}{chapter.3}
+\contentsline {section}{\numberline {3.1}Model For One Fixation}{35}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Arbitrarily Fixed Fixation}{36}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Variable Fixation}{37}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Model for Multiple Fixations}{40}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}A given set of fixations}{40}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}A variable set of fixations}{45}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Alternative Models for Variable Set of Fixations}{47}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}First Alternative Model}{47}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Second Alternative Model}{50}{subsection.3.3.2}
+\contentsline {chapter}{\numberline {4}Experiment}{53}{chapter.4}
+\contentsline {section}{\numberline {4.1}ML and SSA Capacities:}{53}{section.4.1}
+\contentsline {section}{\numberline {4.2}Experiment on the Hypothesis:}{55}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Comparing ``Distance between theoretical and experimental $\sigma ^2_{C(a)}$'' with ``variance of $\sigma ^2_{p_{\eta }(a)}$ over all $\eta $''}{56}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}$T(\phi ,a)$:}{57}{section.4.3}
+\contentsline {section}{\numberline {4.4}Evaluating $T_{a}\left (\phi \right )$(Fixed fixation, variable sample)}{58}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}15 Rounds}{58}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}$T_a(\phi )$ with different fixations after $15$ rounds}{58}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Evaluating $T\left (a,\phi \right )$(Variable fixations, variable samples)}{59}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}$T\left (\phi ,a\right )$ as $N$ grows:}{60}{subsection.4.5.1}
+\contentsline {chapter}{\numberline {5}Data Complexity of SSA}{64}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{65}{chapter.6}

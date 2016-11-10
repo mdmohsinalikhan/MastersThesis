@@ -1,0 +1,10 @@
+gcc -c -g encryptionFunctions.c -lm
+gcc -c -g keyGenerationFunctions.c -lm
+gcc -c -g smallpresent.c -lm
+gcc -c -g sbox.c -lm
+gcc -c -g ssaPreparation.c -lm
+gcc -c -g ssaExperiments.c -lm
+gcc -c -g  generateSampleWithoutReplacement.c -lm
+gcc -o smallpresent encryptionFunctions.o keyGenerationFunctions.o sbox.o smallpresent.o ssaPreparation.o ssaExperiments.o generateSampleWithoutReplacement.o -lm
+./smallpresent
+

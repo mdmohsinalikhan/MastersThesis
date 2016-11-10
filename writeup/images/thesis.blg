@@ -1,0 +1,85 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: thesis.aux
+The style file: acm.bst
+Illegal, another \bibstyle command---line 330 of file thesis.aux
+ : \bibstyle
+ :          {plain}
+I'm skipping whatever remains of this command
+Database file #1: sources.bib
+I was expecting a `,' or a `}'---line 103 of file sources.bib
+ :   
+ :   publisher = {CRC Press}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 123 of file sources.bib
+ :   
+ :   booktitle = {Cryptographic Hardware and Embedded Systems - CHES 2007},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 139 of file sources.bib
+ :   
+ :   publisher = {CRC Press}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty year in sample_without_replacement
+Warning--empty year in Celine_Kaisa_non_linear_functions
+Warning--empty booktitle in bogdanov_PRESENT
+Warning--empty publisher in chi_square_definition_book
+Warning--empty year in chi_square_definition_book
+Warning--empty publisher in binomial_distribution_defn
+Warning--empty year in binomial_distribution_defn
+Warning--empty year in j_y_cho_linear_cryptanalysis
+Warning--empty year in Kaisa_perfect_non_linear_functions
+Warning--empty year in kaisa_mohsin_2015
+Warning--empty publisher in gamma_distribution_book
+Warning--empty year in gamma_distribution_book
+Warning--empty publisher in chi_gamma_link_book
+Warning--empty year in chi_gamma_link_book
+Warning--empty publisher in spn_definition_book
+Warning--empty year in spn_definition_book
+Warning--empty publisher in cryptosystem_definition_book
+Warning--empty year in cryptosystem_definition_book
+Warning--empty publisher in chi_square_normal_approximation
+Warning--empty year in chi_square_normal_approximation
+You've used 23 entries,
+            2253 wiz_defined-function locations,
+            627 strings with 7509 characters,
+and the built_in function-call counts, 7156 in all, are:
+= -- 648
+> -- 241
+< -- 0
++ -- 104
+- -- 78
+* -- 419
+:= -- 1056
+add.period$ -- 62
+call.type$ -- 23
+change.case$ -- 103
+chr.to.int$ -- 0
+cite$ -- 43
+duplicate$ -- 376
+empty$ -- 692
+format.name$ -- 78
+if$ -- 1585
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 25
+newline$ -- 111
+num.names$ -- 46
+pop$ -- 242
+preamble$ -- 1
+purify$ -- 85
+quote$ -- 0
+skip$ -- 236
+stack$ -- 0
+substring$ -- 370
+swap$ -- 117
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 78
+warning$ -- 20
+while$ -- 64
+width$ -- 25
+write$ -- 205
+(There were 4 error messages)

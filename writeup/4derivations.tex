@@ -1,0 +1,553 @@
+\chapter{Statistical Distinguishers}
+\label{chapter:statistical_distinguishers} In previous chapter we have discussed how to exploit the weakness of a cipher in SSA. Now we know that, to exploit the weakness of a block cipher by SSA, we need to be able to distinguish a distribution from random. It was shown how a statistical test can accomplish this task. We also have explained that we need a statistic to perform the statistical test and have defined the statistic that we have used in the test. While defining the statistic $T$ in previous chapter we have introduced two function $\Omega$ and $\omega$ but have not exactly defined them. In this chapter we define the statistic $T$ specifically by defining the exact mapping of $\Omega$ and $\omega$ .
+\par \noindent In the SSA introduced by Collard and Standaert \cite{SSA_Collard_Standaert}, a part of the plaintext is fixed and the distribution of a part of the ciphertext is observed. Let the plaintext be 
+\begin{eqnarray*}
+x&=&(x_s,x_t) \in \mathbb{F}_{2}^{s} \times \mathbb{F}_{2}^{t}
+\end{eqnarray*} and the ciphertext 
+\begin{eqnarray*}
+y = E(x,K) = (y_q,y_r) \in \mathbb{F}_{2}^{q} \times \mathbb{F}_{2}^{r}
+\end{eqnarray*} We fix the $x_s$ part of the plaintexts to different values and observe the distribution of $y_q$ part. We can define the functions $\Omega$ and $\omega$ differently based on how $x_s$ is fixed. In the following sections we will derive different distributions of the statistics $T$ defined differently, based on different variants of the functions $\Omega$ and $\omega$. 
+\section{Model For One Fixation} \label{section:model_for_one_fixation}
+We find the distribution of the statistic depending on the way the fixation is chosen. First, we derive the distribution for a given fixation $a$ and then we go for general case of any fixation $a \in \mathbb{F}^2_s$. For a fixed $a \in \mathbb{F}_{2}^{s}$ such that $x = (a,x_t)$ and $K \in \mathbb{F}_{2}^{l}$ the vectorial boolean function under consideration is
+\begin{eqnarray}
+\Omega_{a}: \phi \rightarrow \mathbb{F}_{2}^{q} \mbox{ where } \Omega_{a}(x_t)=y_q
+\end{eqnarray} where $y = E\left(\left(a,x_t\right),K\right) = (y_q,y_r)$ and $\phi \subseteq \mathbb{F}_{2}^{t}$ is sampled randomly with replacement. We also define another integer function $\omega_a:\mathbb{F}_2^q \rightarrow \mathbb{Z}$ such that for a given $\eta \in \mathbb{F}_2^q$
+\begin{eqnarray}
+\omega_a\left(\eta \right) =  \# \left\lbrace \Omega_a\left( x_t \right) = \eta \; \vert \; x_t \in \phi \right\rbrace  \label{eqn:omega_a}
+\end{eqnarray}
+%where $\_{a}(\eta) = \# \left\lbrace x|x = (a,x_t),x_t \in \phi, y_q = \eta \right\rbrace$. 
+\subsection{Arbitrarily Fixed Fixation}
+For a fixed fixation $a$ and any sample $\phi \subseteq \mathbb{F}_{2}^{t}$ such that $|\phi| = N \leq 2^t$, the statistic $T$ is denoted by $T_{a}(\phi)$ and defined as
+\begin{eqnarray}
+T_{a}(\phi) = \displaystyle\sum_{\eta = 0}^{2^q-1} \frac{\left( \omega_{a}(\eta)-N2^{-q}\right)^2}{N2^{-q}} \label{eqn:T_fixed_a_variable_phi}
+\end{eqnarray}
+We see that $\omega_{a}(\eta)$ is binomially distributed. So, according to (\ref{eqn:binomial_distribution_normal_approximation}), we can write 
+\begin{eqnarray*}
+\omega_{a}(\eta) \sim \mathcal{N}\left(\mu_{\omega_{\eta}(a)},\sigma^{2}_{\omega_{\eta}(a)}\right)
+\end{eqnarray*} where $\mu_{\omega_{a}(\eta)} = Np_{\eta}(a)$ and $\sigma^{2}_{\omega_{a}(\eta)} = N2^{-q}$. Then the random variable $X_{a}(\eta) = \omega_{a}(\eta)-N2^{-q}$  is also approximately normally distributed 
+\begin{eqnarray*}
+X_{a}(\eta) \sim \mathcal{N}(\mu_{X_{a}(\eta)},\sigma^{2}_{X_{a}(\eta)})
+\end{eqnarray*}  where $\mu_{X_{a}(\eta)} = \mu_{\omega_{a}(\eta)} - N2^{-q}$  and $\sigma^{2}_{X_{a}(\eta)} = \sigma^{2}_{\omega_{a}(\eta)}$. Now we can write 
+\begin{eqnarray*}
+T_{a}(\phi) &=& \displaystyle\sum_{\eta = 0}^{2^q-1} \frac{\left(X_{a}(\eta) \right)^2}{N2^{-q}} \\
+&=& \displaystyle\sum_{\eta = 0}^{2^q-1} \frac{\left( X_{a}(\eta) \right)^2}{\sigma^{2}_{X_{a}\left(\eta\right)}} \\
+&=& \displaystyle\sum_{\eta = 0}^{2^q-1} \frac{\left(X_{a}(\eta) \right)^2}{\sigma^{2}_{X_{a}\left(\eta\right)}}
+\end{eqnarray*} Then by Definition \ref{defn:chi_square_distribution} we can write
+\begin{eqnarray}
+T_{a}(\phi) &\sim & \chi_{2^q-1}^2(\delta(a))
+\end{eqnarray}where $\chi_{2^q-1}^2(\delta(a))$ is the non-central $\chi^2$ distribution with $2^q-1$ degrees of freedom and non-central parameter 
+\begin{eqnarray*}
+\delta(a) &=& \displaystyle\sum_{\eta = 0}^{2^q-1} \frac{(\mu_{X_{a}(\eta)})^2}{\sigma^{2}_{X_{a}(\eta)}}\\ 
+&=& \displaystyle\sum_{\eta = 0}^{2^q-1} \frac{(\mu_{\omega_{a}(\eta)} - \sigma^{2}_{\omega_{a}(\eta)})^2}{\sigma^{2}_{\omega_{a}(\eta)}}\\
+&=&\displaystyle\sum_{\eta = 0}^{2^q-1} \frac{(Np_{\eta}(a)-N2^{-q})^2}{N2^{-q}} \\
+&=& NC(a)
+\end{eqnarray*} Then by Definition \ref{defn:chi_square_distribution}, for each fixed $a$ the mean $\mu_{T_{a}(\phi)}$ and variance $\sigma^2_{T_{a}(\phi)}$ of $T_{a}(\phi)$, as the sample of size $N$ varies, are 
+\begin{eqnarray*}
+\mu_{T_{a}(\phi)} &=& 2^q -1 + NC(a)\\
+\sigma^2_{T_{a}(\phi)} &=& 2(2^q-1+2NC(a))
+\end{eqnarray*}
+By the normal approximation of $\chi^2$ distribution as given in (\ref{eqn:chi_square_non_central_normal_approx}), we can write:
+\begin{eqnarray*}
+T_{a}(\phi) &\sim & \mathcal{N}(\mu_{T_{a}(\phi)},\sigma^2_{T_{a}(\phi)})
+\end{eqnarray*}
+\begin{eqnarray}
+T_{a}(\phi) &\sim & \mathcal{N}\left(2^q -1 + NC(a),2(2^q-1+2NC(a)\right) \label{eqn:distribution_of_T_fixed_a_variable_phi}
+\end{eqnarray}
+\subsection{Variable Fixation}
+By Theorem \ref{general capacity distribution}, for any arbitrarily fixed fixation $a \in \mathbb{F}_2^{s}$, the capacity of the distribution $p(a)$ denoted by $C(a)$ is
+\begin{eqnarray*}
+C(a) \sim \Gamma\left(\frac{|Y|-1}{2},\frac{2C}{|Y|-1}\right)
+\end{eqnarray*} where we have assumed that $p\left(a\right)$ satisfies Hypothesis \ref{hyp:hypothesis_on_p_eta_a}. According to the property of gamma distribution as given in \ref{eqn:mean_gamma_dist} and \ref{eqn:variance_gamma_dist}, the mean and variance of $C\left(a\right)$ over all possible $a$ is $C$ and $\frac{2C^2}{|Y|-1}$ respectively. According to the link in between gamma and normal distribution given in Section $\ref{section:link_gamma_normal_distribution}$ we get
+\begin{eqnarray}
+C(a) \sim \mathcal{N}\left(C,\frac{2C^2}{|Y|-1}\right) \label{normal distribution C a}
+\end{eqnarray} We can derive the mean $\mu_{NC(a)}$ and variance $\sigma^{2}_{NC(a)}$ of $NC(a)$. 
+\begin{eqnarray*}
+\mu_{NC(a)} &=& N\mu_{C(a)} = NC \\
+\sigma^{2}_{NC(a)} &=& N^2\sigma^{2}_{C(a)} = N^2\frac{2C^2}{|Y|-1} = \frac{2(NC)^2}{|Y|-1}
+\end{eqnarray*}
+That implies
+\begin{eqnarray}
+NC(a) \sim \mathcal{N}\left(NC,\frac{2(NC)^2}{|Y|-1}\right) \label{Distribution of NC(a)}
+\end{eqnarray}
+\par \noindent We denote by $T\left(\phi,a \right)$ the statistic $T_a\left(\phi\right)$ where fixation $a$ also varies in the same way sample $\phi$ of size $N$ varies. Then we have the following result.
+\begin{theorem} \label{theorem: variable fixation}
+Let us assume that sample $\phi$ of size $N \leq 2^t$ drawn randomly with replacement with a fixed key and fixation $a$ of $s$ bits of the plaintext and the number $q$ of observed bits in the ciphertext is sufficiently large. If $p\left(a\right)$ satisfies Hypothesis \ref{hyp:hypothesis_on_p_eta_a}, then $T\left(\phi,a\right)$ is approximately normal with mean $\mu_{T\left(\phi,a\right)}$ and variance $\sigma^2_{T\left(\phi,a\right)}$, where
+\begin{eqnarray*}
+\mu_{T\left(\phi,a\right)} &=& 2^{-s}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}\mu_{T_{a}(\phi)} = 2^{q}-1+NC\\
+\sigma^2_{T\left(\phi,a\right)} &=& \frac{2}{2^q - 1}\left(2^q -1 + NC\right)^2
+\end{eqnarray*}
+\end{theorem}
+\begin{proof}
+For each fixed $a$ and variable sample $\phi$ of size $N$, according to (\ref{eqn:distribution_of_T_fixed_a_variable_phi}) we have 
+\begin{eqnarray*}
+T_{a}(\phi) &\sim & \mathcal{N}(2^q - 1 + NC(a),2(2^q -1 + 2NC(a)))
+\end{eqnarray*}
+And according to (\ref{Distribution of NC(a)}) we also have
+\begin{eqnarray*}
+NC(a) &\sim & \mathcal{N}\left(NC, \frac{2(NC)^2}{(2^q-1)}\right)
+\end{eqnarray*} Hence $T\left(\phi,a\right)$ is also a normal deviate. Now we derive the mean $\mu_{T\left(\phi,a\right)}$ and variance $\sigma^2_{T\left(\phi,a\right)}$ of $T\left(\phi,a\right)$. Let $\Phi$ be the set of all possible samples of size $N$. Then with variable fixation $a \in \mathbb{F}_{2}^{s}$ and variable sample $\phi \in \Phi$ where $|\phi|= N$, we can write:
+\begin{eqnarray*}
+\mu_{T\left(\phi,a\right)} &=& \frac{1}{2^s|\Phi|}\displaystyle\sum_{a \in \mathbb{F}_{2}^s, \phi \in \Phi}T\left(\phi,a\right) \\
+&=& \frac{1}{2^s|\Phi|}\displaystyle\sum_{a \in \mathbb{F}_{2}^s}\displaystyle\sum_{\phi \in \Phi}T_{a}(\phi) \\
+&=& \frac{1}{2^s}\displaystyle\sum_{a \in \mathbb{F}_{2}^s}\frac{1}{|\Phi|}\displaystyle\sum_{\phi \in \Phi}T_{a}(\phi)\\
+&=& \frac{1}{2^s}\displaystyle\sum_{a \in \mathbb{F}_{2}^s}\mu_{T_{a}(\phi)}\\
+&=& \frac{1}{2^s}\displaystyle\sum_{a \in \mathbb{F}_{2}^s}2^q -1 + NC(a)\\
+&=& 2^q -1 + \mu_{NC(a)}\\
+&=& 2^q -1 + NC
+\end{eqnarray*}
+Let $\mu_{\mu_{T_{a}(\phi)}}$ be the mean of $\mu_{T_{a}(\phi)}$ over all the fixation $a$. That means  $\mu_{T\left(\phi,a\right)} = \mu_{\mu_{T_{a}(\phi)}}$. So we write 
+\begin{scriptsize}
+\begin{eqnarray*}
+T\left(\phi,a\right) - \mu_{T\left(\phi,a\right)} &=& T - \mu_{T_{a}(\phi)} + \mu_{T_{a}(\phi)} - \mu_{\mu_{T_{a}(\phi)}}\\
+\left(T\left(\phi,a\right) - \mu_{T\left(\phi,a\right)}\right)^2 &=& \left((T\left(\phi,a\right) - \mu_{T_{a}(\phi)}) + (\mu_{T_{a}(\phi)} - \mu_{\mu_{T_{a}(\phi)}})\right)^2\\
+\frac{1}{2^{s}|\Phi|}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s},\phi \in \Phi}(T\left(\phi,a\right) - \mu_{T\left(\phi,a\right)})^2 &=& \frac{1}{2^{s}|\Phi|}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s},\phi \in \Phi}\left((T\left(\phi,a\right) - \mu_{T_{a}(\phi)}) + (\mu_{T_{a}(\phi)} - \mu_{\mu_{T_{a}(\phi)}})\right)^2\\
+\sigma^2_{T\left(\phi,a\right)} &=& \frac{1}{2^{s}|\Phi|}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s},\phi \in \Phi}\left((T\left(\phi,a\right) - \mu_{T_{a}(\phi)}) + (\mu_{T_{a}(\phi)} - \mu_{\mu_{T_{a}(\phi)}})\right)^2\\
+\end{eqnarray*}
+\end{scriptsize}
+Consequently we find
+\begin{tiny}
+\begin{eqnarray*}
+\sigma^2_{T\left(\phi,a\right)} &=& \frac{1}{2^{s}|\Phi|}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}\displaystyle\sum_{\phi \in \Phi}\left((T\left(\phi,a\right) - \mu_{T_{a}(\phi)})^2 + 2(T\left(\phi,a\right) - \mu_{T_{a}(\phi)})(\mu_{T_{a}(\phi)} - \mu_{\mu_{T_{a}(\phi)}})  + (\mu_{T_{a}(\phi)} - \mu_{\mu_{T_{a}(\phi)}})^2 \right)
+\end{eqnarray*}
+\end{tiny}Let MT denote the the middle term at the right side in the above equation. Now let us analyse MT. $(\mu_{T_{a}(\phi)} - \mu_{\mu_{T_{a}(\phi)}})$ part does not depend on the variable $\phi$ because $\mu_{T_{a}(\phi)}$ is the mean of $T_{a}(\phi)$ over all possible $\phi$ and $\mu_{\mu_{T_{a}(\phi)}}$ is a constant. As a result we can write
+\begin{eqnarray*}
+MT &=&\frac{1}{2^{s}|\Phi|}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}\displaystyle\sum_{\phi \in \Phi} 2(T\left(\phi,a\right) - \mu_{T_{a}(\phi)})(\mu_{T_{a}(\phi)} - \mu_{\mu_{T_{a}(\phi)}})\\
+&=& \frac{2}{2^{s}|\Phi|} \displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}(\mu_{T_{a}(\phi)} - \mu_{\mu_{T_{a}(\phi)}}) \displaystyle\sum_{\phi \in \Phi} (T\left(\phi,a\right) - \mu_{T_{a}(\phi)})
+\end{eqnarray*}
+Observe that for a fixed $a$, $T_{a}\left(\phi\right) = T\left(\phi,a\right)$.As a result we get
+\begin{eqnarray*}
+MT &=& \frac{2}{2^{s}|\Phi|} \displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}\left(\mu_{T_{a}(\phi)} - \mu_{\mu_{T_{a}(\phi)}}\right) \left( \displaystyle\sum_{\phi \in \Phi} T_a\left(\phi\right) - \displaystyle\sum_{\phi \in \Phi} \mu_{T_{a}(\phi)} \right)\\
+\end{eqnarray*}
+By the definition of mean we know that $\left( \displaystyle\sum_{\phi \in \Phi} T_a\left(\phi\right) = \displaystyle\sum_{\phi \in \Phi} \mu_{T_{a}(\phi)} \right)$. This implies $MT = 0$. And we can continue deriving the variance of $T\left(\phi,a\right)$ as following.
+\begin{eqnarray*}
+\sigma^2_{T\left(\phi,a\right)} &=& \frac{1}{2^{s}}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}\frac{1}{|\Phi|}\displaystyle\sum_{\phi \in \Phi}(T_{a}(\phi) - \mu_{T_{a}(\phi)})^2  + \frac{1}{2^{s}}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}\frac{1}{|\Phi|}\displaystyle\sum_{\phi \in \Phi}(\mu_{T_{a}(\phi)} - \mu_{\mu_{T_{a}(\phi)}})^2\\
+&=& \frac{1}{2^{s}}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}} \sigma^2_{T_{a}(\phi)} + \frac{1}{2^{s}}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}\frac{1}{|\Phi|}\displaystyle\sum_{\phi \in \Phi}(2^q -1 + NC(a) - 2^q + 1 - NC)^2\\
+&=& \frac{1}{2^{s}}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}} \sigma^2_{T_{a}(\phi)} + \frac{1}{2^{s}}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}\frac{1}{|\Phi|}\displaystyle\sum_{\phi \in \Phi}(NC(a) - NC)^2\\
+&=& \frac{1}{2^{s}}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}} \sigma^2_{T_{a}(\phi)} + \frac{1}{2^{s}}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}\sigma^{2}_{NC(a)}\\
+&=& \frac{1}{2^{s}}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}} 2(2^q-1+2NC(a)) + \frac{1}{2^{s}}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}\frac{2(NC)^2}{2^q-1}\\
+&=& 2(2^q-1+2NC) + \frac{2(NC)^2}{(2^q-1)}\\
+&=& \frac{2(2^q-1+2NC)(2^q - 1) + 2(NC)^2}{(2^q-1)}\\
+&=& \frac{2((2^q - 1)^2 + 2(NC)(2^q -1) + (NC)^2}{(2^q-1)} \\
+&=& \frac{2}{(2^q -1)}(2^q -1 + NC)^2
+\end{eqnarray*}
+\end{proof}
+\par \noindent To justify Hypothesis \ref{hyp:hypothesis_on_p_eta_a} we observe that 
+\begin{eqnarray*}
+2^{-s}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}p_{\eta}(a) = 2^{-q}
+\end{eqnarray*} as this probability is the probability of the event $y_q = \eta$ taken over all plaintexts. The variance $p_{\eta}\left(a\right)$ taken over $a$ may not be same for all $\eta \in \mathbb{F}_2^q$. We will see in the Experiment chapter that the variance of ``variance of $p_{\eta}\left( a \right)$ taken over $a$'' taken over $\eta$ is nonzero for any number of rounds. And the experimental and theoretical variance of $C\left(a\right)$ taken over all the possible $a$ also differs by large value. However, interestingly we have found that, this does not affect the distance in between the theoretical and experimental variance of the statistic $T$ as shown in Figures \ref{fig:T_a_phi_variable_a_varible_phi_variable_size_03rounds}, \ref{fig:T_a_phi_variable_a_varible_phi_variable_size_04rounds},
+\ref{fig:T_a_phi_variable_a_varible_phi_variable_size_22rounds},
+\ref{fig:T_a_phi_variable_a_varible_phi_variable_size_23rounds} for the case of SMALLPRESENT-[$4$]. In an upcoming research paper \citep{kaisa_mohsin_2015}, for SMALLPRESENT-[$8$], we have observed that the experimental variance of $T$ is very larger than the theoretical variance but this happens only when the distinguisher already distinguishes itself from the uniform one. As a result, such a distance in between theory and experiment does not affect our original goal significantly.
+
+\section{Model for Multiple Fixations} \label{section:model_for_multiple_fixations}
+Let $A \subseteq \mathbb{F}_{2}^{s}$ be a set of fixations, $\phi \subseteq \mathbb{F}_2^t$ be the sample which is sampled randomly with replacement and $\Phi$ is the set of all possible $\phi$. In this context, the functions $\Omega: A \times \phi \rightarrow \mathbb{F}_2^q$ and $\omega:A \times \mathbb{F}_2^q \rightarrow \mathbb{Z}$ are defined so that
+\begin{eqnarray}
+\Omega(a,x_t) &=& y_q \\
+\omega\left(a,\eta \right) &=&  \# \left\lbrace \Omega\left(a,x_t \right) = \eta \; \vert \; x_t \in \phi \right\rbrace  \label{eqn:omega_a_eta}
+\end{eqnarray} where $y = E\left(\left(a,x_t\right),K\right) = (y_q,y_r)$ and $a \in A$
+\subsection{A given set of fixations}
+For a given set of fixations $|A|=M$ and any sample $\phi$ such that $\lvert \phi \rvert = S \leq 2^t$, the size of the domain of the distribution to be distinguished from random is $M2^q$. The distribution of the function $\omega$ is composed of the probabilities $p_{\left(a,\eta\right)}(A)$. In this context, let the statistic $T$ be denoted by $T_{A}\left(\phi\right)$ is defined as
+\begin{eqnarray}
+T_{A}(\phi) = \displaystyle\sum_{a \in A}\displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}} \frac{(\omega(a,\eta) - N2^{-q}M^{-1})^2}{N2^{-q}M^{-1}}
+\label{eqn:T_for_a_set_of_fixations}
+\end{eqnarray} For simplicity, we restrict the considerations to the case where, for each
+fixation, the $q$ bits of the ciphertext is computed for equally many, say $S$, different $x_t \in \mathbb{F}_{2}^{t}$. Then $N = MS$, We also observe that for a given $a$, $w_a\left(\phi\right) = w\left(\phi,a\right)$ and $T_{a}\left( \phi \right) = T\left(\phi,a\right)$. Consequently, and we get 
+\begin{eqnarray*}
+T_{A}(\phi) &=& \displaystyle\sum_{a \in A}\displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}} \frac{(\omega(a,\eta) - S2^{-q})^2}{S2^{-q}} \\
+&=& \displaystyle\sum_{a \in A}\displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}} \frac{(\omega_a(\eta) - S2^{-q})^2}{S2^{-q}} \\
+&=& \displaystyle\sum_{a \in A}T_{a}(\phi)\\
+&=& \displaystyle\sum_{a \in A}T(\phi,a) 
+\end{eqnarray*}
+By Theorem \ref{theorem: variable fixation}, $T(\phi,a)$ is a normal deviate. And from the above equation we see $T_{A}\left(\phi\right)$ is a summation of $\lvert A \rvert = M$ number of normally distributed random variables. As a result, according to the property of normal distribution $T_{A}\left(\phi\right)$ is also normally distributed and we can write
+\begin{eqnarray*}
+T_{A}(\phi) &\sim & \mathcal{N}\left(M\mu_{T_{a}(\phi)},M\sigma_{T_{a}(\phi)}^2\right)\\
+&=& \mathcal{N}\left(M(2^q-1+SC),M\frac{2(2^q -1 +SC)^2}{(2^q -1)}\right)\\
+&=& \mathcal{N}\left(M(2^q-1)+MSC,M\frac{2(2^q -1 +SC)^2}{(2^q -1)}\right)\\
+\end{eqnarray*}
+Which implies
+\begin{eqnarray}
+T_{A}(\phi) &\sim & \mathcal{N}\left(M(2^q-1)+NC,\frac{2M(2^q -1 +SC)^2}{(2^q -1)}\right)
+\end{eqnarray}But the tools developed in this thesis work offer also an alternative approach to determine the distribution of $T_{A}(\phi)$. Instead of splitting the domain of the distribution of $(a,\eta)$ as a union of subdomains of size $2^q$ we can investigate the distribution over the large domain directly. 
+\par \noindent Let the capacity of the distribution $p\left(A\right) = \left( p_{\left(a,\eta \right)} \left(A\right) \right)$ be denoted by $C\left(A\right)$. We can now define $C\left(A\right)$ in the same way $C\left(a\right)$ is defined for the distribution $p\left(a\right) = \left( p_{\left(\eta \right)} \left(a\right) \right)$ in \ref{eqn:defn_c(a)} and write
+\begin{eqnarray*}
+C\left(A\right) = |A|2^q\displaystyle\sum_{\left(a,\eta \right) \in A \times \mathbb{F}_2^q} \left( p_{\left(a,\eta \right)}\left(A\right) - \frac{1}{|A|2^q} \right)^2
+\end{eqnarray*}
+By plugging in the definition of probability
+\begin{eqnarray*}
+p_{\left(a,\eta \right)}\left(A\right) = \frac{\#\lbrace x_t \in \mathbb{F}_{2}^{t}\;|\;x_s = a,y_q=\eta \rbrace}{|A|2^t},
+\end{eqnarray*} we can write 
+\begin{eqnarray}
+C\left(A\right) = |A|2^q\displaystyle\sum_{\left(a,\eta \right) \in A \times \mathbb{F}_2^q} \left( \frac{\#\lbrace x_t \in \mathbb{F}_{2}^{t}\;|\;x_s = a,y_q=\eta \rbrace}{|A|2^t} - \frac{1}{|A|2^q} \right)^2 \label{eqn:C(A)_elaborate}
+\end{eqnarray}
+\begin{lemma} \label{lemma:C(A)} Let us denote by $C(A)$ the capacity of the distribution over the values 
+$(a,\eta) \in A \times \mathbb{F}_{2}^{q}$ as $x_t$ varies in $\mathbb{F}_{2}^{t}$. Then 
+$$C(A)=\frac{1}{|A|}\displaystyle\sum_{a \in A}C(a)$$
+\end{lemma}
+\begin{proof}
+Let us recall that $C(a)$ is defined in (\ref{eqn:defn_c(a)}) as
+\begin{eqnarray}
+C(a) &=& 2^q \displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}}\left(p_{\eta}\left(a\right) -\frac{1}{2^q}\right)^2 \label{eqn:c(a)}
+\end{eqnarray}
+According to definition $p_{\eta}\left(a\right) = \frac{\#\lbrace x_t \in \mathbb{F}_{2}^{t}\;|\;x_s = a,y_q=\eta \rbrace}{2^t}$. By plugging this equality in \ref{eqn:c(a)}, we continue as following
+\begin{eqnarray*}
+|A|^{-1}\displaystyle\sum_{a \in A}C(a) &=& |A|^{-1}\displaystyle\sum_{a \in A}2^q \displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}}\left(\frac{\#\lbrace x_t \in \mathbb{F}_{2}^{t}\;|\;x_s = a,y_q=\eta \rbrace}{2^t} -\frac{1}{2^q}\right)^2\\
+&=& |A|^{-1}2^q\displaystyle\sum_{a \in A} \displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}}\left(\frac{\#\lbrace x_t \in \mathbb{F}_{2}^{t}\;|\;x_s = a,y_q=\eta \rbrace}{2^t} -\frac{1}{2^q}\right)^2\\
+&=& |A|^{-1}2^q\displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}, a \in A}\left(\frac{\#\lbrace x_t \in \mathbb{F}_{2}^{t}\;|\;x_s = a,y_q=\eta \rbrace}{2^t} -\frac{1}{2^q}\right)^2\\
+&=& |A|^{-1}2^q\displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}, a \in A}\frac{|A|^2}{|A|^2}\left(\frac{\#\lbrace x_t \in \mathbb{F}_{2}^{t}\;|\;x_s = a,y_q=\eta \rbrace}{2^t} -\frac{1}{2^q}\right)^2\\
+&=& |A|2^q\displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}, a \in A}\left(\frac{\#\lbrace x_t \in \mathbb{F}_{2}^{t}\;|\;x_s = a,y_q=\eta \rbrace}{|A|2^t} -\frac{1}{|A|2^q}\right)^2
+\end{eqnarray*}
+Now using (\ref{eqn:C(A)_elaborate}) in the last equality above, we have
+\begin{eqnarray*}
+|A|^{-1}\displaystyle\sum_{a \in A}C(a) &=& C(A), \mbox{ that is } \\
+C(A) &=& \frac{1}{|A|}\displaystyle\sum_{a \in A}C(a)
+\end{eqnarray*}
+\end{proof}
+\begin{lemma} \label{lemma:C(A)_2} Let $A$ be a set of fixations such that $A \subseteq \mathbb{F}_{2}^{s}$ and $|A|=M$ and $C(A)$ be the capacity of the distribution $(a,\eta)$ where $a \in A$ and $\eta \in \mathbb{F}_{2}^{q}$. The average capacity of $C(A)$ as $A$ runs over all possible subset of $\mathbb{F}_{2}^{s}$ such that $|A| = M$ is
+$C$ which is also the average capacity of $C(a)$
+\end{lemma}
+\begin{proof}
+Let $\mu_{C(A)}$ denote the average capacity of $C(A)$ and $\mathcal{F}$ be the set family that contains all the $M$-subset of $\mathbb{F}_{2}^{s}$. Then we can write
+$$\mu_{C(A)} = \frac{1}{|\mathcal{F}|}\displaystyle\sum_{A \in \mathcal{F}}C(A)$$
+Now as per the Lemma \ref{lemma:C(A)} we can write
+\begin{eqnarray*}
+\mu_{C(A)} &=& \frac{1}{|\mathcal{F}|}\displaystyle\sum_{A \in \mathcal{F}} |A|^{-1}\displaystyle\sum_{a \in A}C(a)\\
+&=& \frac{1}{|\mathcal{F}|M}\displaystyle\sum_{A \in \mathcal{F}} \displaystyle\sum_{a \in A}C(a)\\
+&=& \frac{1}{|\mathcal{F}|M}\displaystyle\sum_{A \in \mathcal{F}, a \in A}C(a)\\
+&=& \frac{1}{|\mathcal{F}|M}\displaystyle\sum_{A \in \mathcal{F}, a \in A}C(a)
+\end{eqnarray*} Observe that $|\mathcal{F}| = \binom{2^s}{M}$. As $A$ runs through $\mathcal{F}$ and $a$ runs through each of these $M$-subsets, each term $C\left(a\right)$ for each $a \in \mathbb{F}_2^s$ occurs $\binom{2^s - 1}{M-1}$ many times. So, we can continue with the proof as following
+\begin{eqnarray*}
+\mu_{C(A)} &=& \frac{\binom{2^s - 1}{M-1}}{\binom{2^s}{M}M}\displaystyle\sum_{a \in \mathbb{F}_2^s}C(a) \\
+&=& \frac{1}{2^s}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}C(a) \\
+&=& C
+\end{eqnarray*}
+
+\end{proof}
+\begin{corollary} \label{corollary C A}
+The capacity $C(A)$ of set $A$ of size $M$ is approximately a normal deviate with mean $\mu_{C(A)} = C$ and variance $\sigma^{2}_{C(A)} = \frac{2C^2}{M(2^q-1)}$
+\end{corollary}
+\begin{proof}
+We know $C\left(a\right)$ is a normal deviate. According to the definition, $C\left(A\right)$ is average of $C\left(a\right)$ over all the $a \in A$. We know that average of a collection of normally distributed random variable is also normally distributed. Consequently $C\left(A\right)$ is a normal deviate. From lemma 2 we see that the mean $\mu_{C(A)} = C$. We know $C\left(A\right) = \frac{1}{|A|}\displaystyle\sum_{a \in A}C\left(a\right)$. So variance of $C\left(A\right)$ will be $\frac{1}{|A|^2}$ times the variance of $\displaystyle\sum_{a \in A}C\left(a\right)$. And variance of $\displaystyle\sum_{a \in A}C\left(a\right)$ is $|A|$ times the variance of $C\left(a\right)$. As a result, we write
+\begin{eqnarray*}
+\sigma^{2}_{C(A)} &=& \frac{1}{|A|^{2}}|A|\sigma_{C(a)}^{2}\\
+&=& \frac{2C^2}{M(2^q-1)}
+\end{eqnarray*}
+\end{proof}
+
+\begin{corollary} \label{corollary:T_A_phi}
+For each fixed set $A \subseteq \mathbb{F}_{2}^{s}$ such that $|A| = M$ and variable sample of size $N = MS$ where $S$ is the size of the sample $\phi \subseteq \mathbb{F}_2^t$ drawn randomly with replacement for each fixation $a \in A$, the statistic $T_{A}(\phi)$ is $\chi^2$-distributed with non-central parameter $\delta(A)=NC(A)$ where degree of freedom is $M2^q-1$. That is
+\begin{eqnarray*}
+T_{A}(\phi) \sim \chi^2_{M2^{q}-1}(NC(A))
+\end{eqnarray*}
+\end{corollary}
+\begin{proof}
+Recall the definition of $T_{A}(\phi)$
+\begin{eqnarray*}
+T_{A}(\phi) = \displaystyle\sum_{a \in A}\displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}} \frac{(\omega(a,\eta) - N2^{-q}M^{-1})^2}{N2^{-q}M^{-1}}
+\end{eqnarray*}
+%$$\implies T_{\phi,a \in A}(A) = \displaystyle\sum_{a \in A}\displaystyle\sum_{\nu \in %\mathbb{F}_{2}^{q}} \frac{(N_{a,\nu}(A) - \frac{N}{2^{q}M})^2}{\frac{N}{2^{q}M}}$$
+Here $\omega(a,\eta)$ is non-uniformly binomially distributed. So the mean and variance of $\omega(a,\eta)$ are $\mu_{\omega(a,\eta)} = Np_{\left( a,\eta \right)}\left(A\right)$ and $\sigma^{2}_{\omega(a,\eta)} = \frac{N}{M2^{q}}$. Where $\left( p_{\left(a,\eta\right)\left(A\right)} \right)$ is the probability distribution of function $\omega$. As a result we get
+\begin{eqnarray*}
+T_{A}(\phi) = \displaystyle\sum_{a \in A}\displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}} \frac{(\omega(a,\eta) - \mu_{\omega(a,\eta)})^2}{\sigma^{2}_{\omega(a,\eta)}}
+\end{eqnarray*} Now let us assume that $X = \omega(a,\eta) - \sigma^{2}_{\omega(a,\eta)}$. Then the mean and variance of $X$ are $\mu_{X} = Np_{\left(a,\eta\right)}(A) - \frac{N}{M2^q}$ and $\sigma^{2}_{X} = \frac{N}{M2^q}$. So we write 
+\begin{eqnarray*}
+T_{A}(\phi) = \displaystyle\sum_{a \in A,\eta \in \mathbb{F}_{2}^{q}}\frac{(X)^2}{\sigma^{2}_{X}}
+\end{eqnarray*} Now as per the definition of non-central $\chi^2$ distribution we see that
+\begin{eqnarray*}
+T_{A}(\phi) \sim \chi^{2}_{|A|2^q-1}(\delta(A))\\
+T_{A}(\phi) \sim \chi^{2}_{M2^q-1}(\delta(A))
+\end{eqnarray*} where 
+\begin{eqnarray*}
+\delta(A) &=& \displaystyle\sum_{a \in A, \eta \in \mathbb{F}_{2}^{q}}\frac{\mu_{X}^2}{\sigma^{2}_{X}}\\
+&=& \displaystyle\sum_{a \in A, \eta \in \mathbb{F}_{2}^{q}}\frac{(Np_{\left(a,\eta\right)}(A) - \frac{N}{M2^q})^2}{\frac{N}{M2^q}}\\
+&=& NM2^q\displaystyle\sum_{a \in A, \eta \in \mathbb{F}_{2}^{q}}\left(p_{\left(a,\eta\right)}(A) - \frac{1}{M2^q}\right)^2 \\
+&=& NM2^q\displaystyle\sum_{a \in A, \eta \in \mathbb{F}_{2}^{q}}\left(\frac{1}{|A|}p_{\left(\eta\right)}(a) - \frac{1}{M2^q}\right)^2 \\
+&=& NM\displaystyle\sum_{a \in A} 2^q \displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}}\left(\frac{1}{|M|}p_{\left(\eta\right)}(a) - \frac{1}{M2^q}\right)^2 \\
+&=& NM\displaystyle\sum_{a \in A} \frac{1}{M^2} 2^q \displaystyle\sum_{\eta \in \mathbb{F}_{2}^{q}}\left(p_{\left(\eta\right)}(a) - \frac{1}{2^q}\right)^2 \\
+&=& N\frac{1}{|A|}\displaystyle\sum_{a \in A} C\left(a\right) \\
+&=& NC(A)
+\end{eqnarray*} The last equality is as per Lemma \ref{lemma:C(A)}. That means:
+\begin{eqnarray*}
+T_{A}(\phi) \sim \chi^{2}_{M2^q-1}(NC(A))
+\end{eqnarray*}
+\end{proof}\noindent So now as per the property of $\chi^2$-distribution the mean and variance of $T_{A}(\phi)$ are 
+\begin{eqnarray}
+\mu_{T_{A}(\phi)} &=& M2^q-1+NC(A) \label{eqn:T_A_phi_mean} \\
+\sigma_{T_{A}(\phi)}^{2} &=& 2(M2^q-1+2NC(A)) \label{eqn:T_A_phi_variance}
+\end{eqnarray}And according to the normal approximation of $\chi^2$-distribution mentioned in Section \ref{section:normal_approximation_of_chi_square_distribution}, we have 
+\begin{eqnarray}
+T_{A}(\phi) &\sim & \mathcal{N}\left(M2^q-1+NC(A),2(M2^q-1+2NC(A))\right) \label{eqn:T_A_phi_variable_phi_fixed_A}
+\end{eqnarray}
+where $\phi$ is sampled randomly with replacement.
+\subsection{A variable set of fixations}
+\begin{lemma} \label{varible set of fixation T phi A}
+Now let us consider the statistic $T\left(\phi,A\right)$ where the sample $\phi$ of size $S$ which is sampled randomly with replacement and the set of fixations $A$ of size $M$ both are variable and $N=MS$. Then the mean and variance of $T\left(\phi,A\right)$ are 
+\begin{eqnarray*}
+\mu_{T\left(\phi,A\right)} &=& M2^q-1 + NC \\
+%\sigma^{2}_{T\left(\phi,A\right)} &=& 2(M2^q-1+2N\mu_{C(A)}) + \frac{2(N\mu_{C(A)})^2}{M(2^q-1)}
+\sigma^{2}_{T\left(\phi,A\right)} &=& 2(M2^q-1 + 2NC) + N^2\sigma_{C\left(A\right)}^2
+\end{eqnarray*}
+\end{lemma}
+\begin{proof}
+Let $\Phi$ is the set of all the $\phi$ with $|\phi|=S$. According to the definition, the mean of $T\left(a,\phi\right)$ over all the possible value of $a$ and $\phi$ is
+\begin{eqnarray}
+\mu_{T\left(\phi,A \right)} &=& \frac{1}{|\mathcal{F}||\Phi|}\displaystyle\sum_{\phi \in \Phi, A \in \mathcal{F}}T\left(\phi,A\right) \label{eqn:T(a,phi)}
+\end{eqnarray}
+It is immediate to see that for a given set of fixations $A$, $T\left(\phi,A\right) = T_{A}\left(\phi\right)$. Using this equality in (\ref{eqn:T(a,phi)}), we obtain
+\begin{eqnarray*}
+\mu_{T\left(\phi,A \right)} &=& \frac{1}{|\mathcal{F}|}\displaystyle\sum_{A \in \mathcal{F}}\frac{1}{|\Phi|}\displaystyle\sum_{\phi \in \Phi}T_{A}\left(\phi\right) \label{eqn:T_phi_A_1}
+\end{eqnarray*}
+Consequently we can write 
+\begin{eqnarray}
+\mu_{T\left(\phi,A \right)} &=& \frac{1}{|\mathcal{F}|}\displaystyle\sum_{A \in |\mathcal{F}|}\mu_{T_{A}(\phi)} \label{eqn:T_A_phi_2}\\ 
+&=& \mu_{\mu_{T_{A}(\phi)}} \label{eqn:T_A_phi_3}
+\end{eqnarray}
+Now, by plugging (\ref{eqn:T_A_phi_mean}) in (\ref{eqn:T_A_phi_2}) we obtain
+\begin{eqnarray*}
+\mu_{T\left(\phi,A \right)} &=& \frac{1}{|\mathcal{F}|}\displaystyle\sum_{A \in |\mathcal{F}|}(M2^q-1+NC(A))\\
+&=& \frac{|\mathcal{F}|(M2^q-1)}{|\mathcal{F}|}+\frac{1}{|\mathcal{F}|}\displaystyle\sum_{A \in |\mathcal{F}|}(NC(A))\\
+&=& M2^q-1 + N\mu_{C(A)}
+\end{eqnarray*}
+By applying the Lemma \ref{lemma:C(A)_2} in the last equality above, we can write
+\begin{eqnarray}
+\mu_{T\left(\phi,A \right)} &=& M2^q-1 + NC
+\end{eqnarray}
+Using (\ref{eqn:T_A_phi_3}), we can write 
+\begin{eqnarray}
+T\left(\phi,A\right) - \mu_{T\left(\phi,A\right)} &=& T\left(\phi,A\right) - \mu_{T_{A}(\phi)} + \mu_{T_{A}(\phi)} - \mu_{\mu_{T_{A}(\phi)}} \label{T phi A - mu T phi A}
+\end{eqnarray} Taking the average of the square of both side of (\ref{T phi A - mu T phi A}) over all the possible fixations and samples we have 
+\begin{eqnarray*}
+\sigma^{2}_{T\left(\phi,A\right)} &=& \frac{1}{|\mathcal{F}||\Phi|}\displaystyle\sum_{\phi \in \Phi, A \in \mathcal{F}}(T\left(\phi,A\right) - \mu_{T_{A}(\phi)} + \mu_{T_{A}(\phi)} - \mu_{\mu_{T_{A}(\phi)}})^2
+\end{eqnarray*}
+By expanding the right side of the above equation we can write
+\begin{eqnarray*}
+\sigma^{2}_{T\left(\phi,A\right)} &=& \frac{1}{|\mathcal{F}||\Phi|}\displaystyle\sum_{\phi \in \Phi, A \in \mathcal{F}}(T\left(\phi,A\right) - \mu_{T_{A}(\phi)})^2\\
+&+& \frac{1}{|\mathcal{F}||\Phi|}\displaystyle\sum_{}(\mu_{T_{A}(\phi)} - \mu_{\mu_{T_{A}(\phi)}})^2 \\
+&+& \frac{1}{|\mathcal{F}||\Phi|}\displaystyle\sum_{\phi \in \Phi, A \in \mathcal{F}}2(T\left(\phi,A\right) - \mu_{T_{A}(\phi)})(\mu_{T_{A}(\phi)} - \mu_{\mu_{T_{A}(\phi)}}) \label{eqn:variance_T_A_phi}
+\end{eqnarray*}
+
+Let MT denote the the third term at the right side in the above equation. Now let us analyse MT. $(\mu_{T_{A}(\phi)} - \mu_{\mu_{T_{A}(\phi)}})$ part does not depend on the variable $\phi$ because $\mu_{T_{A}(\phi)}$ is the mean of $T_{A}(\phi)$ over all possible $\phi$ and $\mu_{\mu_{T_{A}(\phi)}}$ is a constant. As a result we can write
+\begin{eqnarray*}
+MT &=& \frac{1}{|\mathcal{F}||\Phi|}\displaystyle\sum_{\phi \in \Phi, A \in \mathcal{F}}2\left( T\left(\phi,A\right) - \mu_{T_{\phi,a}\left(A\right)} \right)\left(\mu_{T_{A}(\phi)} - \mu_{\mu_{T_{A}(\phi)}}\right)\\
+&=& \frac{2}{|\mathcal{F}||\Phi|} \displaystyle\sum_{A \in \mathcal{F}}\left(\mu_{T_{A}(\phi)} - \mu_{\mu_{T_{A}(\phi)}}\right) \displaystyle\sum_{\phi \in \Phi} \left(T\left(\phi,A\right) - \mu_{T_{A}(\phi)}\right)
+\end{eqnarray*}
+Observe that for a fixed $A$, $T_{A}\left(\phi\right) = T\left(\phi,A\right)$.As a result we get
+\begin{eqnarray*}
+MT &=& \frac{2}{|\mathcal{F}||\Phi|} \displaystyle\sum_{A \in \mathbb{F}_{2}^{s}}\left(\mu_{T_{A}(\phi)} - \mu_{\mu_{T_{A}(\phi)}}\right) \left( \displaystyle\sum_{\phi \in \Phi} T_A\left(\phi\right) - \displaystyle\sum_{\phi \in \Phi} \mu_{T_{A}(\phi)} \right)\\
+\end{eqnarray*}
+By the definition of mean we know that $\left( \displaystyle\sum_{\phi \in \Phi} T_A\left(\phi\right) = \displaystyle\sum_{\phi \in \Phi} \mu_{T_{A}(\phi)} \right)$. This implies $MT = 0$. And we can continue deriving the variance of $T\left(\phi,A\right)$ as following.
+\begin{eqnarray*}
+\sigma^{2}_{T\left(\phi,A\right)} &=& \frac{1}{|\mathcal{F}|}\displaystyle\sum_{A \in \mathcal{F}}\frac{1}{|\Phi|}\displaystyle\sum_{\phi \in \Phi}(T_{A}\left(\phi\right) - \mu_{T_{A}(\phi)})^2\\
+&+& \frac{1}{|\mathcal{F}||\Phi|}\displaystyle\sum_{\phi \in \Phi, A \in \mathcal{F}}(M2^q-1+NC(A) - M2^q+1-NC)^2
+\end{eqnarray*}
+By simplifying the right side of the above equation we obtain
+\begin{eqnarray}
+\sigma^{2}_{T\left(\phi,A\right)} &=& \frac{1}{|\mathcal{F}|}\displaystyle\sum_{A \in \mathcal{F}}\sigma_{T_{A}(\phi)}^{2} + \frac{1}{|\mathcal{F}||\Phi|}\displaystyle\sum_{\phi \in \Phi, A \in \mathcal{F}}(NC(A)-NC)^2 \label{eqn:T_A_phi_variance_2}
+\end{eqnarray}
+Now by using the (\ref{eqn:T_A_phi_variance}) in (\ref{eqn:T_A_phi_variance_2}) we can continue the derivation as following
+\begin{eqnarray*}
+\sigma^{2}_{T\left(\phi,A\right)} &=& \frac{1}{|\mathcal{F}|}\displaystyle\sum_{A \in \mathcal{F}}2(M2^q-1+2NC(A)) + \frac{1}{|\mathcal{F}||\Phi|}\displaystyle\sum_{\phi \in \Phi, A \in \mathcal{F}}(NC(A)-NC)^2\\
+&=& \frac{1}{|\mathcal{F}|}\displaystyle\sum_{A \in \mathcal{F}}2(M2^q-1)+4NC(A) + \frac{N^2}{|\mathcal{F}||\Phi|}\displaystyle\sum_{\phi \in \Phi, A \in \mathcal{F}}(C(A)-C)^2\\
+\end{eqnarray*}
+The mean of $C\left(A\right)$ over all possible $A$ is $C$ according to Lemma \ref{lemma:C(A)_2}. So, according to the definition of the variance of any statistic and using the fact that $2\left(M2^q -1 \right),4N$, and $\sigma_{C\left(A\right)}^2$ over all possible $A$  are constant, we can write the following:
+\begin{eqnarray*}
+\sigma^{2}_{T\left(\phi,A\right)} &=& 2(M2^q-1) + \frac{4N}{|\mathcal{F}|}\displaystyle\sum_{A \in \mathcal{F}} C(A) + \frac{N^2}{|\Phi|}\displaystyle\sum_{\phi \in \Phi}\frac{1}{|\mathcal{F}|}\displaystyle\sum_{A \in \mathcal{F}}(C(A)-C)^2\\
+&=& 2(M2^q-1) + \frac{4N}{|\mathcal{F}|}\displaystyle\sum_{A \in \mathcal{F}} C(A) + \frac{N^2}{|\Phi|}\displaystyle\sum_{\phi \in \Phi}\sigma_{C(A)}^{2}\\
+&=& 2(M2^q-1)+4NC + N^2\sigma_{C(A)}^{2}\\
+&=& 2(M2^q-1+2NC) + N^2\sigma_{C(A)}^{2}
+\end{eqnarray*}
+\end{proof}Recall that our objective is to find the distribution of the statistic $T$ and in this context, $T\left(a,\phi \right)$. From Lemma \ref{varible set of fixation T phi A}, we can find the mean and variance of $T\left(a,\phi \right)$. And from Corollary \ref{corollary C A}, we find the value of $\sigma_{C(A)}^{2}$. So, by using the corollary in the lemma, we can continue computing the variance of $T\left(a,\phi\right)$ as following
+\begin{eqnarray*}
+\sigma^{2}_{T\left(\phi,A\right)} &=& 2(M2^q-1+2NC) + N^2\sigma_{C(A)}^{2}\\
+&=& 2(M2^q-1+2NC) + \frac{2(NC)^2}{M(2^q-1)}\\
+&=& \frac{2(M2^q-M+M-1+2NC)M(2^q-1) + 2(NC)^2}{M(2^q-1)}\\
+&=& \frac{2(M(2^q-1)+(M-1)+2NC)M(2^q-1) + 2(NC)^2}{M(2^q-1)}\\
+&=&\frac{2((M(2^q-1))^2+M(2^q-1)(M-1)+2NCM(2^q-1))+ (NC)^2}{M(2^q-1)}\\
+&=& \frac{2((M(2^q-1))^2+2NCM(2^q-1))+ (NC)^2}{M(2^q-1)}+\frac{2M(2^q-1)(M-1)}{M(2^q-1)}\\
+&=& \frac{2(M(2^q-1)+ NC)^2}{M(2^q-1)}+2(M-1)
+\end{eqnarray*} As mentioned in Section \ref{section:link_gamma_normal_distribution}, $T_{A}(\phi)$-is approximately normally distributed. Now as $C(A)$ is normally distributed, so is $NC\left(A\right)$. As a result, $T\left(\phi,A\right)$ is also normally distributed. That is
+\begin{eqnarray*}
+T\left(\phi,A\right) &\sim & \mathcal{N}(\mu_{T\left(\phi,A\right)},\sigma_{T\left(\phi,A\right)}^{2})
+\end{eqnarray*}
+And consequently
+%\begin{scriptsize}
+\begin{eqnarray*}
+T\left(\phi,A\right) &\sim & \mathcal{N}\left(M2^q-1 + NC,\frac{2(M(2^q-1)+ NC)^2}{M(2^q-1)}+2(M-1)\right) 
+\end{eqnarray*}
+%\end{scriptsize}
+where $\phi$ is sampled randomly with replacement. We observe that for sufficiently large value of $q$, the term $2(M-1)$ is negligibly small in the above variance. And $q$ is always sufficiently large. To simplify the analysis of the data complexity of the distinguisher based on the statistic $T(\phi,A)$ we have used the following approximation
+\begin{eqnarray}
+T\left(\phi,A\right) &\sim & \mathcal{N}\left(M2^q-1 + NC,\frac{2(M(2^q-1)+ NC)^2}{M(2^q-1)}\right) \label{eqn:T_a_variable_set_of_fixations}
+\end{eqnarray}
+
+%\section{Alternative Model for Variable Set of Fixations}
+\iffalse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{First Alternative Model}
+\begin{corollary} 
+Let $\mathcal{F}$ denotes the set of all the disjoint subsets of $\mathbb{F}_{2}^{s}$ such that $\bigcup A_j = \mathbb{F}_{2}^{s}$ where $A_j \in \mathcal{F}$ and for all $j \neq k$ it holds that $A_j \cap A_k = \emptyset$ and $|A_j|=|A_k|$. Let $p_{\eta}(A_j)$ denotes the probability of getting $y_q = \eta$ where the fixation $a \in A_j$ and $A_j \in \mathcal{F}$. Then $p_{\eta}(A_j)$ is $i.i.d$ for a fixed $\eta$ and variable $A_j \in \mathcal{F}$ and 
+\begin{eqnarray*}
+p_{\eta}(A_j) &\sim & \mathcal{N}\left(\frac{1}{2^q},\frac{C}{|A_j|2^q(2^q-1)}\right)
+\end{eqnarray*}
+\end{corollary}
+\begin{proof} As per the definition we have
+\begin{eqnarray*}
+p_{\eta}(A_j) &=& \frac{\# \lbrace (x_s,x_t) \in \mathbb{F}_{2}^{s} \times \mathbb{F}_{2}^{t}|x_s \in A_j, y_q = \eta \rbrace }{|A_j|2^t}
+\end{eqnarray*} where $(y_q,y_r) = E_k(x_s,x_t)$. Which means
+\begin{eqnarray*}
+p_{\eta}(A_j) &=& \displaystyle\sum_{a \in A_j}\frac{\# \lbrace (a,x_t) \in \mathbb{F}_{2}^{s} \times \mathbb{F}_{2}^{t}| y_q = \eta \rbrace }{|A_j|2^t}\\
+&=& \frac{1}{|A_j|}\displaystyle\sum_{a \in A_j}\frac{\# \lbrace (a,x_t) \in \mathbb{F}_{2}^{s} \times \mathbb{F}_{2}^{t}| y_q = \eta \rbrace }{2^t}\\
+&=& \frac{1}{|A_j|}\displaystyle\sum_{a \in A_j}p_{\eta}(a)
+\end{eqnarray*} From Hypothesis 1 we know that $p_{\eta}(a)$ is $i.i.d$ for a fixed $\eta$ and variable fixation $a$. Consequently $p_{\eta}(A_j)$ is $i.i.d$ for a fixed $\eta$ and variable $A_j \in \mathcal{F}$. From Hypothesis 1 we know that 
+\begin{eqnarray*}
+p_{\eta}(a) \sim \mathcal{N}\left(\frac{1}{2^q},\frac{C}{2^q(2^q-1)}\right)
+\end{eqnarray*}where $C$ is the average capacity of the distribution of $y_q \in \mathbb{F}_{2}^{q}$. Consequently 
+\begin{eqnarray*}
+p_{\eta}(A_j) \sim \mathcal{N}\left(\mu_{p_{\eta}(A_j)},\sigma^{2}_{p_{\eta}(A_j)}\right)
+\end{eqnarray*}
+where
+\begin{eqnarray*}
+\mu_{p_{\eta}(A_j)} &=& \frac{1}{|\mathcal{F}|}\displaystyle\sum_{A_j \in \mathcal{F}}p_{\eta}(A_j)= \frac{1}{|\mathcal{F}|}\displaystyle\sum_{A_j \in \mathcal{F}}\frac{1}{|A_j|}\displaystyle\sum_{a \in A_j}p_{\eta}(a)\\
+&=& \frac{1}{|\mathcal{F}||A_j|}\displaystyle\sum_{A_j \in \mathcal{F},a \in A_j}p_{\eta}(a)=\frac{1}{2^s}\displaystyle\sum_{a \in \mathbb{F}_{2}^{s}}p_{\eta}(a)\\
+&=& \frac{1}{2^q}\\
+\sigma^2_{p_{\eta}(A_j)}&=&\sigma^2_{\frac{1}{|A_j|}\displaystyle\sum_{a \in A_j}p_{\eta}(a)} = \frac{1}{|A_j|^2}\sigma^2_{\displaystyle\sum_{a \in A_j}p_{\eta}(a)}\\
+&=&\frac{1}{|A_j|^2}\frac{|A_j|C}{2^q(2^q-1)}=\frac{C}{|A_j|2^q(2^q-1)}
+\end{eqnarray*}As a result 
+\begin{eqnarray*}
+p_{\eta}(A_j) &\sim & \mathcal{N}\left(\frac{1}{2^q},\frac{C}{|A_j|2^q(2^q-1)}\right)
+\end{eqnarray*}
+\end{proof}
+\begin{theorem}
+Given a family $p(A_j)$, $A_j \in \mathcal{F}$ of probability distributions the capacity where $\mathcal{F}$ denotes the set of all the disjoint subsets of $\mathbb{F}_{2}^{s}$ such that $\bigcup A_j = \mathbb{F}_{2}^{s}$ where $A_j \in \mathcal{F}$ and for all $j \neq k$ it holds that $A_j \cap A_k = \emptyset$ and $|A_j|=|A_k|$. Then the capacity $C(A_j)$ is distributed as 
+\begin{eqnarray*}
+C(A_j) &\sim & \mathcal{N}\left(\frac{C}{A_j},\frac{2C^2}{|A_j|^2(2^q -1)}\right)
+\end{eqnarray*}
+\end{theorem}
+\begin{proof}
+By the above corollary and definition of $\chi^2$-distribution we obtain that
+\begin{eqnarray*}
+Q &=& \displaystyle\sum_{\eta}\frac{\left(p_{\eta}(A_j) - \mu_{p_{\eta}(A_j)}\right)^2}{\sigma_{p_{\eta}(A_j)}^2} \sim \chi^{2}_{2^q-1}\\
+Q2^q\sigma_{p_{\eta}(A_j)}^2 &=& 2^q\displaystyle\sum_{\eta}\left(p_{\eta}(A_j) - \mu_{p_{\eta}(A_j)}\right)^2\\
+C(A_j) &=& Q2^q\sigma_{p_{\eta}(A_j)}^2
+\end{eqnarray*}
+Now, as we know from the discussion of theoretical background that, $\chi^2$-distribution is a gamma distribution with the shape parameter $\alpha = \frac{\nu}{2}$ and the scale parameter $\beta = 2$ where $\nu$ is the degree of freedom of the $\chi^2$ distribution. Then we can write
+\begin{eqnarray*}
+Q \sim \Gamma\left(\frac{\left(2^q-1\right)}{2},2\right)
+\end{eqnarray*}Now we see $2^q\sigma_{p_{\eta}(A_j)}^2$ is a constant and $Q$ is a Gamma distribution. So as per the property of gamma distribution we can write
+\begin{eqnarray*}
+C(A_j) &\sim & \Gamma\left(\frac{2^q-1}{2},22^q\sigma_{p_{\eta}(A_j)}^2\right)\\
+C(A_j) &\sim & \Gamma\left(\frac{(2^q-1)}{2},22^q\frac{C}{|A_j|2^q(2^q-1)}\right)\\
+C(A_j) &\sim & \Gamma\left(\frac{(2^q-1)}{2},\frac{2C}{|A_j|(2^q-1)}\right)
+\end{eqnarray*}
+Now as per the property of Gamma distribution mentioned in (\ref{eqn:mean_gamma_dist}) and (\ref{eqn:variance_gamma_dist}),the mean $\mu_{C(A_j)}$ and variance $\sigma_{C(A_j)}^2$ of $C(A_j)$ are
+\begin{eqnarray*}
+\mu_{C(A_j)} &=& \frac{2^q-1}{2}22^q\sigma_{p_{\eta}(A_j)}^2\\
+&=& (2^q-1)2^q\sigma_{p_{\eta}(A_j)}^2\\
+%(discuss about  $C_{w}(A_j)$ Vs $C(A_j)$)
+&=& (2^q-1)2^q\frac{C}{|A_j|2^q(2^q-1)}\\
+&=& \frac{C}{|A_j|}\\
+\sigma_{C(A_j)}^2 &=& \frac{(2^q-1)}{2}\left(\frac{2C}{|A_j|(2^q-1)}\right)^2\\
+&=& \frac{2C^2}{|A_j|^2(2^q -1)}
+\end{eqnarray*}
+As gamma distribution is approximately a normal distribution with the same mean and variance, we can write
+\begin{eqnarray*}
+C(A_j) &\sim & \mathcal{N}\left(\frac{C}{A_j},\frac{2C^2}{|A_j|^2(2^q -1)}\right)
+\end{eqnarray*}
+\end{proof}
+\emph{\color{red}TO DO: Discuss here that this alternative approximation is of no help}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Second Alternative Model}
+
+\iffalse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+By carefully studying the derivation of the distribution of $T\left(\phi,A\right)$ in Section \ref{section:model_for_multiple_fixations}, we see that the derivation is based on the distribution of $C(A)$. In Section \ref{section:model_for_multiple_fixations}, we computed the variance of $C\left(A\right)$ over all possible $A$ in Corollary \ref{corollary C A}. This computation was based on the variance of $C\left(a\right)$ over all the possible $a$. In our alternative model, we compute the variance of $C\left(A\right)$ in a different way. Apart from the way this variance is computed, the rest of the part of the alternative model follows the same approach as in Section \ref{section:model_for_multiple_fixations}. However, using the different approach of computing the variance of $C\left(A\right)$ we obtain a result with is slightly different from the one we obtained in Corollary \ref{corollary C A}. Consequently, the rest of the algebraic simplifications following the computation of the variance of $C\left(A\right)$  are not identical in this section with those in Section \ref{section:model_for_multiple_fixations}
+\begin{corollary} Let $\mathcal{F}$ denote the set of all the equal length and disjoint subsets of $\mathbb{F}_{2}^{s}$. That is for all $j \neq k$, $A_j \cap A_K = \emptyset$, $|A_j| = |A_k|$ and $\bigcup A_j = \mathbb{F}_{2}^{s}$. Let $p_{\left(a,\eta\right)}(A)$ be the probability of getting $(x_s,y_q) = (a,\eta)$ where the fixation $a \in A$ and $A \in \mathcal{F}$. Then $p_{\left(a,\eta\right)}(A)$ is independently distributed for a fixed $\left( a,\eta \right)$ and variable $A$ as following:
+\begin{eqnarray*}
+p_{\left( a,\eta\right)}(A) \sim \mathcal{N}\left(\frac{p_{\eta}(a)}{2^s},\frac{C}{|A|2^q(|A|2^q-1)}\right)
+\end{eqnarray*}where $C$ is the capacity of the probability distribution $p\left(A\right) = \left( p_{\left(a,\eta\right)}\left(A\right) \right)$
+\end{corollary}
+
+\begin{proof}
+For any arbitrary set of fixations $A$ and fixed $a,\eta$ we have $p_{a,\eta}(A) = p_{a}(A)p_{\eta}(a)$. Consequently the average $\mu_{p_{a,\eta}(A_j)}$ of $p_{a,\eta}(A)$ taken over all the possible values of $A \in \mathcal{F}$  
+\begin{eqnarray*}
+\mu_{p_{a,\eta}(A_j)} &=& \frac{1}{|\mathcal{F}|} \displaystyle\sum_{A_j \in \mathcal{F}}p_{a}(A_j)p_{\eta}(a)
+\end{eqnarray*}
+Now as $A_j$ are disjoint, there is only one $A_j$ such that $a \in A_j$. Consequently we can write 
+\begin{eqnarray*}
+\mu_{p_{a,\eta}(A_j)} &=& \frac{1}{|\mathcal{F}||A_j|}p_{\eta}(a)\\
+&=& \frac{p_{\eta}(a)}{2^s}
+\end{eqnarray*}
+Now like the previous cases, let us now define the statistic $Q$ as follows
+\begin{eqnarray*}
+Q &=& \displaystyle\sum_{a,\eta}\frac{\left(p_{a,\eta}(A_j)-\mu_{p_{a,\eta}}(A_j)\right)^2}{\sigma^2_{p_{a,\eta}(A_j)}}\\
+|A_j|2^q\sigma^2_{p_{a,\eta}(A_j)}Q &=& |A_j|2^q\displaystyle\sum_{a,\eta}\left(p_{a,\eta}(A_j) - \mu_{p_{a,\eta}(A_j)}\right)^2\\
+C(A_j) &=& |A_j|2^q\sigma^2_{p_{a,\eta}(A_j)}Q
+\end{eqnarray*}
+As per the definition and properties of $\chi^2$ and $\Gamma$ distribution we can write the following
+\begin{eqnarray*}
+Q &\sim & \chi^2_{|A_j|2^q-1}\\
+Q &\sim & \Gamma\left(\frac{|A_j|2^q - 1}{2},2\right)
+\end{eqnarray*}Now as $Q$ is a $\Gamma$ distribution and $|A_j|2^q\sigma^2_{p_{a,\eta}(A_j)}$ is constant, we observe that 
+\begin{eqnarray*}
+C(A_j) &\sim & \Gamma\left(\frac{|A_j|2^q-1}{2},2|A_j|2^q\sigma^2_{p_{a,\eta}(A_j)}\right)
+\end{eqnarray*}
+Using the lemma we can show that $\mu_{C(A_j)} = C$. As per the property of gamma distribution as mentioned in (\ref{eqn:mean_gamma_dist}), we see the mean of $C(A_j)$ is following
+\begin{eqnarray*}
+\mu_{C(A_j)} &=& C\\
+&=& (\frac{|A_j|2^q-1}{2})\left(2|A_j|2^q\sigma^2_{p_{a,\eta}(A_j)}\right)\\
+&=& (|A_j|2^q-1)|A_j|2^q\sigma^2_{p_{a,\eta}(A_j)}\\
+\sigma^2_{p_{a,\eta}(A_j)} &=& \frac{C}{|A_j|2^{q}(|A_j|2^q-1)} 
+\end{eqnarray*} 
+\end{proof}
+And similarly as per the property of gamma distribution mentioned in \ref{eqn:variance_gamma_dist} we see that 
+\begin{eqnarray*}
+\sigma^2_{C(A_j)} &=& \frac{(|A_j|2^q-1)}{2}\left(2|A_j|2^q\sigma^2_{p_{a,\eta}(A_j)}\right)^2\\
+&=& \frac{(|A_j|2^q-1)}{2}\left(4|A_j|^22^{2q}\left(\sigma^2_{p_{a,\eta}(A_j)}\right)^2\right)\\
+&=& \frac{(|A_j|2^q-1)}{2}\left(4|A_j|^22^{2q}\left(\frac{C}{|A_j|2^{q}(|A_j|2^q-1)}\right)^2\right)\\
+&=& \frac{(|A_j|2^q-1)}{2}\left(\frac{4|A_j|^22^{2q}C^2}{(|A_j|2^{q}(|A_j|2^q-1))^2}\right)\\
+&=& \frac{2C^2}{|A_j|2^q-1}
+\end{eqnarray*}
+Now as gamma distribution is approximately normal distribution as mentioned in \ref{section:link_gamma_normal_distribution}, we have the following:
+\begin{eqnarray*}
+C(A_j) \sim \mathcal{N}\left(C,\frac{2C^2}{|A_j|2^q-1}\right)
+\end{eqnarray*}
+By Corollarry \ref{corollary:T_A_phi}, we can write
+\begin{eqnarray*}
+T_{A}(\phi) &\sim & \chi^2_{|A_j|2^q-1}(NC(A))
+\end{eqnarray*}Then as per the property of $\chi^2$-distribution mentioned in Definition \ref{defn:chi_square_distribution}, the mean and variance of $T_{A}(\phi)$ are
+\begin{eqnarray*}
+\mu_{T_{A}(\phi)} &=& |A_j|2^q-1+NC(A)\\
+\sigma^2_{T_{A}(\phi)} &=& 2\left(|A_j|2^q-1+2NC(A)\right)
+\end{eqnarray*}Since $\chi^2$ distribution is approximately normal distribution as mentioned in \ref{section:normal_approximation_of_chi_square_distribution}, we can write
+\begin{eqnarray}
+T_{A}(\phi) &\sim & \mathcal{N}\left(|A_j|2^q-1+NC(A),2(|A_j|2^q-1+2NC(A))\right)
+\end{eqnarray} Now, as per Lemma \ref{varible set of fixation T phi A} we get
+\begin{eqnarray*}
+\mu_{T\left(\phi,A\right)} &=& M2^q-1 + NC
+\end{eqnarray*}
+And using the same lemma we can calculate $\sigma^2_{T\left(\phi,A\right)}$. In this case we get
+\begin{eqnarray*}
+\sigma^{2}_{T\left(\phi,A\right)} &=& 2(M2^q-1+2NC) + N^2\sigma_{C(A)}^{2}\\
+&=& 2(M2^q-1+2NC) + N^2\frac{2C^2}{|A_j|2^q-1}\\
+&=& 2(|A_j|2^q-1+2NC) + 2\frac{(NC)^2}{|A_j|2^q-1}\\
+&=& \frac{2(|A_j|2^q-1+2NC)(|A_j|2^q-1)+2(NC)^2}{|A_j|2^q-1}\\
+&=& \frac{2((|A_j|2^q-1)^2+2(NC)(|A_j|2^q-1)+(NC)^2)}{|A_j|2^q-1}\\
+&=& \frac{2((|A_j|2^q-1)+(NC))^2}{|A_j|2^q-1}
+\end{eqnarray*}Which means 
+\begin{eqnarray}
+T\left(\phi,A\right) \sim \mathcal{N}\left(|A_j|2^q-1+NC,\frac{2((|A_j|2^q-1)+(NC))^2}{|A_j|2^q-1}\right)
+\end{eqnarray}
+The result is identical with Theorem \ref{theorem: variable fixation} which models the statistic for one fixation when $|A_j|=1$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fi

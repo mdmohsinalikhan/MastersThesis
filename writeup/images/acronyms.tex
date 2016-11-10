@@ -1,0 +1,26 @@
+\addcontentsline{toc}{chapter}{Abbreviations and Acronyms}
+\chapter*{Abbreviations and Acronyms}
+
+% The longtable environment should break the table properly to multiple pages, 
+% if needed
+
+\noindent
+\begin{longtable}{@{}p{0.25\textwidth}p{0.7\textwidth}@{}}
+ML & Multidimensional Linear\\
+TD & Truncated Differential\\
+SS & Statistical Saturation\\
+SSA & Statistical Saturation Attack\\
+SPN & Substitution Permutation Network\\
+$a$ & A constant value at the input of an SS trail known as \textit{fixation} of the trail input \\
+$\eta$ & A constant value at the output of an SS trail known as \textit{output} or value at the trail output\\
+$A$ & Set of $a$\\
+$\mathcal{F}$ & Set of $A$ \\
+$\phi$ & A set of values at the non-trail input known as \textit{sample} \\
+$\Phi$ & Set of $\phi$\\
+$\mu_x$ & Mean of the random variable $x$ \\
+$\sigma^2_x$ & Variance of the random variable $x$ \\
+$T_a:\Phi \rightarrow \mathbb{R}$ & A mapping from a set of samples to the set of real numbers for a given value $a$ used for all samples; also called as statistic $T$ for a fixed fixation\\
+$T_A:\Phi \rightarrow \mathbb{R}$ & A mapping from a set of samples to the set of real numbers such that $T_{A}\left(\phi\right) = \displaystyle\sum_{a \in A} T_{a}(\phi)$. For all the samples $\phi \in \Phi$, the domain of $a$ remains constant to $A$; also called as statistic $T$ for a fixed set of fixation\\
+$T:\Phi \times A \rightarrow \mathbb{R}$ & A mapping from a set of samples and a set of fixations to the set of real numbers; also called as statistic $T$ for a variable fixation\\
+$T:\Phi \times \mathcal{F} \rightarrow \mathbb{R}$& A mapping from a set of samples and a set of subsets of fixations to the set of real numbers such that $T\left(\phi,A\right) = \displaystyle\sum_{a \in A} T(\phi,a)$; also called as statistic $T$ for a variable set of fixation
+\end{longtable}

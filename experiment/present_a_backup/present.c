@@ -1,0 +1,359 @@
+#include<stdio.h>
+
+#define ROUND 31
+#define BLOCKLENGTH 64
+#define KEYLENGTH 80
+
+void generateRoundKeys();
+void printRoundKeys();
+void rotateKey61bitLeft(int r);
+void applySBoxOnKey(int r);
+unsigned char sBox(unsigned char input);
+void addRoundCounterOnKey(int r);
+void printState(int r);
+
+void applyRoundFunction(int r);
+void addRoundKey(int r);
+void applySBox(int r);
+void applyPBox(int r);
+
+int powOf2(int x);
+
+unsigned char plaintext[ROUND+1][BLOCKLENGTH/8];
+unsigned char keys[ROUND][KEYLENGTH/8];
+
+
+unsigned char sBox(unsigned char input)
+{
+	if(input == 0x00)
+		return 0x0C;
+	else if (input == 0x01)
+		return 0x05;
+	else if (input == 0x02)
+		return 0x06;
+	else if (input == 0x03)
+		return 0x0B;
+	else if (input == 0x04)
+		return 0x09;
+	else if (input == 0x05)
+		return 0x00;
+	else if (input == 0x06)
+		return 0x0A;
+	else if (input == 0x07)
+		return 0x0D;
+	else if (input == 0x08)
+		return 0x03;
+	else if (input == 0x09)
+		return 0x0E;
+	else if (input == 0x0A)
+		return 0x0F;
+	else if (input == 0x0B)
+		return 0x08;
+	else if (input == 0x0C)
+		return 0x04;
+	else if (input == 0x0D)
+		return 0x07;
+	else if (input == 0x0E)
+		return 0x01;
+	else if (input == 0x0F)
+		return 0x02;
+}
+
+void addRoundCounterOnKey(int r)
+{
+	keys[r][2] = keys[r][2] ^ (r >> 1);
+	keys[r][1] = keys[r][1] ^ (r << 7);
+}
+
+void applySBoxOnKey(int r)
+{
+	unsigned char input;
+	input = keys[r][9] >> 4;
+	keys[r][9] = (keys[r][9] & 0x0f) ^ (sBox(input) << 4);	
+}
+
+void rotateKey61bitLeft(int r)
+{
+	keys[r][0]=keys[r-1][2] >> 3;
+	keys[r][0]= keys[r][0] ^ (keys[r-1][3] & 0x07) << 5;
+
+	keys[r][1]=keys[r-1][3] >> 3;
+	keys[r][1]= keys[r][1] ^ (keys[r-1][4] & 0x07) << 5;
+
+	keys[r][2]=keys[r-1][4] >> 3;
+	keys[r][2]= keys[r][2] ^ (keys[r-1][5] & 0x07) << 5;
+
+	keys[r][3]=keys[r-1][5] >> 3;
+	keys[r][3]= keys[r][3] ^ (keys[r-1][6] & 0x07) << 5;
+
+	keys[r][4]=keys[r-1][6] >> 3;
+	keys[r][4]= keys[r][4] ^ (keys[r-1][7] & 0x07) << 5;
+
+	keys[r][5]=keys[r-1][7] >> 3;
+	keys[r][5]= keys[r][5] ^ (keys[r-1][8] & 0x07) << 5;
+
+	keys[r][6]=keys[r-1][8] >> 3;
+	keys[r][6]= keys[r][6] ^ (keys[r-1][9] & 0x07) << 5;
+
+
+	keys[r][7]=keys[r-1][9] >> 3;
+	keys[r][7]= keys[r][7] ^ (keys[r-1][0] & 0x07) << 5;
+
+	keys[r][8]=keys[r-1][0] >> 3;
+	keys[r][8]= keys[r][8] ^ (keys[r-1][1] & 0x07) << 5;
+
+	keys[r][9]=keys[r-1][1] >> 3;
+	keys[r][9]= keys[r][9] ^ (keys[r-1][2] & 0x07) << 5;
+}
+
+
+//the following function considers the key in keys[0][i] to be the master key
+void generateRoundKeys()
+{
+	int i = 1;
+	int j = 1;
+	for(i = 1; i <= ROUND; i++)
+	{
+		rotateKey61bitLeft(i);
+		applySBoxOnKey(i);
+		addRoundCounterOnKey(i);
+	}
+
+}
+
+void printRoundKeys()
+{
+	int i = 0;
+	int j = 0;
+	for(i = 0; i < ROUND; i++)
+	{
+		printf("Round key at %d round: ",i);
+		for(j = 0; j < KEYLENGTH/8; j++)
+		{
+			printf("%02X ",keys[i][j]);
+		}
+		printf("\n");		
+	}
+
+}
+
+
+void printState(int r)
+{
+	int i = 0;
+	printf("Plaintext after %d round: ",r);
+	for(i = 0; i < BLOCKLENGTH/8; i++)
+	{
+		printf("%02X ",plaintext[r][i]);
+	}
+	printf("\n");		
+
+}
+
+int main()
+{
+	int i = 0;
+	//initialize the master key
+	keys[0][0] = 0x00; keys[0][1] = 0x00; keys[0][2] = 0x00; keys[0][3] = 0x00; keys[0][4] = 0x00;
+	keys[0][5] = 0x00; keys[0][6] = 0x00; keys[0][7] = 0x00; keys[0][8] = 0x00; keys[0][9] = 0x00;
+
+	generateRoundKeys();
+	printRoundKeys();
+
+	//initialize plaintext
+	plaintext[0][0] = 0x00; plaintext[0][1] = 0x00; plaintext[0][2] = 0x00; plaintext[0][3] = 0x00;
+	plaintext[0][4] = 0x00; plaintext[0][5] = 0x00; plaintext[0][6] = 0x00; plaintext[0][7] = 0x00;
+
+	printState(0);
+	for(i = 1; i <= ROUND; i++)
+	{
+		applyRoundFunction(i);
+		printState(i);
+	}
+
+	if(i == 32)
+	{
+		addRoundKey(32);
+		printState(32);
+	}
+
+	return 1;
+}
+
+
+void applyRoundFunction(int r)
+{
+	addRoundKey(r);
+	applySBox(r);
+	applyPBox(r);
+}
+
+
+void addRoundKey(int r)
+{
+	plaintext[r][0] = plaintext[r-1][0] ^ keys[r-1][2];
+	plaintext[r][1] = plaintext[r-1][1] ^ keys[r-1][3];
+	plaintext[r][2] = plaintext[r-1][2] ^ keys[r-1][4];
+	plaintext[r][3] = plaintext[r-1][3] ^ keys[r-1][5];
+	plaintext[r][4] = plaintext[r-1][4] ^ keys[r-1][6];
+	plaintext[r][5] = plaintext[r-1][5] ^ keys[r-1][7];
+	plaintext[r][6] = plaintext[r-1][6] ^ keys[r-1][8];
+	plaintext[r][7] = plaintext[r-1][7] ^ keys[r-1][9];
+}
+
+void applySBox(int r)
+{
+	plaintext[r][0] = sBox(plaintext[r][0] & 0x0f) ^ (sBox((plaintext[r][0] & 0xf0) >> 4) << 4);
+	plaintext[r][1] = sBox(plaintext[r][1] & 0x0f) ^ (sBox((plaintext[r][1] & 0xf0) >> 4) << 4);
+	plaintext[r][2] = sBox(plaintext[r][2] & 0x0f) ^ (sBox((plaintext[r][2] & 0xf0) >> 4) << 4);
+	plaintext[r][3] = sBox(plaintext[r][3] & 0x0f) ^ (sBox((plaintext[r][3] & 0xf0) >> 4) << 4);
+	plaintext[r][4] = sBox(plaintext[r][4] & 0x0f) ^ (sBox((plaintext[r][4] & 0xf0) >> 4) << 4);
+	plaintext[r][5] = sBox(plaintext[r][5] & 0x0f) ^ (sBox((plaintext[r][5] & 0xf0) >> 4) << 4);
+	plaintext[r][6] = sBox(plaintext[r][6] & 0x0f) ^ (sBox((plaintext[r][6] & 0xf0) >> 4) << 4);
+	plaintext[r][7] = sBox(plaintext[r][7] & 0x0f) ^ (sBox((plaintext[r][7] & 0xf0) >> 4) << 4);
+}
+
+void applyPBox(int r)
+{
+	
+	unsigned char bit0,bit1,bit2,bit3,bit4,bit5,bit6,bit7;
+	unsigned char byte0,byte1,byte2,byte3,byte4,byte5,byte6,byte7;
+
+	bit0 = plaintext[r][0] & 0x01;
+	bit1 = (plaintext[r][0] & 0x10) >> 4;
+	bit2 = plaintext[r][1] & 0x01;
+	bit3 = (plaintext[r][1] & 0x10) >> 4;
+	bit4 = plaintext[r][2] & 0x01;
+	bit5 = (plaintext[r][2] & 0x10) >> 4;
+	bit6 = plaintext[r][3] & 0x01;
+	bit7 = (plaintext[r][3] & 0x10) >> 4;
+
+	bit1 = bit1 << 1; bit2 = bit2 << 2; bit3 = bit3 << 3; 
+	bit4 = bit4 << 4; bit5 = bit5 << 5; bit6 = bit6 << 6; bit7 = bit7 << 7;
+
+	byte0 = bit0 ^ bit1 ^ bit2 ^ bit3 ^ bit4 ^ bit5 ^ bit6 ^ bit7;
+
+	bit0 = plaintext[r][4] & 0x01;
+	bit1 = (plaintext[r][4] & 0x10) >> 4;
+	bit2 = plaintext[r][5] & 0x01;
+	bit3 = (plaintext[r][5] & 0x10) >> 4;
+	bit4 = plaintext[r][6] & 0x01;
+	bit5 = (plaintext[r][6] & 0x10) >> 4;
+	bit6 = plaintext[r][7] & 0x01;
+	bit7 = (plaintext[r][7] & 0x10) >> 4;
+
+	bit1 = bit1 << 1; bit2 = bit2 << 2; bit3 = bit3 << 3; 
+	bit4 = bit4 << 4; bit5 = bit5 << 5; bit6 = bit6 << 6; bit7 = bit7 << 7;
+
+	byte1 = bit0 ^ bit1 ^ bit2 ^ bit3 ^ bit4 ^ bit5 ^ bit6 ^ bit7;
+
+	bit0 = (plaintext[r][0] & 0x02) >> 1;
+	bit1 = (plaintext[r][0] & 0x20) >> 5;
+	bit2 = (plaintext[r][1] & 0x02) >> 1;
+	bit3 = (plaintext[r][1] & 0x20) >> 5;
+	bit4 = (plaintext[r][2] & 0x02) >> 1;
+	bit5 = (plaintext[r][2] & 0x20) >> 5;
+	bit6 = (plaintext[r][3] & 0x02) >> 1;
+	bit7 = (plaintext[r][3] & 0x20) >> 5;
+
+	bit1 = bit1 << 1; bit2 = bit2 << 2; bit3 = bit3 << 3; 
+	bit4 = bit4 << 4; bit5 = bit5 << 5; bit6 = bit6 << 6; bit7 = bit7 << 7;
+
+	byte2 = bit0 ^ bit1 ^ bit2 ^ bit3 ^ bit4 ^ bit5 ^ bit6 ^ bit7;
+
+	//constructing 4th byte
+	bit0 = (plaintext[r][4] & 0x02) >> 1;
+	bit1 = (plaintext[r][4] & 0x20) >> 5;
+	bit2 = (plaintext[r][5] & 0x02) >> 1;
+	bit3 = (plaintext[r][5] & 0x20) >> 5;
+	bit4 = (plaintext[r][6] & 0x02) >> 1;
+	bit5 = (plaintext[r][6] & 0x20) >> 5;
+	bit6 = (plaintext[r][7] & 0x02) >> 1;
+	bit7 = (plaintext[r][7] & 0x20) >> 5;
+
+	bit1 = bit1 << 1; bit2 = bit2 << 2; bit3 = bit3 << 3; 
+	bit4 = bit4 << 4; bit5 = bit5 << 5; bit6 = bit6 << 6; bit7 = bit7 << 7;
+
+	byte3 = bit0 ^ bit1 ^ bit2 ^ bit3 ^ bit4 ^ bit5 ^ bit6 ^ bit7;
+
+	//constructing 5th byte
+	bit0 = (plaintext[r][0] & 0x04) >> 2;
+	bit1 = (plaintext[r][0] & 0x40) >> 6;
+	bit2 = (plaintext[r][1] & 0x04) >> 2;
+	bit3 = (plaintext[r][1] & 0x40) >> 6;
+	bit4 = (plaintext[r][2] & 0x04) >> 2;
+	bit5 = (plaintext[r][2] & 0x40) >> 6;
+	bit6 = (plaintext[r][3] & 0x04) >> 2;
+	bit7 = (plaintext[r][3] & 0x40) >> 6;
+	
+	bit1 = bit1 << 1; bit2 = bit2 << 2; bit3 = bit3 << 3; 
+	bit4 = bit4 << 4; bit5 = bit5 << 5; bit6 = bit6 << 6; bit7 = bit7 << 7;
+
+	byte4 = bit0 ^ bit1 ^ bit2 ^ bit3 ^ bit4 ^ bit5 ^ bit6 ^ bit7;
+
+	//constructing 6th byte
+	bit0 = (plaintext[r][4] & 0x04) >> 2;
+	bit1 = (plaintext[r][4] & 0x40) >> 6;
+	bit2 = (plaintext[r][5] & 0x04) >> 2;
+	bit3 = (plaintext[r][5] & 0x40) >> 6;
+	bit4 = (plaintext[r][6] & 0x04) >> 2;
+	bit5 = (plaintext[r][6] & 0x40) >> 6;
+	bit6 = (plaintext[r][7] & 0x04) >> 2;
+	bit7 = (plaintext[r][7] & 0x40) >> 6;
+	
+	bit1 = bit1 << 1; bit2 = bit2 << 2; bit3 = bit3 << 3; 
+	bit4 = bit4 << 4; bit5 = bit5 << 5; bit6 = bit6 << 6; bit7 = bit7 << 7;
+
+	byte5 = bit0 ^ bit1 ^ bit2 ^ bit3 ^ bit4 ^ bit5 ^ bit6 ^ bit7;
+
+	//constructing 7th byte
+	bit0 = (plaintext[r][0] & 0x08) >> 3;
+	bit1 = (plaintext[r][0] & 0x80) >> 7;
+	bit2 = (plaintext[r][1] & 0x08) >> 3;
+	bit3 = (plaintext[r][1] & 0x80) >> 7;
+	bit4 = (plaintext[r][2] & 0x08) >> 3;
+	bit5 = (plaintext[r][2] & 0x80) >> 7;
+	bit6 = (plaintext[r][3] & 0x08) >> 3;
+	bit7 = (plaintext[r][3] & 0x80) >> 7;
+
+	bit1 = bit1 << 1; bit2 = bit2 << 2; bit3 = bit3 << 3; 
+	bit4 = bit4 << 4; bit5 = bit5 << 5; bit6 = bit6 << 6; bit7 = bit7 << 7;
+
+	byte6 = bit0 ^ bit1 ^ bit2 ^ bit3 ^ bit4 ^ bit5 ^ bit6 ^ bit7;
+
+	//constructing 8th byte
+	bit0 = (plaintext[r][4] & 0x08) >> 3;
+	bit1 = (plaintext[r][4] & 0x80) >> 7;
+	bit2 = (plaintext[r][5] & 0x08) >> 3;
+	bit3 = (plaintext[r][5] & 0x80) >> 7;
+	bit4 = (plaintext[r][6] & 0x08) >> 3;
+	bit5 = (plaintext[r][6] & 0x80) >> 7;
+	bit6 = (plaintext[r][7] & 0x08) >> 3;
+	bit7 = (plaintext[r][7] & 0x80) >> 7;
+	
+	bit1 = bit1 << 1; bit2 = bit2 << 2; bit3 = bit3 << 3; 
+	bit4 = bit4 << 4; bit5 = bit5 << 5; bit6 = bit6 << 6; bit7 = bit7 << 7;
+
+	byte7 = bit0 ^ bit1 ^ bit2 ^ bit3 ^ bit4 ^ bit5 ^ bit6 ^ bit7;
+
+	plaintext[r][0] = byte0;
+	plaintext[r][1] = byte1;
+	plaintext[r][2] = byte2;
+	plaintext[r][3] = byte3;
+	plaintext[r][4] = byte4;
+	plaintext[r][5] = byte5;
+	plaintext[r][6] = byte6;
+	plaintext[r][7] = byte7;
+
+}
+
+
+int powOf2(int x)
+{
+	int i = 0,y=1;
+	for(i = 1;i <=x; i++)
+	{
+		y = y*2;
+	}
+	return y;
+}

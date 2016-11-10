@@ -1,0 +1,303 @@
+Starting the experiment.
+
+SMALLPRESENT-[8]
+No of Rounds:7
+Block size: 32 bits
+Master Key:00 00 00 00 00 00 00 00 00 00 
+Size of input trail:8
+Size of output trail:8
+Bit positions at the input of the trail (starting from zero from the right):10 11 14 15 26 27 30 31 
+Bit positions at the output of the trail (starting from zero from the right):9 11 13 15 25 27 29 31 
+
+
+Encryption is starting at: 2015:05:11 14:54:26
+All encryptions for fixation 0 has been completed at: 2015:05:11 14:55:47
+All encryptions for fixation 1 has been completed at: 2015:05:11 14:57:07
+All encryptions for fixation 2 has been completed at: 2015:05:11 14:58:29
+All encryptions for fixation 3 has been completed at: 2015:05:11 14:59:51
+All encryptions for fixation 4 has been completed at: 2015:05:11 15:01:15
+All encryptions for fixation 5 has been completed at: 2015:05:11 15:02:38
+All encryptions for fixation 6 has been completed at: 2015:05:11 15:03:58
+All encryptions for fixation 7 has been completed at: 2015:05:11 15:05:19
+All encryptions for fixation 8 has been completed at: 2015:05:11 15:06:40
+All encryptions for fixation 9 has been completed at: 2015:05:11 15:08:03
+All encryptions for fixation 10 has been completed at: 2015:05:11 15:09:24
+All encryptions for fixation 11 has been completed at: 2015:05:11 15:10:46
+All encryptions for fixation 12 has been completed at: 2015:05:11 15:12:07
+All encryptions for fixation 13 has been completed at: 2015:05:11 15:13:29
+All encryptions for fixation 14 has been completed at: 2015:05:11 15:14:49
+All encryptions for fixation 15 has been completed at: 2015:05:11 15:16:10
+All encryptions for fixation 16 has been completed at: 2015:05:11 15:17:30
+All encryptions for fixation 17 has been completed at: 2015:05:11 15:18:53
+All encryptions for fixation 18 has been completed at: 2015:05:11 15:20:13
+All encryptions for fixation 19 has been completed at: 2015:05:11 15:21:34
+All encryptions for fixation 20 has been completed at: 2015:05:11 15:22:54
+All encryptions for fixation 21 has been completed at: 2015:05:11 15:24:15
+All encryptions for fixation 22 has been completed at: 2015:05:11 15:25:36
+All encryptions for fixation 23 has been completed at: 2015:05:11 15:26:56
+All encryptions for fixation 24 has been completed at: 2015:05:11 15:28:17
+All encryptions for fixation 25 has been completed at: 2015:05:11 15:29:37
+All encryptions for fixation 26 has been completed at: 2015:05:11 15:30:58
+All encryptions for fixation 27 has been completed at: 2015:05:11 15:32:20
+All encryptions for fixation 28 has been completed at: 2015:05:11 15:33:42
+All encryptions for fixation 29 has been completed at: 2015:05:11 15:35:03
+All encryptions for fixation 30 has been completed at: 2015:05:11 15:36:26
+All encryptions for fixation 31 has been completed at: 2015:05:11 15:37:52
+All encryptions for fixation 32 has been completed at: 2015:05:11 15:39:13
+All encryptions for fixation 33 has been completed at: 2015:05:11 15:40:35
+All encryptions for fixation 34 has been completed at: 2015:05:11 15:41:56
+All encryptions for fixation 35 has been completed at: 2015:05:11 15:43:18
+All encryptions for fixation 36 has been completed at: 2015:05:11 15:44:39
+All encryptions for fixation 37 has been completed at: 2015:05:11 15:46:00
+All encryptions for fixation 38 has been completed at: 2015:05:11 15:47:24
+All encryptions for fixation 39 has been completed at: 2015:05:11 15:48:46
+All encryptions for fixation 40 has been completed at: 2015:05:11 15:50:07
+All encryptions for fixation 41 has been completed at: 2015:05:11 15:51:27
+All encryptions for fixation 42 has been completed at: 2015:05:11 15:52:48
+All encryptions for fixation 43 has been completed at: 2015:05:11 15:54:08
+All encryptions for fixation 44 has been completed at: 2015:05:11 15:55:29
+All encryptions for fixation 45 has been completed at: 2015:05:11 15:56:51
+All encryptions for fixation 46 has been completed at: 2015:05:11 15:58:12
+All encryptions for fixation 47 has been completed at: 2015:05:11 15:59:34
+All encryptions for fixation 48 has been completed at: 2015:05:11 16:00:55
+All encryptions for fixation 49 has been completed at: 2015:05:11 16:02:16
+All encryptions for fixation 50 has been completed at: 2015:05:11 16:03:38
+All encryptions for fixation 51 has been completed at: 2015:05:11 16:05:01
+All encryptions for fixation 52 has been completed at: 2015:05:11 16:06:23
+All encryptions for fixation 53 has been completed at: 2015:05:11 16:07:45
+All encryptions for fixation 54 has been completed at: 2015:05:11 16:09:07
+All encryptions for fixation 55 has been completed at: 2015:05:11 16:10:29
+All encryptions for fixation 56 has been completed at: 2015:05:11 16:11:51
+All encryptions for fixation 57 has been completed at: 2015:05:11 16:13:12
+All encryptions for fixation 58 has been completed at: 2015:05:11 16:14:34
+All encryptions for fixation 59 has been completed at: 2015:05:11 16:15:56
+All encryptions for fixation 60 has been completed at: 2015:05:11 16:17:17
+All encryptions for fixation 61 has been completed at: 2015:05:11 16:18:37
+All encryptions for fixation 62 has been completed at: 2015:05:11 16:19:58
+All encryptions for fixation 63 has been completed at: 2015:05:11 16:21:18
+All encryptions for fixation 64 has been completed at: 2015:05:11 16:22:38
+All encryptions for fixation 65 has been completed at: 2015:05:11 16:23:59
+All encryptions for fixation 66 has been completed at: 2015:05:11 16:25:19
+All encryptions for fixation 67 has been completed at: 2015:05:11 16:26:39
+All encryptions for fixation 68 has been completed at: 2015:05:11 16:28:00
+All encryptions for fixation 69 has been completed at: 2015:05:11 16:29:20
+All encryptions for fixation 70 has been completed at: 2015:05:11 16:30:41
+All encryptions for fixation 71 has been completed at: 2015:05:11 16:32:01
+All encryptions for fixation 72 has been completed at: 2015:05:11 16:33:21
+All encryptions for fixation 73 has been completed at: 2015:05:11 16:34:42
+All encryptions for fixation 74 has been completed at: 2015:05:11 16:36:03
+All encryptions for fixation 75 has been completed at: 2015:05:11 16:37:23
+All encryptions for fixation 76 has been completed at: 2015:05:11 16:38:44
+All encryptions for fixation 77 has been completed at: 2015:05:11 16:40:04
+All encryptions for fixation 78 has been completed at: 2015:05:11 16:41:24
+All encryptions for fixation 79 has been completed at: 2015:05:11 16:42:45
+All encryptions for fixation 80 has been completed at: 2015:05:11 16:44:05
+All encryptions for fixation 81 has been completed at: 2015:05:11 16:45:26
+All encryptions for fixation 82 has been completed at: 2015:05:11 16:46:46
+All encryptions for fixation 83 has been completed at: 2015:05:11 16:48:06
+All encryptions for fixation 84 has been completed at: 2015:05:11 16:49:27
+All encryptions for fixation 85 has been completed at: 2015:05:11 16:50:47
+All encryptions for fixation 86 has been completed at: 2015:05:11 16:52:07
+All encryptions for fixation 87 has been completed at: 2015:05:11 16:53:28
+All encryptions for fixation 88 has been completed at: 2015:05:11 16:54:48
+All encryptions for fixation 89 has been completed at: 2015:05:11 16:56:09
+All encryptions for fixation 90 has been completed at: 2015:05:11 16:57:29
+All encryptions for fixation 91 has been completed at: 2015:05:11 16:58:49
+All encryptions for fixation 92 has been completed at: 2015:05:11 17:00:10
+All encryptions for fixation 93 has been completed at: 2015:05:11 17:01:30
+All encryptions for fixation 94 has been completed at: 2015:05:11 17:02:51
+All encryptions for fixation 95 has been completed at: 2015:05:11 17:04:11
+All encryptions for fixation 96 has been completed at: 2015:05:11 17:05:31
+All encryptions for fixation 97 has been completed at: 2015:05:11 17:06:52
+All encryptions for fixation 98 has been completed at: 2015:05:11 17:08:12
+All encryptions for fixation 99 has been completed at: 2015:05:11 17:09:33
+All encryptions for fixation 100 has been completed at: 2015:05:11 17:10:53
+All encryptions for fixation 101 has been completed at: 2015:05:11 17:12:13
+All encryptions for fixation 102 has been completed at: 2015:05:11 17:13:34
+All encryptions for fixation 103 has been completed at: 2015:05:11 17:14:54
+All encryptions for fixation 104 has been completed at: 2015:05:11 17:16:15
+All encryptions for fixation 105 has been completed at: 2015:05:11 17:17:35
+All encryptions for fixation 106 has been completed at: 2015:05:11 17:18:55
+All encryptions for fixation 107 has been completed at: 2015:05:11 17:20:16
+All encryptions for fixation 108 has been completed at: 2015:05:11 17:21:36
+All encryptions for fixation 109 has been completed at: 2015:05:11 17:22:57
+All encryptions for fixation 110 has been completed at: 2015:05:11 17:24:17
+All encryptions for fixation 111 has been completed at: 2015:05:11 17:25:38
+All encryptions for fixation 112 has been completed at: 2015:05:11 17:26:58
+All encryptions for fixation 113 has been completed at: 2015:05:11 17:28:18
+All encryptions for fixation 114 has been completed at: 2015:05:11 17:29:39
+All encryptions for fixation 115 has been completed at: 2015:05:11 17:30:59
+All encryptions for fixation 116 has been completed at: 2015:05:11 17:32:20
+All encryptions for fixation 117 has been completed at: 2015:05:11 17:33:40
+All encryptions for fixation 118 has been completed at: 2015:05:11 17:35:01
+All encryptions for fixation 119 has been completed at: 2015:05:11 17:36:21
+All encryptions for fixation 120 has been completed at: 2015:05:11 17:37:42
+All encryptions for fixation 121 has been completed at: 2015:05:11 17:39:02
+All encryptions for fixation 122 has been completed at: 2015:05:11 17:40:23
+All encryptions for fixation 123 has been completed at: 2015:05:11 17:41:43
+All encryptions for fixation 124 has been completed at: 2015:05:11 17:43:04
+All encryptions for fixation 125 has been completed at: 2015:05:11 17:44:24
+All encryptions for fixation 126 has been completed at: 2015:05:11 17:45:45
+All encryptions for fixation 127 has been completed at: 2015:05:11 17:47:05
+All encryptions for fixation 128 has been completed at: 2015:05:11 17:48:25
+All encryptions for fixation 129 has been completed at: 2015:05:11 17:49:46
+All encryptions for fixation 130 has been completed at: 2015:05:11 17:51:06
+All encryptions for fixation 131 has been completed at: 2015:05:11 17:52:27
+All encryptions for fixation 132 has been completed at: 2015:05:11 17:53:47
+All encryptions for fixation 133 has been completed at: 2015:05:11 17:55:08
+All encryptions for fixation 134 has been completed at: 2015:05:11 17:56:28
+All encryptions for fixation 135 has been completed at: 2015:05:11 17:57:48
+All encryptions for fixation 136 has been completed at: 2015:05:11 17:59:09
+All encryptions for fixation 137 has been completed at: 2015:05:11 18:00:29
+All encryptions for fixation 138 has been completed at: 2015:05:11 18:01:50
+All encryptions for fixation 139 has been completed at: 2015:05:11 18:03:10
+All encryptions for fixation 140 has been completed at: 2015:05:11 18:04:31
+All encryptions for fixation 141 has been completed at: 2015:05:11 18:05:51
+All encryptions for fixation 142 has been completed at: 2015:05:11 18:07:12
+All encryptions for fixation 143 has been completed at: 2015:05:11 18:08:32
+All encryptions for fixation 144 has been completed at: 2015:05:11 18:09:52
+All encryptions for fixation 145 has been completed at: 2015:05:11 18:11:13
+All encryptions for fixation 146 has been completed at: 2015:05:11 18:12:33
+All encryptions for fixation 147 has been completed at: 2015:05:11 18:13:54
+All encryptions for fixation 148 has been completed at: 2015:05:11 18:15:14
+All encryptions for fixation 149 has been completed at: 2015:05:11 18:16:35
+All encryptions for fixation 150 has been completed at: 2015:05:11 18:17:55
+All encryptions for fixation 151 has been completed at: 2015:05:11 18:19:15
+All encryptions for fixation 152 has been completed at: 2015:05:11 18:20:36
+All encryptions for fixation 153 has been completed at: 2015:05:11 18:21:56
+All encryptions for fixation 154 has been completed at: 2015:05:11 18:23:17
+All encryptions for fixation 155 has been completed at: 2015:05:11 18:24:37
+All encryptions for fixation 156 has been completed at: 2015:05:11 18:25:58
+All encryptions for fixation 157 has been completed at: 2015:05:11 18:27:18
+All encryptions for fixation 158 has been completed at: 2015:05:11 18:28:39
+All encryptions for fixation 159 has been completed at: 2015:05:11 18:29:59
+All encryptions for fixation 160 has been completed at: 2015:05:11 18:31:20
+All encryptions for fixation 161 has been completed at: 2015:05:11 18:32:40
+All encryptions for fixation 162 has been completed at: 2015:05:11 18:34:01
+All encryptions for fixation 163 has been completed at: 2015:05:11 18:35:21
+All encryptions for fixation 164 has been completed at: 2015:05:11 18:36:42
+All encryptions for fixation 165 has been completed at: 2015:05:11 18:38:02
+All encryptions for fixation 166 has been completed at: 2015:05:11 18:39:23
+All encryptions for fixation 167 has been completed at: 2015:05:11 18:40:43
+All encryptions for fixation 168 has been completed at: 2015:05:11 18:42:04
+All encryptions for fixation 169 has been completed at: 2015:05:11 18:43:24
+All encryptions for fixation 170 has been completed at: 2015:05:11 18:44:45
+All encryptions for fixation 171 has been completed at: 2015:05:11 18:46:06
+All encryptions for fixation 172 has been completed at: 2015:05:11 18:47:27
+All encryptions for fixation 173 has been completed at: 2015:05:11 18:48:48
+All encryptions for fixation 174 has been completed at: 2015:05:11 18:50:09
+All encryptions for fixation 175 has been completed at: 2015:05:11 18:51:29
+All encryptions for fixation 176 has been completed at: 2015:05:11 18:52:50
+All encryptions for fixation 177 has been completed at: 2015:05:11 18:54:10
+All encryptions for fixation 178 has been completed at: 2015:05:11 18:55:31
+All encryptions for fixation 179 has been completed at: 2015:05:11 18:56:51
+All encryptions for fixation 180 has been completed at: 2015:05:11 18:58:12
+All encryptions for fixation 181 has been completed at: 2015:05:11 18:59:32
+All encryptions for fixation 182 has been completed at: 2015:05:11 19:00:53
+All encryptions for fixation 183 has been completed at: 2015:05:11 19:02:13
+All encryptions for fixation 184 has been completed at: 2015:05:11 19:03:34
+All encryptions for fixation 185 has been completed at: 2015:05:11 19:04:55
+All encryptions for fixation 186 has been completed at: 2015:05:11 19:06:15
+All encryptions for fixation 187 has been completed at: 2015:05:11 19:07:36
+All encryptions for fixation 188 has been completed at: 2015:05:11 19:08:56
+All encryptions for fixation 189 has been completed at: 2015:05:11 19:10:17
+All encryptions for fixation 190 has been completed at: 2015:05:11 19:11:37
+All encryptions for fixation 191 has been completed at: 2015:05:11 19:12:58
+All encryptions for fixation 192 has been completed at: 2015:05:11 19:14:19
+All encryptions for fixation 193 has been completed at: 2015:05:11 19:15:40
+All encryptions for fixation 194 has been completed at: 2015:05:11 19:17:01
+All encryptions for fixation 195 has been completed at: 2015:05:11 19:18:21
+All encryptions for fixation 196 has been completed at: 2015:05:11 19:19:42
+All encryptions for fixation 197 has been completed at: 2015:05:11 19:21:03
+All encryptions for fixation 198 has been completed at: 2015:05:11 19:22:23
+All encryptions for fixation 199 has been completed at: 2015:05:11 19:23:43
+All encryptions for fixation 200 has been completed at: 2015:05:11 19:25:04
+All encryptions for fixation 201 has been completed at: 2015:05:11 19:26:24
+All encryptions for fixation 202 has been completed at: 2015:05:11 19:27:45
+All encryptions for fixation 203 has been completed at: 2015:05:11 19:29:05
+All encryptions for fixation 204 has been completed at: 2015:05:11 19:30:26
+All encryptions for fixation 205 has been completed at: 2015:05:11 19:31:46
+All encryptions for fixation 206 has been completed at: 2015:05:11 19:33:07
+All encryptions for fixation 207 has been completed at: 2015:05:11 19:34:27
+All encryptions for fixation 208 has been completed at: 2015:05:11 19:35:48
+All encryptions for fixation 209 has been completed at: 2015:05:11 19:37:08
+All encryptions for fixation 210 has been completed at: 2015:05:11 19:38:29
+All encryptions for fixation 211 has been completed at: 2015:05:11 19:39:49
+All encryptions for fixation 212 has been completed at: 2015:05:11 19:41:10
+All encryptions for fixation 213 has been completed at: 2015:05:11 19:42:30
+All encryptions for fixation 214 has been completed at: 2015:05:11 19:43:50
+All encryptions for fixation 215 has been completed at: 2015:05:11 19:45:11
+All encryptions for fixation 216 has been completed at: 2015:05:11 19:46:31
+All encryptions for fixation 217 has been completed at: 2015:05:11 19:47:52
+All encryptions for fixation 218 has been completed at: 2015:05:11 19:49:12
+All encryptions for fixation 219 has been completed at: 2015:05:11 19:50:33
+All encryptions for fixation 220 has been completed at: 2015:05:11 19:51:53
+All encryptions for fixation 221 has been completed at: 2015:05:11 19:53:14
+All encryptions for fixation 222 has been completed at: 2015:05:11 19:54:34
+All encryptions for fixation 223 has been completed at: 2015:05:11 19:55:55
+All encryptions for fixation 224 has been completed at: 2015:05:11 19:57:15
+All encryptions for fixation 225 has been completed at: 2015:05:11 19:58:36
+All encryptions for fixation 226 has been completed at: 2015:05:11 19:59:56
+All encryptions for fixation 227 has been completed at: 2015:05:11 20:01:17
+All encryptions for fixation 228 has been completed at: 2015:05:11 20:02:37
+All encryptions for fixation 229 has been completed at: 2015:05:11 20:03:58
+All encryptions for fixation 230 has been completed at: 2015:05:11 20:05:18
+All encryptions for fixation 231 has been completed at: 2015:05:11 20:06:39
+All encryptions for fixation 232 has been completed at: 2015:05:11 20:07:59
+All encryptions for fixation 233 has been completed at: 2015:05:11 20:09:20
+All encryptions for fixation 234 has been completed at: 2015:05:11 20:10:41
+All encryptions for fixation 235 has been completed at: 2015:05:11 20:12:01
+All encryptions for fixation 236 has been completed at: 2015:05:11 20:13:22
+All encryptions for fixation 237 has been completed at: 2015:05:11 20:14:42
+All encryptions for fixation 238 has been completed at: 2015:05:11 20:16:03
+All encryptions for fixation 239 has been completed at: 2015:05:11 20:17:23
+All encryptions for fixation 240 has been completed at: 2015:05:11 20:18:44
+All encryptions for fixation 241 has been completed at: 2015:05:11 20:20:04
+All encryptions for fixation 242 has been completed at: 2015:05:11 20:21:25
+All encryptions for fixation 243 has been completed at: 2015:05:11 20:22:45
+All encryptions for fixation 244 has been completed at: 2015:05:11 20:24:06
+All encryptions for fixation 245 has been completed at: 2015:05:11 20:25:26
+All encryptions for fixation 246 has been completed at: 2015:05:11 20:26:47
+All encryptions for fixation 247 has been completed at: 2015:05:11 20:28:07
+All encryptions for fixation 248 has been completed at: 2015:05:11 20:29:28
+All encryptions for fixation 249 has been completed at: 2015:05:11 20:30:48
+All encryptions for fixation 250 has been completed at: 2015:05:11 20:32:09
+All encryptions for fixation 251 has been completed at: 2015:05:11 20:33:29
+All encryptions for fixation 252 has been completed at: 2015:05:11 20:34:50
+All encryptions for fixation 253 has been completed at: 2015:05:11 20:36:10
+All encryptions for fixation 254 has been completed at: 2015:05:11 20:37:31
+All encryptions for fixation 255 has been completed at: 2015:05:11 20:38:51
+
+
+Below, we print the result we are expecting from this SSA experiment 
+ 1. It prints the average SSA capacity of every round
+ 2. It prints the experimental variance of SSA capacities over all possible fixations a for every round 
+ 3. It prints the theoretical variance of SSA capacities over all possible fixations a for every round. 
+ 4. It prints the distance between theoretical and experimental variance. 
+ 5. It also prints the variance of 'variance of $p_{eta}(a)$ over all possible fixation for a given round' over all possible $eta$SSA Capacity Detail Table:
+Round	Avg_C_a	Exp_Vari_C_a	Theo_Var_C_a	Distance	var_var
+0	1.00000000	0.00000000000000000000	0.00784313725490196078	0.00784313725490196068	0.000000000000000000000000000000
+1	1.25000000	0.57812500000000000000	0.01225490196078431373	0.56587009803921572981	0.000000000000000000000000000000
+2	0.27648926	0.01454256474971771240	0.00059957889949574190	0.01394298585022197071	0.000000000000916679926410424173
+3	0.08090577	0.00194915423628843392	0.00005133916321623898	0.00189781507307219496	0.000000000000237786179678340841
+4	0.01151728	0.00003082654343067511	0.00000104037363102242	0.00002978616979965269	0.000000000000004380139875502112
+5	0.00155004	0.00000081163435701171	0.00000001884419227256	0.00000079279016473915	0.000000000000000082168489232365
+6	0.00025617	0.00000002445113209856	0.00000000051469824422	0.00000002393643385434	0.000000000000000005158124114043
+7	0.00004981	0.00000000039493814537	0.00000000001945529996	0.00000000037548284541	0.000000000000000000057306279088
+
+
+ Now we will be computing the mean and varaince of $T(phi,a)$ over all fixations and samples.  
+As we have used the whole codebook and sample without replacement, there will be no variance of this statistic because of $phi$. 
+ We will compute the experimental variance over all possible a. We will also compute the theoretical variance. 
+ While computing the theoretical variance, we will have to use the formuala developed for sampling without replacement. 
+We have not developed the formula in detail in the thesis. But it is clear that the theoretical mean will be $NC$ and theoretical variance will be $frac{2(NC)^2}{2^q-1}$. This formulas also agrees with the formula of celine and kaisa's paper presented in WCC205 (which is also mentioned in my thesis in the section of sample without replacement).  
+ Where $N$ is the size of sample and $C$ is the average SSA capacity for that round. The result is stored in an array and the pointer of the array is returned.T_a_phi Detail Table:
+Round	Exp_Avg_T_a_phi	Theo_Avg_T_a_phi	Exp_Var_T_a_phi	Theo_Var_T_a_phi	var_var_p_eta
+0	16777216.00000000	16777216.000000000000	0.000000000000	2207646876162.007843255997	0.000000000000000000000000000000
+1	20971520.00000000	20971520.000000000000	162727720910848.000000000000	3449448244003.137254953384	0.000000000000000000000000000000
+2	4638720.00000000	4638720.000000000000	4093368074240.000000000000	168766456771.764705881476	0.000000000000916679926410424173
+3	1357373.54687500	1357373.546875000000	548638143264.763419151306	14450689770.635433900170	0.000000000000237786179678340841
+4	193227.82098913	193227.820989131927	8676900594.219303057529	292839143.562415807392	0.000000000000004380139875502112
+5	26005.41278434	26005.412784337997	228454761.737438463882	5304168.581049491845	0.000000000000000082168489232365
+6	4297.85076857	4297.850768566132	6882381.837992584211	144874.676304819508	0.000000000000000005158124114043
+7	835.59138525	835.591385245323	111165.205269378058	5476.180102715279	0.000000000000000000057306279088

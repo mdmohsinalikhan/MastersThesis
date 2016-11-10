@@ -1,0 +1,148 @@
+\chapter{Data Complexity of SSA}
+\label{chapter:data_complexity_of_SSA}
+In \cite{Celine_Kaisa_Links_2014}, the connection in between SS an TD is used to explain the statistical behaviour of the SS attack. In this thesis, we have developed a statistical model for the SS attack using the distribution properties directly and in this section we will derive the data complexity of an SS attack directly based on the success probabilities of the statistical test described in Section \ref{section:statistical_test}.
+\par \noindent Let us consider the statistic $T$ computed from a set of fixations as defined in (\ref{eqn:T_for_a_set_of_fixations}). The set of fixations is denoted by $A$ such that $|A| = M$. And let us set $T_0 = T$ when the function $\omega$ is uniformly distributed. Otherwise $T_1 = T$. By the definition of $\chi^2$ distribution, both the statisti $T_0,T_1$ is $\chi^2$ distributed. So, accoridng to the normal approximation of $\chi^2$ distribution we find the mean $\mu_{T_0}$ and variance $\sigma^2_{T_0}$ of the statistic $T_0$ as following:
+\begin{eqnarray}
+\mu_{T_0} &=& M2^{q} - 1 \label{eqn:mean_T_0}\\
+\sigma^2_{T_0} &=& 2(M2^{q} - 1) \label{eqn:variance_T_0}
+\end{eqnarray}
+On the other hand, from (\ref{eqn:T_a_variable_set_of_fixations}), we know the mean $\mu_{T_1}$ and variance $\sigma^2_{T_1}$ of the statistic $T_1$ are as following:
+\begin{eqnarray}
+\mu_{T_1} &=& M2^q-1 + NC \label{eqn:mean_T_1}\\
+\sigma^2_{T_1} &=& \frac{2(M(2^q-1)+ NC)^2}{M(2^q-1)} \label{eqn:variance_T_1}
+\end{eqnarray}
+Now, let us find out what is the required value of $N$ to successfully perform the statistical test mentioned in Section \ref{section:statistical_test}. To perform the test we need to find out a value of $\tau$ so that we can succeed in the test with certain minimum success probability. If $\alpha_0,\alpha_1$ is the maximum error probability of wrongly choosing distribution $T_1$ and $T_0$, then according to inequality \ref{eqn:selecting_tau_range} and as depicted in Figure \ref{fig:single_tau_as_distributions_distinguishes}, we can choose $\tau$ as following
+\begin{eqnarray}
+\mu_{T_0}+\sigma_{T_0}\zeta_0 = \tau = \mu_{T_1} - \sigma_{T_1}\zeta_1 \label{eqn:feasible_tau}
+\end{eqnarray}
+where $\mathit{\Phi}(\zeta_i) = 1 - \alpha_i$ for $i \in \mathbb{Z}_2$ for the cumulative distribution function $\mathit{\Phi}$ of the standard normal distribution. Without loss of generality let us assume that $\alpha_0 > \alpha_1$. Then the minimum success probability is $1-\alpha_0$. Using (\ref{eqn:feasible_tau}), we have derived a lower bound of $N$ to achieve the mentioned minimum probability of succeeding in the test. \par \noindent According to (\ref{eqn:mean_T_0}) and (\ref{eqn:mean_T_1}) we find that 
+\begin{eqnarray}
+\mu_{T_1} &=& \mu_{T_0} + NC
+\end{eqnarray}
+Plugging the above equality in (\ref{eqn:feasible_tau}), we find
+\begin{eqnarray*}
+\mu_{T_0}+\sigma_{T_0}\zeta_0 &=& \mu_{T_0} + NC - \sqrt{\frac{2\left(M\left(2^q -1 \right) + NC\right)^2}{M\left(2^q -1 \right)}}\zeta_1\\
+\sigma_{T_0}\zeta_0 &=& NC - \sqrt{\frac{2\left(M\left(2^q -1 \right) + NC\right)^2}{M\left(2^q -1 \right)}}\zeta_1\\
+\end{eqnarray*}
+By setting $NC = \theta$ and $M\left(2^q -1 \right) = \Theta$, we obtain
+\begin{eqnarray*}
+\sigma_{T_0}\zeta_0 &=& \theta - \sqrt{\frac{2\left(\Theta + \theta \right)^2}{\Theta}}\zeta_1\\
+\sigma_{T_0}\zeta_0 &=& \theta - \sqrt{\frac{2}{\Theta}}\left(\Theta + \theta \right)\zeta_1\\
+\sigma_{T_0}\zeta_0 &=& \theta - \sqrt{2\Theta} \zeta_1 - \sqrt{\frac{2}{\Theta}} \theta \zeta_1\\
+\theta \left( 1 - \sqrt{\frac{2}{\Theta}} \zeta_1 \right) &=& \sigma_{T_0}\zeta_0 + \sqrt{2\Theta} \zeta_1\\
+\end{eqnarray*}
+By replacing back the values of $\theta$ and $\Theta$, and plugging in the value of $\sigma_{T_0}$ from \ref{eqn:variance_T_0}, we obtain the following
+\begin{eqnarray*}
+NC \left( 1 - \sqrt{\frac{2}{M\left(2^q -1 \right)}} \zeta_1 \right) &=& \sqrt{2(M2^{q} - 1)}\zeta_0 + \sqrt{2M\left(2^q -1 \right)} \zeta_1\\
+\end{eqnarray*}
+We take a simple over estimate of $\sqrt{2M\left(2^q -1 \right)}$ by $\sqrt{2(M2^{q} - 1)}$  and get
+\begin{eqnarray*}
+N_{SS} &=& \frac{\sqrt{2(M2^{q} - 1)} \left( \zeta_0 +  \zeta_1 \right)}{\left( 1 - \sqrt{\frac{2}{M\left(2^q -1 \right)}} \zeta_1 \right)C} \label{eqn:N_ss}\\
+\end{eqnarray*}
+Note that $N_{SS}$ is a lower bound. That is, the statsitical test will be successfull with the considered success probabilities for any larger value of $N$ as well.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iffalse
+\section{All fixations}
+Let us consider that, in the statistical saturation attack, we will be using all the possible fixations. So, the statistic $T$ under consideration is actually the statistic $T$ with a fixed set of fixations and variable samples, that is $T_{A}(\phi)$. According to (\ref{eqn:T_A_phi_variable_phi_fixed_A}), we know that $T_{A}\left(\phi\right)$ is normally distributed. Now, if we denote $T_{A}\left(\phi\right)$ as $T_1$ when $A$ is the set of all possible fixations, we can write  
+\begin{eqnarray}
+T_1 \sim \mathcal{N}\left(\mu_{T_1},\sigma^2_{T_1}\right)
+\end{eqnarray} 
+According to Lemma \ref{lemma:C(A)}, we know $C\left(A\right) = \frac{1}{\lvert A \rvert}\displaystyle\sum_{a \in A}C\left(a\right)$. Note that there are $2^s$ different possible fixations, which means $\lvert A \rvert = 2^s$. So, we can apply the equality of (\ref{eqn:average of C a}), and find that  $C\left(A\right) = \frac{1}{2^s}\displaystyle\sum_{a \in A}C\left(a\right) = C$. In (\ref{eqn:T_A_phi_variable_phi_fixed_A}), $M$ is the size of set $A$, which means $M = 2^s$. Consequently we can write   
+\begin{eqnarray}
+\mu_{T_1} &=& 2^{s+q} - 1 + NC \label{eqn:mean_T_1}\\
+\sigma^2_{T_1} &=& 2(2^{s+q} - 1 + 2NC) \label{eqn:variance_T_1}
+\end{eqnarray}
+If the distribution of the values at the output of the trail is random then the distribution of the statistic $T$ will be different from above. Because in case of random  output distribution, the capacity $C\left(a\right)$ is zero for all fixations and consequently $C\left(A\right)$ is also zero. Let this statistic in case of random distribution be called as $T_0$. So, we can write 
+\begin{eqnarray}
+T_0 \sim \mathcal{N}\left( \mu_{T_0} , \sigma^2_{T_0}  \right)
+\end{eqnarray} where 
+\begin{eqnarray}
+\mu_{T_0} &=& 2^{s+q} - 1 \label{eqn:mean_T_0}\\
+\sigma^2_{T_0} &=& 2(2^{s+q} - 1) \label{eqn:variance_T_0}
+\end{eqnarray}
+Now, let us find out what is the required value of $N$ to successfully perform the statistical test mentioned in Section \ref{section:statistical_test}. To perform the test we need to find out a value of $\tau$ so that we can succeed in the test with certain minimum success probability. If $\alpha_0,\alpha_1$ is the maximum error probability of wrongly choosing distribution $T_0$ and $T_1$, then according to Inequality \ref{eqn:selecting_tau_range} and as depicted in Figure \ref{fig:single_tau_as_distributions_distinguishes} we can choose $\tau$ as following
+\begin{eqnarray}
+\mu_{T_0}+\sigma_{T_0}\zeta_0 = \tau = \mu_{T_1} - \sigma_{T_1}\zeta_1 \label{eqn:feasible_tausss}
+\end{eqnarray}
+where $\mathit{\Phi}(\zeta_i) = 1 - \alpha_i$ for $i \in \mathbb{Z}_2$ for the cumulative distribution function $\mathit{\Phi}$ of the standard normal distribution. Without loss of generality let us assume that $\alpha_0 > \alpha_1$. Then the minimum success probability is $1-\alpha_0$. Using (\ref{eqn:feasible_tau}), we will find a lower bound of $N$ to achieve the mentioned minimum probability of succeeding in the test. \par \noindent According to (\ref{eqn:mean_T_0}),(\ref{eqn:variance_T_0}),(\ref{eqn:mean_T_1}) and (\ref{eqn:variance_T_1}) we find that 
+\begin{eqnarray}
+\mu_{T_1} &=& \mu_{T_0} + NC\\
+\sigma^2_{T_1} &=& 2\left(2^{s+1}-1\right) + 4NC = \sigma^2_{T_0} + 4NC
+\end{eqnarray}
+Plugging the above two equalities in (\ref{eqn:feasible_tau}), we find
+\begin{eqnarray*}
+\mu_{T_0}+\sigma_{T_0}\zeta_0 &=& \mu_{T_0} + NC - \sqrt{\left(\sigma^2_{T_0}+ 4NC\right)}\zeta_1\\
+\rightarrow \sigma_{T_0}\zeta_0 &=& NC - \sqrt{\left(\sigma^2_{T_0}+ 4NC\right)}\zeta_1
+\end{eqnarray*}
+By setting $NC = x$ and then squaring both side of the last equality above, we obtain
+\begin{eqnarray*}
+\sqrt{\left(\sigma^2_{T_0}+ 4x\right)}\zeta_1 &=& x - \sigma_{T_0}\zeta_0\\
+\rightarrow \left(\sigma^2_{T_0}+ 4x\right)\zeta^2_1 &=& x^2 + \sigma^2_{T_0}\zeta_0^2 - 2x\sigma_{T_0}\zeta_0 \\
+\rightarrow \sigma^2_{T_0}\zeta^2_1 + 4x\zeta^2_1 &=& x^2 + \sigma^2_{T_0}\zeta_0^2 - 2x\sigma_{T_0}\zeta_0
+\end{eqnarray*}
+And the last equality simplifies to the below quadratic equation
+\begin{eqnarray*}
+\rightarrow x^2 - \left(2\sigma_{T_0}\zeta_0 + 4\zeta^2_1 \right)x + \sigma^2_{T_0} \left(\zeta_0^2 - \zeta^2_1\right) &=&  0 
+\end{eqnarray*}
+By solving this quadratic equation for $x$, we find
+\begin{eqnarray*}
+x &=& \frac{2\sigma_{T_0}\zeta_0+4\zeta_1^2 + \sqrt{\left(2\sigma_{T_0}\zeta_0 + 4\zeta^2_1 \right)^2 - 4\sigma^2_{T_0} \left(\zeta_0^2 - \zeta^2_1\right)}}{2} \\
+&=&  \frac{2\left(\sigma_{T_0}\zeta_0+2\zeta_1^2\right) + \sqrt{4\left(\sigma_{T_0}\zeta_0 + 2\zeta^2_1 \right)^2 - 4\sigma^2_{T_0} \left(\zeta_0^2 - \zeta^2_1\right)}}{2}\\
+&=&  \left(\sigma_{T_0}\zeta_0+2\zeta_1^2\right) + \sqrt{\left(\sigma_{T_0}\zeta_0 + 2\zeta^2_1 \right)^2 - \sigma^2_{T_0} \left(\zeta_0^2 - \zeta^2_1\right)} \\
+&=&  \left(\sigma_{T_0}\zeta_0+2\zeta_1^2\right) + \sqrt{\sigma_{T_0}^2\zeta_0^2 + 4\zeta^4_1 + 4\sigma_{T_0}\zeta_0\zeta^2_1 - \sigma^2_{T_0}\zeta_0^2 + \sigma^2_{T_0}\zeta^2_1}\\
+&=&  \sigma_{T_0}\zeta_0+2\zeta_1^2 + \zeta_1\sqrt{4\zeta^2_1 + 4\sigma_{T_0}\zeta_0 + \sigma^2_{T_0}}\\
+&=&  \sigma_{T_0}\zeta_0 + \zeta_1 \left(2\zeta_1 + \sqrt{4\zeta^2_1 + 4\sigma_{T_0}\zeta_0 + \sigma^2_{T_0}}\right)
+\end{eqnarray*}
+We can consider a simple over estimate of the term $\sqrt{4\zeta^2_1 + 4\sigma_{T_0}\zeta_0 + \sigma^2_{T_0}}$ by $2\sigma_{T_0}$ and another overestimation of $\sigma_{T_0}\zeta_0$ by $2\sigma_{T_0}\zeta_0$. This over estimations will give
+\begin{eqnarray*}
+x &=& 2\sigma_{T_0}\zeta_0 + 2 \zeta_1 \sigma_{T_0}\\
+\rightarrow NC &=& 2\sigma_{T_0}\left(\zeta_0 + \zeta_1 \right)
+\end{eqnarray*}
+Let us also overestimate $\sigma_{T_0}$ by $\sqrt{2\left(2^{s+q}\right)}$. This will imply
+\begin{eqnarray*}
+N &=& \frac{2^{\frac{1}{2}}2^\frac{s+q+1}{2}\sqrt{2}\left(\zeta_0 + \zeta_1 \right)}{C}
+\end{eqnarray*}
+This means, if we compute the statistic $T$ by encrypting $N$ number of plaintexts, then $T$ will reach the value larger than $\tau$ with probability at least $1-\alpha_1$. Furthermore if $T$ is computed from random distribution then the value of $T$ will not change as $N$ grows. Which means in random case, $T$ will remain smaller than $\tau$ with probability at least $1-\alpha_0$. So, any value $N_{SS}$ larger than $N$ will also achieve our goal. As a result we can write
+\begin{eqnarray*}
+N_{SS} &\geq & \frac{2^{\frac{1}{2}}2^\frac{s+q+1}{2}\sqrt{2}\left(\zeta_0 + \zeta_1 \right)}{C}
+\end{eqnarray*}
+Let us consider the constant $\sqrt{2}\left(\zeta_0 + \zeta_1 \right) = \varphi$. Consequently, we can write
+\begin{eqnarray}
+N_{SS} &\geq & \frac{\sqrt{2}2^\frac{q+1}{2}2^{\frac{s}{2}}\varphi}{C} \label{eqn:N_SS}
+\end{eqnarray}
+We already have mentioned that we are using all the possible fixations. We know there are $2^s$ possible fixations. Along with this, let us assume that for each fixation, we are using the sample of equal size. Let us assume that the sample size is $S$. Which means $N = 2^s S$. Squaring both side of (\ref{eqn:N_SS}) and using $N = 2^s S$, we get
+\begin{eqnarray}
+N_{SS} &\geq & 2 \frac{2^{q+1}\varphi^2}{SC^2} \label{eqn:N_SS_final}
+\end{eqnarray}
+Which is in close correspondence with the data complexity of truncated differential cryptanalysis denoted by $N_{TD}$ in \cite{Celine_Kaisa_Links_2014}. Similarly as there by choosing $S = 2^t$ we now get the equation $N^2_{ML} = N_{SS}2^{n-1}$.
+\section{Single Fixation} However, let us also consider that the statistic $T$ is computed from only one fixation and both of the fixation and sample are variable. In that case, the statistic under consideration is $T\left(\phi,a\right)$. We already have derived the distribution of this statistic in 
+Theorem \ref{theorem: variable fixation}. As like the case of multiple fixations above, let us call this statistic as $T_1$. Then according to the Theorem \ref{theorem: variable fixation}, $T_1$ is a normal deviate with the following mean $\mu_{T_{1}}$ and variance $\sigma^2_{T_{1}}$
+\begin{eqnarray}
+\mu_{T_{1}} &=& 2^q - 1 + NC\\
+\sigma^2_{T_{1}} &=& \frac{1}{2^q-1}\left(2^q-1 + NC \right)^2
+\end{eqnarray}
+Let us consider the statistic $T$ which is computed from a random distribution of size $2^q$. Let us call this statistic $T_0$. Then $T_0$ is also a normal distribution with the following mean $\mu_{T_0}$ and variance $\sigma^2_{T_{0}}$
+\begin{eqnarray}
+\mu_{T_{0}} &=& 2^q - 1\\
+\sigma^2_{T_{0}} &=& 2\left(2^q-1\right)^2
+\end{eqnarray} As like the case of using multiple fixations, let us find out what is the required value of $N$ to successfully perform the statistical test. We need to have
+\begin{eqnarray}
+\mu_{T_0}+\sigma_{T_0}\zeta_0 = \tau = \mu_{T_1} - \sigma_{T_1}\zeta_1 
+\end{eqnarray} \par \noindent Plugging the above mean and variances in (\ref{eqn:feasible_tau}), we find
+\begin{eqnarray*}
+\mu_{T_0} + \sigma_{T_{0}}\zeta_0 &=& \mu_{T_{0}} + NC - \sigma_{T_{1}}\zeta_1\\
+\sigma_{T_0}\zeta_0 &=& \mu_{T_0} + NC - \sqrt{\frac{2}{2^q - 1}}\left(2^q - 1 + NC \right)\zeta_1
+\end{eqnarray*}
+By simplifying the last equality above, we can find
+\begin{eqnarray*}
+NC\left( 1 - \sqrt{\frac{2}{2^q-1}}\zeta_1 \right) = \sqrt{2\left(2^q-1\right)}\left(\zeta_0 + \zeta_1 \right) \\
+\end{eqnarray*} For large enough $q$, the co-efficient of $NC$ on the left side of the above equality approaches $1$. And $\sqrt{2\left(2^q - 1 \right)}$ can be simply approximated to $\sqrt{2^{q+1}}$. All these together we find
+\begin{eqnarray}
+N_{SS} \geq \frac{2^{\frac{q+1}{2}}\left(\zeta_0 + \zeta_1\right)}{C} \label{eqn:data_complexity_single_fixation}
+\end{eqnarray}
+\fi

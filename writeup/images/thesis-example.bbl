@@ -1,0 +1,68 @@
+\begin{thebibliography}{10}
+
+\bibitem{def_cryptanalysis}
+{\sc Agency, N.~S.}
+\newblock Cryptanalysis/signals analysis.
+\newblock
+  \url{https://www.nsa.gov/careers/career_fields/cryptsiganalysis.shtml}.
+
+\bibitem{Celine_Kaisa_Links_2013}
+{\sc Blondeau, C., and Nyberg, K.}
+\newblock New links between differential and linear cryptanalysis.
+\newblock In {\em Mention the name of the Proceeding\/} (2013), pp.~??--??
+
+\bibitem{Celine_Kaisa_Links_2014}
+{\sc Blondeau, C., and Nyberg, K.}
+\newblock Links between truncated differential and multidimensional linear
+  properties of block ciphers and underlying attack complexites.
+\newblock In {\em Mention the name of the Proceeding\/} (2014), pp.~??--??
+
+\bibitem{bogdanov_PRESENT}
+{\sc Bogdanov, A., Knudsen, L.~R., Leander, G., C.~Paar, A.~P., Robshaw, M.
+  J.~B., Seurin, Y., and Vikkelsoe, C.}
+\newblock Present: An ultra-lightweight block cipher.
+\newblock vol.~4727 2007.
+
+\bibitem{Chabaud_Vaudenay_link}
+{\sc Chabaud, F., and Vaudenay, S.}
+\newblock Links between differential and linear cryptoanalysis.
+\newblock In {\em De Santis, A. ed: EUROCRYPT-94, Vol. 950 of LNCS, Springer\/}
+  (1994), pp.~356--365.
+
+\bibitem{SSA_Collard_Standaert}
+{\sc Collard, B., and Standaert, F.-X.}
+\newblock A atatistical saturation attack against the block cipher present.
+\newblock In {\em Mention the name of the Proceeding\/} (Years??), pp.~??--??
+
+\bibitem{Leander_link}
+{\sc Leander, G.}
+\newblock On linear hulls, statistical saturation attacks, present and a
+  cryptanalysis of puffin.
+\newblock In {\em Paterson, K.G. ed.: EUROCRYPT 2011. Vol. 6632 of LNCS,
+  Springer\/} (2011), pp.~303--322.
+
+\bibitem{distribution_cryptanalysis_kaisa_lecture_ice_break_2013}
+{\sc Nyberg, K.}
+\newblock Distribution cryptanalysis.
+\newblock \url{http://ice.mat.dtu.dk/slides/lecture2_kaisa.pdfn}.
+
+\bibitem{Stinson_book_cryptosystem_defn}
+{\sc Stinson, D.~R.}
+\newblock {\em Cryptography Theory and Practice}, third~ed.
+
+\bibitem{binomial_distribution_defn}
+{\sc Wikipedia}.
+\newblock Binomial distribution.
+\newblock \url{http://en.wikipedia.org/wiki/Binomial_distribution}.
+
+\bibitem{wikipedia_chi_square_defn}
+{\sc Wikipedia}.
+\newblock Chi-squared distribution.
+\newblock \url{http://en.wikipedia.org/wiki/Chi-squared_distribution}.
+
+\bibitem{wikipedia_gamma_dist}
+{\sc Wikipedia}.
+\newblock Gamma distribution.
+\newblock \url{http://en.wikipedia.org/wiki/Gamma_distribution}.
+
+\end{thebibliography}

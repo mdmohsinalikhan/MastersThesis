@@ -1,0 +1,143 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include "config.h"
+
+/* This file contains all the functions which are needed to encrypt a plaintext*/
+
+unsigned char **allocate_Memory_for_plaintext_or_ciphertext()
+{
+	int i = 0,j=0;
+	unsigned char **states = (unsigned char **)malloc(sizeof(unsigned char*)*(ROUND+2));
+
+	for(i = 0;i <= ROUND+1; i++)
+	{
+		states[i] = (unsigned char *)malloc(sizeof(unsigned char)*BLOCKLENGTH);
+
+	}
+
+return states;
+}
+
+void encryption(unsigned char **plaintext_states,unsigned char **keys)
+{
+
+	int i = 0;
+
+	printf("Plaintext: "); printState(i,plaintext_states);
+	for(i = 1; i <= ROUND; i++)
+	{
+		addRoundKey(i,plaintext_states,keys);
+		applySBox(i,plaintext_states);
+		pbox(i, plaintext_states);
+		//printf("Current state after sbox of %d round: ",i); 	printState(i,plaintext_states);
+	}
+
+	printf("Ciphertext before post whitening: "); 	printState(ROUND,plaintext_states);
+	//post whitening
+	addRoundKey(i,plaintext_states,keys);
+
+	printf("Ciphertext after post whitening: "); 	printState(ROUND+1,plaintext_states);
+}
+
+
+void addRoundKey(int r,unsigned char **plaintext_states,unsigned char **keys)
+{
+	int i = 0;
+	for(i = 0;i < BLOCKLENGTH; i ++)
+	{
+		//The rightmost 4n bits of the leftmost 64 bits of the 80bit round key is the key of SMALLPRESENT-[N].
+		plaintext_states[r][i] = plaintext_states[r-1][i] ^ keys[r-1][i+2]; 
+	}
+	
+}
+
+void applySBox(int r,unsigned char **plaintext_states)
+{
+	int i = 0;
+	for(i = 0;i < BLOCKLENGTH; i ++)
+	{
+		//two sboxes for every byte
+		plaintext_states[r][i] = sBox(plaintext_states[r][i] & 0x0f) ^ (sBox((plaintext_states[r][i] & 0xf0) >> 4) << 4);
+
+//		printf("I am looping\n");
+	}
+}
+
+
+void pbox(int r,unsigned char **plaintext_states)
+{
+
+	int i = 0;
+	int j=0;
+	int byte = 0;
+	int bit = 0;
+	unsigned char x = 0x01;
+	int source_byte_position = 0;
+	int source_bit_position = 0;
+	int target_byte_position = 0;
+	int target_bit_position = 0;
+	unsigned char source_bit_value = 0x00;
+
+	unsigned char *temp_states = (unsigned char *)malloc(sizeof(unsigned char)*(BLOCKLENGTH));
+
+	for(i = 0;i < BLOCKLENGTH; i++)
+	{
+		temp_states[i] = 0x00;
+	}
+	
+
+	for(i = 0;i < BLOCKLENGTH*8; i++)
+	{
+		x = 0x01;
+		if(i != (BLOCKLENGTH*8)-1)
+		{
+			source_byte_position = i/8;
+			source_bit_position = i%8;
+			source_bit_value = (plaintext_states[r][source_byte_position] & (x << source_bit_position)) >> source_bit_position;
+
+			target_byte_position = ((n*i)%(4*n-1))/8;
+			target_bit_position = ((n*i)%(4*n-1))%8;
+
+			temp_states[target_byte_position] = temp_states[target_byte_position] ^ (source_bit_value << target_bit_position);
+			//printf("Source byte position: %d,Source bit position: %d,source_bit_value:%02x, target byte position: %d,target bit position: %d\n",source_byte_position,source_bit_position,source_bit_value,target_byte_position,target_bit_position);
+			
+		}
+		else
+		{
+			temp_states[BLOCKLENGTH-1] = temp_states[BLOCKLENGTH-1] ^ (plaintext_states[r][BLOCKLENGTH-1] & 0x80);
+		}
+	}
+
+	for(i = 0;i < BLOCKLENGTH; i++)
+	{
+		plaintext_states[r][i] = temp_states[i];
+	}
+
+free(temp_states);
+
+}
+
+//printing a plaintext or ciphertext space mostly for the purpose of debugging
+void printState(int r,unsigned char **states)
+{
+	int i = 0;
+	//State after r rounds
+	for(i = BLOCKLENGTH-1; i >= 0; i--)
+	{
+		printf("%02X ",states[r][i]);
+	}
+	printf("\n");		
+}
+
+
+//To release plaintext states and ciphertext states
+void releaseStateMemory(unsigned char **states)
+{
+	int i = 0;
+	for(i = 0;i <= ROUND+1; i++)
+	{
+		free(states[i]);
+	}	
+
+	free(states);
+}

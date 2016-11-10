@@ -1,0 +1,131 @@
+\begin{thebibliography}{10}
+
+\bibitem{def_cryptanalysis}
+{\sc Agency, N.~S.}
+\newblock Cryptanalysis/signals analysis.
+\newblock
+  \url{https://www.nsa.gov/careers/career_fields/cryptsiganalysis.shtml}.
+
+\bibitem{sample_without_replacement}
+{\sc Blondeau, C., and Nyberg, K.}
+\newblock On distinct known plaintext attacks.
+\newblock In {\em The Ninth International Workshop on Coding and Cryptography
+  2015}.
+
+\bibitem{Celine_Kaisa_non_linear_functions}
+{\sc Blondeau, C., and Nyberg, K.}
+\newblock Perfect nonlinear functions and cryptography.
+\newblock In {\em Finite fields and their applications [1071-5797] Blondeau,
+  Celine v:2015 vol:32}, pp.~120 --147.
+
+\bibitem{Celine_Kaisa_Links_2013}
+{\sc Blondeau, C., and Nyberg, K.}
+\newblock New links between differential and linear cryptanalysis.
+\newblock In {\em Advances in Cryptology - EUROCRYPT 2013 [3-642-38347-5;
+  3-642-38348-3]\/} (2013), pp.~388--404.
+
+\bibitem{Celine_Kaisa_Links_2014}
+{\sc Blondeau, C., and Nyberg, K.}
+\newblock Links between truncated differential and multidimensional linear
+  properties of block ciphers and underlying attack complexites.
+\newblock In {\em Advances in Cryptology - EUROCRYPT 2014 [3-642-55219-6;
+  3-642-55220-X]\/} (2014), pp.~165 --182.
+
+\bibitem{bogdanov_PRESENT}
+{\sc Bogdanov, A., Knudsen, L.~R., Leander, G., C.~Paar, A.~P., Robshaw, M.
+  J.~B., Seurin, Y., and Vikkelsoe, C.}
+\newblock Present: An ultra-lightweight block cipher.
+\newblock vol.~4727 2007.
+
+\bibitem{chi_square_definition_book}
+{\sc Bowker, and Lieberman}.
+\newblock {\em Engineering Statistics, Chapter: Other Probability Distribution,
+  page: 72}.
+
+\bibitem{Chabaud_Vaudenay_link}
+{\sc Chabaud, F., and Vaudenay, S.}
+\newblock Links between differential and linear cryptoanalysis.
+\newblock In {\em De Santis, A. ed: EUROCRYPT-94, Vol. 950 of LNCS, Springer\/}
+  (1994), pp.~356--365.
+
+\bibitem{binomial_distribution_defn}
+{\sc Charles M.~Grinstead, J. L.~S.}
+\newblock {\em Introduction to Probability, Chapter: Distributions and
+  Densities, page: 184}.
+
+\bibitem{j_y_cho_linear_cryptanalysis}
+{\sc Cho, J.~Y.}
+\newblock Linear cryptanalysis of reduced-round present.
+\newblock In {\em Lecture Notes in Computer Science Volume 5985, 2010}, pp.~302
+  --317.
+
+\bibitem{SSA_Collard_Standaert}
+{\sc Collard, B., and Standaert, F.-X.}
+\newblock A atatistical saturation attack against the block cipher present.
+\newblock In {\em Lecture Notes in Computer Science Volume 5473, 2009\/}
+  (2009), pp.~195--210.
+
+\bibitem{smalpresent}
+{\sc Leander, G.}
+\newblock Small scale variants of the block cipher present.
+\newblock \url{https://eprint.iacr.org/2010/143.pdf}.
+
+\bibitem{Leander_link}
+{\sc Leander, G.}
+\newblock On linear hulls, statistical saturation attacks, present and a
+  cryptanalysis of puffin.
+\newblock In {\em Paterson, K.G. ed.: EUROCRYPT 2011. Vol. 6632 of LNCS,
+  Springer\/} (2011), pp.~303--322.
+
+\bibitem{distribution_cryptanalysis_kaisa_lecture_ice_break_2013}
+{\sc Nyberg, K.}
+\newblock Distribution cryptanalysis, summer school, icebreak 2013.
+\newblock \url{http://ice.mat.dtu.dk/slides/lecture2_kaisa.pdfn}.
+
+\bibitem{Kaisa_perfect_non_linear_functions}
+{\sc Nyberg, K.}
+\newblock Perfect nonlinear s-boxes.
+\newblock In {\em Lecture Notes in Computer Science [0302-9743] Nyberg, K
+  v:1991 vol:547}, pp.~378 --386.
+
+\bibitem{kaisa_mohsin_2015}
+{\sc Nyberg, K., and Khan, M.}
+\newblock Statistical models for the statistical saturation distinguishers.
+\newblock In {\em Selected Areas in Cryptography 2015 (Submitted)}.
+
+\bibitem{gamma_distribution_book}
+{\sc Scheaffer, R.~L., and McClave, J.~T.}
+\newblock {\em Statistics for Engineers, Chapter: Common Continuous Probability
+  Distributions, page: 102 -- 104}.
+
+\bibitem{chi_gamma_link_book}
+{\sc Scheaffer, R.~L., and McClave, J.~T.}
+\newblock {\em Statistics for Engineers, Chapter: Satistics and Sampling
+  Distributions, page: 140}.
+
+\bibitem{spn_definition_book}
+{\sc Stinson, D.~R.}
+\newblock {\em Cryptography Theory and Practice, Chapter: Block Ciphers and the
+  Advanced Encryption Standard, page: 74 -- 79}, third~ed.
+
+\bibitem{cryptosystem_definition_book}
+{\sc Stinson, D.~R.}
+\newblock {\em Cryptography Theory and Practice, Chapter: Classical
+  Cryptography, page: 1}, third~ed.
+
+\bibitem{scaling_of_gamma_distribution_uah}
+{\sc UAH}.
+\newblock The gamma distrigution, definition: 31.
+\newblock \url{http://www.math.uah.edu/stat/special/Gamma.html}.
+
+\bibitem{normal_approximation_of_gamma_distribution_uah}
+{\sc UAH}.
+\newblock The gamma distrigution, definition: 33.
+\newblock \url{http://www.math.uah.edu/stat/special/Gamma.html}.
+
+\bibitem{chi_square_normal_approximation}
+{\sc Walck, C.}
+\newblock {\em Hand-book on STATISTICAL DISTRIBUTIONS for experimentalists,
+  Chapter: Chi-square Distribution, page: 39}.
+
+\end{thebibliography}

@@ -1,0 +1,44 @@
+import random
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.mlab as mlab
+import math
+
+#with open('T_a_phi_result.txt') as f:
+    #w, h = [int(x) for x in f.readline().split()] # read first line
+    #array = []
+    #for line in f: # read rest of lines
+    #    array.append(int(x) for x in line.split())
+
+with open('T_a_phi_result.txt') as f:
+    array = []
+    for line in f:
+        data = line.split()
+        array.append(int(data[0]))
+
+
+
+mu, sigma = 17.930688, 6.459315134
+x = mu + sigma * np.random.randn(10000)
+print array
+
+mean = 17.930688
+variance = 41.722752
+sigma = math.sqrt(variance)
+x = np.linspace(0,60,500)
+plt.plot(x,mlab.normpdf(x,mean,sigma),'r-')
+
+
+# the histogram of the data
+n, bins, patches = plt.hist(array, 50, normed=1, facecolor='Dimgray', alpha=0.75)
+#n, bins, patches = plt.hist(x, 50, normed=1, facecolor='b', alpha=0.5)
+
+
+plt.xlabel('$T_a(\phi)$')
+plt.ylabel('Probability')
+plt.title('$T_a(\phi)$ for where $a=0xb,|\phi|=2048$ using 10000 different samples')
+plt.text(5,.070,r'using $15$ rounds of SMALLPRESENT-4 with all zero key')
+plt.text(5, .065, r'$\mu=17.930688, \sigma^2=41.722752$ for the theoretical plot in red line')
+plt.axis([0, 60, 0, 0.081])
+plt.grid(True)
+plt.show()
